@@ -7,6 +7,11 @@
     "dev": "vuepress dev",
     "docs:build": "vuepress build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:DamengRandom/tipify.git"
+  },
+  "homepage": "https://github.com/DamengRandom/tipify/blob/master/README.md",
   "dependencies": {
     "vuepress": "^0.12.0"
   },
