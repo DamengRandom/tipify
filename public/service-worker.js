@@ -21,14 +21,14 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "95dba6ae2a23bf68aa709dea10771149"
+    "revision": "427a079b562fe54c48cfadf9ad9fdc30"
   },
   {
     "url": "assets/css/1.styles.521b6668.css",
     "revision": "d41d8cd98f00b204e9800998ecf8427e"
   },
   {
-    "url": "assets/css/styles.2d5f8983.css",
+    "url": "assets/css/styles.55f0a6ba.css",
     "revision": "564bb139f1f8cd379110c4e18ebe970a"
   },
   {
@@ -40,40 +40,48 @@ self.__precacheManifest = [
     "revision": "cff9b72dda86ab63b86d82233d9611db"
   },
   {
-    "url": "assets/js/2.c8388a35.js",
-    "revision": "80cbdb74a2d39c91497b8ebbd1d53a11"
+    "url": "assets/js/2.6b925212.js",
+    "revision": "9a644f34b34281058797c9980c909b03"
   },
   {
-    "url": "assets/js/3.08076886.js",
-    "revision": "50a944d266526037e06f2983af4a879c"
+    "url": "assets/js/3.19f4150e.js",
+    "revision": "1d0570a3456e011e45a559912cef7345"
   },
   {
-    "url": "assets/js/4.0212a3cd.js",
-    "revision": "52d1de93ae7dc8a86ffb5d7512b53879"
+    "url": "assets/js/4.d3e1284f.js",
+    "revision": "cb70767aa5e624e059041885893d249e"
   },
   {
-    "url": "assets/js/5.6156ed4f.js",
-    "revision": "4b3e361976c5f219da51d735f63ad2bc"
+    "url": "assets/js/5.2a0afed8.js",
+    "revision": "4e2f8ea3b56039472a290dcf14ed1594"
   },
   {
-    "url": "assets/js/app.2d5f8983.js",
-    "revision": "f5a5a80463e5e6e5a2e07654a8f36e53"
+    "url": "assets/js/6.909b9b8b.js",
+    "revision": "b78d5cb841107f3d6067282112352ffb"
+  },
+  {
+    "url": "assets/js/app.55f0a6ba.js",
+    "revision": "7b661bec45b2e36814387fee500d1495"
   },
   {
     "url": "git-tips-one.html",
-    "revision": "339e3cfb4d4df04d45edd3bdf992234e"
+    "revision": "e07d5da99f2f0ad19239f51827464c90"
   },
   {
     "url": "index.html",
-    "revision": "f522bd29d91021c7aa4adfe2fc9fd7f2"
+    "revision": "b10539ad2bf638e3374a800e86dec07d"
+  },
+  {
+    "url": "react-tips-one.html",
+    "revision": "b997d224f83e5e3e332bac006d580db1"
   },
   {
     "url": "thanks.html",
-    "revision": "c7e4f74cc9493a0fe3eb0eaddba109d2"
+    "revision": "02eeb4f23a61357e8a0bdbda57490166"
   },
   {
     "url": "tipify.html",
-    "revision": "1b9f0cdaa87a3806476d1f061383f269"
+    "revision": "ef1e8bbcb2692cc075ec9b9d6f67b9dc"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();

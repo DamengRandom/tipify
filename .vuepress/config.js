@@ -7,7 +7,8 @@ module.exports = {
     sidebar: [
       'thanks.html',
       'tipify.html',
-      'git-tips-one.html'
+      'git-tips-one.html',
+      'react-tips-one.html'
     ],
     searchMaxSuggestions: 20
   },
