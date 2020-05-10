@@ -8,7 +8,8 @@ module.exports = {
       'thanks.html',
       'tipify.html',
       'git-tips-one.html',
-      'react-tips-one.html'
+      'react-tips-one.html',
+      'js-reduce-method.html'
     ],
     searchMaxSuggestions: 20
   },
