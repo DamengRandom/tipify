@@ -1,8 +1,8 @@
 module.exports = {
-  title: 'Tipify: Get some tips',
+  title: 'Tipify (DM): Get some tips',
   themeConfig: {
     nav: [
-      {text: 'Home', link: '/'}
+      { text: 'Github', link: 'https://github.com/DamengRandom/tipify' }
     ],
     sidebar: [
       'thanks.html',
