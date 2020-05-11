@@ -1,4 +1,4 @@
-### Javascript (JS) Reduce Method
+### JS Reduce Method
 
 There are few cases of using javascript reduce method:
 
