@@ -9,7 +9,8 @@ module.exports = {
       'tipify.html',
       'git-tips-one.html',
       'react-tips-one.html',
-      'js-reduce-method.html'
+      'js-reduce-method.html',
+      'ts-basics.html'
     ],
     searchMaxSuggestions: 20
   },
