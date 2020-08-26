@@ -10,7 +10,8 @@ module.exports = {
       'git-tips-one.html',
       'react-tips-one.html',
       'js-reduce-method.html',
-      'ts-basics.html'
+      'ts-basics.html',
+      'dotnet-basics.html'
     ],
     searchMaxSuggestions: 20
   },
