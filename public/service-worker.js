@@ -21,14 +21,14 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "51e8347074de2b5b6870b628815d3a94"
+    "revision": "46911ab5e7f9dbee2e26ad425575964e"
   },
   {
     "url": "assets/css/1.styles.521b6668.css",
     "revision": "d41d8cd98f00b204e9800998ecf8427e"
   },
   {
-    "url": "assets/css/styles.e9ce7654.css",
+    "url": "assets/css/styles.fba07b3e.css",
     "revision": "564bb139f1f8cd379110c4e18ebe970a"
   },
   {
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "revision": "cff9b72dda86ab63b86d82233d9611db"
   },
   {
-    "url": "assets/js/2.1e1d63c0.js",
-    "revision": "0298f01a202088b8e30d6ae67e921776"
+    "url": "assets/js/2.9de76ab5.js",
+    "revision": "332e1c1e918ebfa2c511b036e3b108e6"
   },
   {
     "url": "assets/js/3.07f24045.js",
@@ -72,40 +72,40 @@ self.__precacheManifest = [
     "revision": "c52af7a1a79a4fa3c6522d5b26cea358"
   },
   {
-    "url": "assets/js/app.e9ce7654.js",
-    "revision": "4aad0bf26da26991945c01f10476156c"
+    "url": "assets/js/app.fba07b3e.js",
+    "revision": "e041fe4a0fd5b0b32673ca3145531dee"
   },
   {
     "url": "dotnet-basics.html",
-    "revision": "189de830e92fcb777f4809094055c964"
+    "revision": "de5a2e441656ee1c3908fce8322d6809"
   },
   {
     "url": "git-tips-one.html",
-    "revision": "afb9666fa9f88b403c607594bf4162d2"
+    "revision": "d3923acf83a81c578b8e416c06f7b177"
   },
   {
     "url": "index.html",
-    "revision": "71d768f6da1bcdfead182414691051f8"
+    "revision": "cd022a25077f4a24cc3a3a6b9bc0a888"
   },
   {
     "url": "js-reduce-method.html",
-    "revision": "6abfc8cf1b0179a14c3f9a7c3c965f96"
+    "revision": "c28b0beee3a5a7d4d574240d143279bc"
   },
   {
     "url": "react-tips-one.html",
-    "revision": "f4dbbebc9265addafdabc6655dfd3448"
+    "revision": "2e1be8598d253205dd66aff7a378036c"
   },
   {
     "url": "thanks.html",
-    "revision": "a6fef52ffb64bb575e4b8e12ab3d0496"
+    "revision": "eab38d905c2d092af22247dadc6eb6b5"
   },
   {
     "url": "tipify.html",
-    "revision": "d4e900ee6a21771ce0df22f8a4d3bc1c"
+    "revision": "de8f3739156dbb6666cf41a7f17b4e48"
   },
   {
     "url": "ts-basics.html",
-    "revision": "941d07f2c7e54f7551d45c4801a42d1d"
+    "revision": "961ffba0a4cbf5ffba5d2be678b5eba0"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
