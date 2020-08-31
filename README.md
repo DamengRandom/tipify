@@ -19,3 +19,4 @@ yarn docs:build // will build up the project and make the latest editions availa
 ### [Javascript (JS) Reduce method](./js-reduce-method.html)
 ### [Typescript (TS) Basics](./ts-basics.html)
 ### [.Net Basics](./dotnet-basics.html)
+### [JavaScript (JS) High Order Functions](./js-high-order-functions.html)

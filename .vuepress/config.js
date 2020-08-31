@@ -11,7 +11,8 @@ module.exports = {
       'react-tips-one.html',
       'js-reduce-method.html',
       'ts-basics.html',
-      'dotnet-basics.html'
+      'dotnet-basics.html',
+      'js-high-order-functions.html'
     ],
     searchMaxSuggestions: 20
   },
