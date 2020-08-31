@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Tipify (DM): Get some tips',
+  title: 'Tipify (DM): Recall some tips',
   themeConfig: {
     nav: [
       { text: 'Github', link: 'https://github.com/DamengRandom/tipify' }
@@ -12,7 +12,9 @@ module.exports = {
       'js-reduce-method.html',
       'ts-basics.html',
       'dotnet-basics.html',
-      'js-high-order-functions.html'
+      'js-high-order-functions.html',
+      'js-callback-promise-async-await.html',
+      'js-general-tips.html'
     ],
     searchMaxSuggestions: 20
   },
