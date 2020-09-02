@@ -22,3 +22,5 @@ yarn docs:build // will build up the project and make the latest editions availa
 ### [JavaScript High Order Functions](./js-high-order-functions.html)
 ### [JavaScript Callback, Ppromise & Async await](./js-callback-promise-async-await.html)
 ### [Javascript General Tips](./js-general-tips.html)
+### [JavaScript Event Loop](./event-loop.html)
+### [JavaScript Hoisting](./hoisting.html)

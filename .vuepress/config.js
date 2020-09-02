@@ -14,7 +14,9 @@ module.exports = {
       'dotnet-basics.html',
       'js-high-order-functions.html',
       'js-callback-promise-async-await.html',
-      'js-general-tips.html'
+      'js-general-tips.html',
+      'event-loop.html',
+      'hoisting.html'
     ],
     searchMaxSuggestions: 20
   },
