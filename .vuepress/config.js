@@ -15,8 +15,9 @@ module.exports = {
       'js-high-order-functions.html',
       'js-callback-promise-async-await.html',
       'js-general-tips.html',
-      'event-loop.html',
-      'hoisting.html'
+      'js-event-loop.html',
+      'js-hoisting.html',
+      'js-closure.html'
     ],
     searchMaxSuggestions: 20
   },

@@ -1,6 +1,6 @@
 ### Javascript Event Loop
 
-#### Concept understanding
+#### Concept:
 
 Event loop is how JavaScript handle events, according to my current understanding, we can understand like this:
 

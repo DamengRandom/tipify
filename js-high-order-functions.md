@@ -1,8 +1,11 @@
 ### JavascScript High Order Functions
 
-Concept: Higher-order functions are functions that take other functions as arguments or return functions as their results.
+#### Concept:
 
-Code Example:
+Higher-order functions are functions that take other functions as arguments or return functions as their results.
+
+
+#### Code Example:
 
 ``` js
 // The typical example could be map function calling a function as an argument and do some actions
