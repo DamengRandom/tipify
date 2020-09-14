@@ -17,10 +17,14 @@ module.exports = {
       'js-general-tips.html',
       'js-event-loop.html',
       'js-hoisting.html',
-      'js-closure.html'
+      'js-closure.html',
+      'dotnet-cli-commands.html',
+      'dotnet-files-meaning.html',
+      'dotnet-cqrs.html'
     ],
     searchMaxSuggestions: 20
   },
   dest: 'public',
+  port: 5151,
   serviceWorker: true
 };

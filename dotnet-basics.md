@@ -27,6 +27,6 @@ This post is related with .Net introduction which is mainly talking about what i
 
 4). Normall after build the project, we can get `.dll` and `.exe` files in order to run your app.
 
-
+5). The reason why we use sqlite: easier to start and its a file based database, you can use db name same as your project name
 
 More contents: To be added later .. 💤
