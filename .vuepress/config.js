@@ -20,7 +20,10 @@ module.exports = {
       'js-closure.html',
       'dotnet-cli-commands.html',
       'dotnet-files-meaning.html',
-      'dotnet-cqrs.html'
+      'dotnet-cqrs.html',
+      'react-hoc.html',
+      'server-side-rendering.html',
+      'react-lifecycle.html'
     ],
     searchMaxSuggestions: 20
   },

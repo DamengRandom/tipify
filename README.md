@@ -28,3 +28,6 @@ yarn docs:build // will build up the project and make the latest editions availa
 ### [.Net CLI commands](./dotnet-cli-commands.html)
 ### [.Net files meaning](./dotnet-files-meaning.html)
 ### [.NET CQRS pattern](./dotnet-cqrs.html)
+### [React HOC](./react-hoc.html)
+### [Server Side Rendering](./sever-side-rendering.html)
+### [React Lifecycle Methods](./react-lifecycle.html)
