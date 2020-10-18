@@ -23,7 +23,8 @@ module.exports = {
       'dotnet-cqrs.html',
       'react-hoc.html',
       'server-side-rendering.html',
-      'react-lifecycle.html'
+      'react-lifecycle.html',
+      'js-immutability.html'
     ],
     searchMaxSuggestions: 20
   },
