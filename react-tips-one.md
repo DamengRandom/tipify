@@ -12,14 +12,65 @@ Due to the fact that JavaScript events are async, when you make an API call, the
 <a href="https://dev.to/torianne02/componentwillmount-vs-componentdidmount-5f0n" target="_blank">Reference</a>
 
 
-#### React side effect
 
-- TBC
+#### React Synthentic Events
+
+Concept: whenever we are triggering an event in React Component, we are not actually dealing with the real DOM event, instead we are cope with React's custom event type, a synthentic event
+
+Examples: `onClick()`, `onChange()`, `onBlur()` and etc ...
+
+* Note: if you want to access the event properties in an asynchronous way, you need to use `event.persist()`. Normally, for synthentic events, we can't access event properties in an asynchronous way.
+
+Reference: <a href="https://dev.to/nagwan/react-synthetic-events-34e5" target="_blank">here</a> And <a href="https://reactjs.org/docs/events.html" target="_blank">here</a>
+
+
+
+#### React Side Effect
+
+- Concept: it means anything that affacts something outside of the scope of the current function thats being executed 
+<!-- 影响与当前函数运行范围以外的（代码/功能） -->
+
+In React, generally, side effects responsible for:
+- API call from the server
+- call authentication service
+- Setting and clearing timers
+- Interacting with the DOM
+
+Reference <a href="https://frontarm.com/james-k-nelson/introduction-to-react-effects/" target="_blank">here</a>
+
+
 
 #### Pure Component
 
-- TBC
+- `React.PureComponent` make the component `NOT` getting re-rendered !!
+- `React.PureComponent` implements `shouldComponentUpdate()` method
+- Knowledge recall: `pure function`: given an input, and getting an output, thats it !!
+- Why we use `PureComponent`: avoid unnecessary re-renders for the component and enhance the performance ..
+- When we use `PureComponent`? When the time we do `NOT` want to re-render the component !! 
+
+Example:
+
+Please find it over <a href="https://stackblitz.com/edit/react-h8oehs?file=src%2FParentComponent.js" target="_blank">here</a>
+
+
+
+#### React Reconciliation
+
+Simple word: its talks about the diffing algorithm, React uses `key` attribute, make sure its unique !!
+According to the diffing algorithm, we updatet he Virtual DOM tree and re-render the specific DOM element !!
+
+
 
 #### React Portals
 
-- TBC
+Render the `tooltips`, `Modal` code out of the `<body>{...}</body>` element, somethings looks like this:
+
+```js
+<body>
+  {... body code logics ...}
+</body>
+// below part is React Portals code !!!
+<div class="model"> 
+  {... model code logics ...}
+</div>
+```

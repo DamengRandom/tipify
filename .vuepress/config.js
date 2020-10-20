@@ -24,7 +24,8 @@ module.exports = {
       'react-hoc.html',
       'server-side-rendering.html',
       'react-lifecycle.html',
-      'js-immutability.html'
+      'js-immutability.html',
+      'react-hooks-tips.html'
     ],
     searchMaxSuggestions: 20
   },

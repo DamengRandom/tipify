@@ -32,3 +32,4 @@ yarn docs:build // will build up the project and make the latest editions availa
 ### [Server Side Rendering](./sever-side-rendering.html)
 ### [React Lifecycle Methods](./react-lifecycle.html)
 ### [JavaScaript Immutability](./js-immutability.html)
+### [React Hooks Tips](./react-hooks-tips.html)

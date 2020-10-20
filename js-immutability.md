@@ -72,3 +72,4 @@ console.log('Output original values array: ', values); // values array stay unch
 
 In React, `immutability` makes state more predictable, thats why we need `immutable` way to handle our variable values, especially `state`.
 
+Good tool: <a href="https://immutable-js.github.io/immutable-js/" target="_blank">immutable.js</a>
