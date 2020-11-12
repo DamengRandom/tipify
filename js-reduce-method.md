@@ -32,7 +32,8 @@ sumAgesResult = family.reduce((acc, person) => {
   return acc + person.age
 }, null);
 
-console.log('use for sum ages: ', sumAgesResult);
+console.log('use for sum ages: ', sumAgesResult); 
+// result: use for sum ages:  61
 ```
 
 

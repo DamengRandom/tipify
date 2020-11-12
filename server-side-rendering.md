@@ -1,4 +1,4 @@
-### Server Side Rendering (SSR)
+### React Server Side Rendering (SSR)
 
 For React, it means we render the React components from server side before sending to browser.
 

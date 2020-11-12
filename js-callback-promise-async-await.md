@@ -16,7 +16,7 @@ function Caller(variableFunction){
 Caller(PassingAsAVariable);
 ```
 
-This is due to the fact that JavaScript functions are `first-class objects` wich can be passed as variable format.
+This is due to the fact that JavaScript functions are `first-class objects` which can be passed as variable format.
 
 
 #### Important tips for Callback:

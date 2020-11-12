@@ -25,7 +25,11 @@ module.exports = {
       'server-side-rendering.html',
       'react-lifecycle.html',
       'js-immutability.html',
-      'react-hooks-tips.html'
+      'react-hooks-tips.html',
+      'one-word-tips.html',
+      'weekly-tips.html',
+      'css-bem.html',
+      'js-module-systems.html'
     ],
     searchMaxSuggestions: 20
   },
