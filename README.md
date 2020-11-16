@@ -37,3 +37,6 @@ yarn docs:build // will build up the project and make the latest editions availa
 ### [Weekly Tips](./weekly-tips.html)
 ### [CSS BEM Methodology](./css-bem.html)
 ### [JavaScript Module Systems](./js-module-systems.html)
+### [Vue General Start Tips](./vue-general-tips.html)
+### [Vuex General Terms need to know](./vuex-terms.html)
+### [Docker Basic knowledge (recall)](./docker-basics.html)

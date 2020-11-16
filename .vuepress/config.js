@@ -29,7 +29,10 @@ module.exports = {
       'one-word-tips.html',
       'weekly-tips.html',
       'css-bem.html',
-      'js-module-systems.html'
+      'js-module-systems.html',
+      'vue-general-tips.html',
+      'vuex-terms.html',
+      'docker-basics.html'
     ],
     searchMaxSuggestions: 20
   },
