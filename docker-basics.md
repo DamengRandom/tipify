@@ -11,13 +11,14 @@
 - `docker images`: check all images docker are running
 - `docker ps`: check docker container(s) currently up & running
 - `docker ps -a`: check all the docker containers (even not running ones)
-- `docker run -it docker-container-name:latest`: run the docker container !!
+- `docker run -it -p portYouWant:originalPort docker-container-name:latest`: run the docker container !!
 - `docker stop docker-container-hash-ID`: shutdown docker container from running
 - `docker container rm docker-container-hash-ID`: remove container from docker containers list
 - `docker image rm docker-image-hash-ID`: remove docker image from docker images list
 - `docker container ls -a`: shows all docker containers
 - `docker pull image-name`: download docker image to local machine [eg: `docker pull nginx`]
 - `docker container exec -it container-name bash`: access container from terminal !!!!!!!!
+- `docker rm $(docker ps -aq) -f`: remove all the docker containers from your local docker environment
 
 
 #### Docker Configuration Commands:
