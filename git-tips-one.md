@@ -15,6 +15,7 @@ Git Merge: merge changes from remote to local
 2. -- git pull vs git pull rebase:
 
 `git pull = git fetch + git merge`
+
 `git pull --rebase = git fetch + git rebase`
 <!-- this is something to recall quickly: https://github.com/twtrubiks/Git-Tutorials -->
 

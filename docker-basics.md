@@ -38,3 +38,9 @@
 - `docker run -d IMAGE`: `-d` means `--detach`, which refers to a docker container runs in the background of your terminal, which will not show input/output logs in terminal. [Reference <a href="https://docs.docker.com/engine/reference/commandline/container_run/" target="_blank">here</a>]
 - `docker run -i -t debian /bin/bash`: `-i` & `-t` means we want an interactive session with a `tty` attached. `tty` means a terminal which allows user to do input and display the output.
 Normally we have `-it` command, which means it make container start look like a terminal connection session. [Reference <a href="https://stackoverflow.com/questions/30137135/confused-about-docker-t-option-to-allocate-a-pseudo-tty/54254380" target="_blank">here</a>]
+- Why we need docker-compose? `docker-compose` is a `tool` for running multiple containers at the same time
+- How to create volume locally?
+```js
+docker volume create --name=localstore
+```
+- Recent Practice: <a href="https://github.com/DamengRandom/docker-node-mongo" target="_blank">Run A Simple Node API Locally by using Express + MongoDB + Docker</a>
