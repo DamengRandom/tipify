@@ -47,4 +47,25 @@
 
 6. Command `vue ui` is so cool, which allows developer to create a project visually and also able to run `build` process and so `easily` check with the code performance !!!!!!!!!!
 
-7. TBD
+7. `computed` vs `methods`:
+- computed: 
+  * when we need to `filter` or `transform` the data, we consider to use computed property
+  * computed values are `cached` for avoiding repetitive calculations (very important)
+  * in html, no need parentheses `()`
+- method:
+  * just like `normal` js method,
+  * normally `don't` use `arrow` function, because not able to read `this` value
+  * in html, `needs` parentheses `()`
+
+*** Difference example: addToA() and addToB() methods put inside `methods` and `computed`, which results are different (see <a href="https://stackoverflow.com/questions/44350862/method-vs-computed-in-vue" target="_blank">here</a>)
+
+8. `watch`: used for handling `expensive operations` like `frequently data change` -> ask user input and make an API request call and get its response [Example - <a href="https://vuejs.org/v2/guide/computed.html#Watchers" target="_blank">here</a>]
+
+- <a href="https://vuejs.org/v2/guide/computed.html#Computed-vs-Watched-Property" target="_blank">here</a> is the difference between `computed` and `watch`.
+
+9. 
+
+
+
+
+<i>Please send to me an email to correct me <a href="mailto: damonwu0605@gmail.com">here</a> if it's worng</i>
