@@ -65,7 +65,49 @@
 
 9. Vue Reactivity concept: simple word, when we change a element data value, the page will reflect the changes and get value updated as latest value !!!! This <a href="https://www.vuemastery.com/courses/advanced-components/build-a-reactivity-system/" target="_blank">video</a> is like `must` watch !!
 
+10. `$emit`: trigger an event and also allows to pass data from child to parent level, example:
+```js
+// child component
+// method:
+onClickButton() {
+  this.$emit('clicked', 'aloha');
+}
+// trigger:
+<div><button @click="onClickButton">pass child data to parent component</button></div>
 
+// parent component
+// method:
+onClickChild(value) {
+  console.log('value from child pass to parent: ', value);
+  this.childText = value;
+}
+// trigger:
+<Child @clicked="onClickChild($event)" />
+<p>Text from child: {{ childText }}</p>
+```
+
+11. event bus: allow to pass data between components, example:
+<a href="https://medium.com/@andrejsabrickis/https-medium-com-andrejsabrickis-create-simple-eventbus-to-communicate-between-vue-js-components-cdc11cd59860" target="_blank">Reference</a> lazy today ~~~
+
+12. `mixins`: is similar concept with sass mixin functions, basically just make code DRY !!! Example:
+```js
+// create a mixin function (extract same function block code out to an independent file)
+export default {
+  computed: {
+    ... ...
+  }
+}
+// Then, call mixin from each component:
+import mixinFunction from './relative/path/from/codebase';
+export default {
+  data() {
+    ...
+  },
+  methods: ...,
+  mixins: [mixinFunction]
+}
+// now your code no longer repeated !!
+```
 
 
 <i>Please send to me an email to correct me <a href="mailto: damonwu0605@gmail.com">here</a> if it's worng</i>
