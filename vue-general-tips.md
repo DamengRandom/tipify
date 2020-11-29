@@ -120,7 +120,7 @@ export default {
 
 Example:
 
-```js
+```
 <keep-alive>
   <component :is="currentComponent"></component>
 </keep-alive>
