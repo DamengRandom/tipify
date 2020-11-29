@@ -59,9 +59,14 @@
 
 *** Difference example: addToA() and addToB() methods put inside `methods` and `computed`, which results are different (see <a href="https://stackoverflow.com/questions/44350862/method-vs-computed-in-vue" target="_blank">here</a>)
 
-8. `watch`: used for handling `expensive operations` like `frequently data change` -> ask user input and make an API request call and get its response [Example - <a href="https://vuejs.org/v2/guide/computed.html#Watchers" target="_blank">here</a>]
+8. `watch`: used for handling `expensive operations` like `frequently data change` -> ask user input and make an API request call and get its response [Example - <a href="https://stackoverflow.com/questions/43277705/vuejs-difference-between-computed-property-and-watcher#:~:text=It%20does%20not%20create%20any,property%20change%20can%20cause%20recalculation." target="_blank">here</a>]
 
 - <a href="https://vuejs.org/v2/guide/computed.html#Computed-vs-Watched-Property" target="_blank">here</a> is the difference between `computed` and `watch`.
+
+- computed: create a `new` property & do `recalculatin` if any `dependent properties` get updated, `cannot` pass any aruguments
+
+- watch: does `NOT` create new property, watch changes only for `one` specific property and has arguments `new` and `old`
+
 
 9. Vue Reactivity concept: simple word, when we change a element data value, the page will reflect the changes and get value updated as latest value !!!! This <a href="https://www.vuemastery.com/courses/advanced-components/build-a-reactivity-system/" target="_blank">video</a> is like `must` watch !!
 
@@ -109,5 +114,24 @@ export default {
 // now your code no longer repeated !!
 ```
 
+13. dynamic component: change component view based on condition, 2 key words:
+- component: is the <component :is="condition ? componentName : anotherComponent">
+- keep-alive: make sure previous component contents still there, like fulfilled form, contents kept !!!
 
-<i>Please send to me an email to correct me <a href="mailto: damonwu0605@gmail.com">here</a> if it's worng</i>
+Example:
+
+```js
+<keep-alive>
+  <component :is="currentComponent"></component>
+</keep-alive>
+<v-btn @click="currentComponent = 'AppDynamicComponentTwo'">
+  Switch To AppDynamicComponentTwo
+</v-btn>
+<v-btn @click="currentComponent = 'AppDynamicComponentOne'">
+  Switch To AppDynamicComponentOne
+</v-btn>
+```
+
+
+
+<i>Please send to me an email to correct me <a href="mailto:damonwu0605@gmail.com">here</a> if it's worng</i>

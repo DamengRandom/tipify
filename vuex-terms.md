@@ -19,6 +19,6 @@ create a store [step 0]
   --> Go to `component` level, and start calling this module file defined action methods, interacting with vue `directive` methods (eg: `@click`, `@change` ...) [step 4]
   --> so far, we can see we generated a state tracking circle, from `action -> mutation -> store`
 
-<i>Please send to me an email to correct me <a href="mailto: damonwu0605@gmail.com">here</a> if it's worng</i>
+<i>Please send to me an email to correct me <a href="mailto:damonwu0605@gmail.com">here</a> if it's worng</i>
 
 
