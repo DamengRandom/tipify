@@ -1,4 +1,4 @@
-### Vue JS (Version 3)
+### Vuejs Tips
 
 1. VueJS component contains 3 parts:
     - template: html view
@@ -30,7 +30,7 @@
   - `v-once`: only the first time variable setup value get rendered, eg: you set variable `X` value at `data()` function as 1, and `mounted()` set `X` to 2, so now, only 1 get rendered !!
   - `v-html`: render html pieces of code which is set inside `data()` function
   - `v-for`: loop array of elements, eg below:
-  ```html
+  ``` html
     <li v-bind:key="greeting.content" v-for="(greeting, index) in greetings">
       {{ index + 1 }} - {{ greeting.content }}
     </li>
@@ -38,7 +38,7 @@
   - `v-on:click`: trigger clicks event, define method inside `methods` object [another syntax sugar: `@click`]
   - `v-bind:value`: bind the value with `data()` function value [another syntax sugar: `:value`]
   - `@input="handleChange($event)"`: 2 way data binding, eg below:
-  ```html
+  ``` html
     <input type="text" :value="textString" @input="handleChange($event)" />
     or simpler solution: using `v-model`:
     <input type="text" v-model="textString" />
@@ -115,12 +115,12 @@ export default {
 ```
 
 13. dynamic component: change component view based on condition, 2 key words:
-- component: is the <component :is="condition ? componentName : anotherComponent">
+- component: is the `<component :is="condition ? componentName : anotherComponent"></component>`
 - keep-alive: make sure previous component contents still there, like fulfilled form, contents kept !!!
 
 Example:
 
-```
+``` html
 <keep-alive>
   <component :is="currentComponent"></component>
 </keep-alive>
@@ -131,7 +131,6 @@ Example:
   Switch To AppDynamicComponentOne
 </v-btn>
 ```
-
 
 
 <i>Please send to me an email to correct me <a href="mailto:damonwu0605@gmail.com">here</a> if it's worng</i>

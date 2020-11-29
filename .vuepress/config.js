@@ -30,9 +30,9 @@ module.exports = {
       'weekly-tips.html',
       'css-bem.html',
       'js-module-systems.html',
-      'vue-general-tips.html',
       'vuex-terms.html',
-      'docker-basics.html'
+      'docker-basics.html',
+      'vuejs-tips.html',
     ],
     searchMaxSuggestions: 20
   },
