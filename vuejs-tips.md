@@ -133,4 +133,4 @@ Example:
 ```
 
 
-<i>Please send to me an email to correct me <a href="mailto:damonwu0605@gmail.com">here</a> if it's worng</i>
+<i>Please send to me by email to correct me <a href="mailto:damonwu0605@gmail.com">here</a> if it's worng</i>
