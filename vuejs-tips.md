@@ -114,7 +114,7 @@ export default {
 // now your code no longer repeated !!
 ```
 
-13. dynamic component: change component view based on condition, 2 key words:
+13. `dynamic component`: change component view based on condition, 2 key words:
 - component: is the `<component :is="condition ? componentName : anotherComponent"></component>`
 - keep-alive: make sure previous component contents still there, like fulfilled form, contents kept !!!
 
