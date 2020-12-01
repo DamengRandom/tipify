@@ -8,4 +8,21 @@
 
 Using XMLHttpRequest to create a http request and send to sever, and then server send data back to browser, and finally update page content
 
-3. 
+3. `splice` usage for remove one element from array :
+
+```js
+var list = [1,2,3,4,77,5,6];
+var removeTheOne = (value) => {
+  for(var i = 0; i < list.length; i++){
+    if(list[i] === value) {
+      list.splice(i, 1);
+    }
+  }
+  return list;
+};
+
+var afterRemove5 = removeTheOne(5);
+console.log(afterRemove5); // [1,2,3,4,77,6]
+```
+
+4. TBD
