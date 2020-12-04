@@ -33,6 +33,7 @@ module.exports = {
       'vuex-terms.html',
       'docker-basics.html',
       'vuejs-tips.html',
+      './postgres-tips.html',
     ],
     searchMaxSuggestions: 20
   },
