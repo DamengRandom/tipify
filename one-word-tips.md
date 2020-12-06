@@ -21,10 +21,10 @@ let doubled = arr.map(num => {
 ```
 
 
-2. viewport: The viewport is the user's visible area of a web page.
+2. `viewport`: The viewport is the user's visible area of a web page.
 
 
-3. autoprefixer: is a tool to automatically write the vendor properties,
+3. `autoprefixer`: is a tool to automatically write the vendor properties,
 
 eg:
 ```css
@@ -42,7 +42,7 @@ a {
 Support more properties for different browsers, such as IE, (polypill consideration)
 
 
-4. composition funcion:
+4. `composition funcion`:
 
 ```js
 const x = a => a + 1;
