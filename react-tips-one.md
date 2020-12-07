@@ -3,7 +3,7 @@
 
 #### Make API call inside componentDidMount method instead of componentWillMount method:
 
-Explanantion:
+Explanation:
 
 Using a fetch call within `componentWillMount()` causes the component to render with empty data at first, because `componentWillMount()` will `NOT` return before the first render of the component.
 
@@ -27,7 +27,7 @@ Reference: <a href="https://dev.to/nagwan/react-synthetic-events-34e5" target="_
 
 #### React Side Effect
 
-- Concept: it means anything that affacts something outside of the scope of the current function thats being executed 
+- Concept: it means anything that affects something outside of the scope of the current function thats being executed 
 <!-- 影响与当前函数运行范围以外的（代码/功能） -->
 
 In React, generally, side effects responsible for:
@@ -56,14 +56,14 @@ Please find it over <a href="https://stackblitz.com/edit/react-h8oehs?file=src%2
 
 #### React Reconciliation
 
-Simple word: its talks about the diffing algorithm, React uses `key` attribute, make sure its unique !!
-According to the diffing algorithm, we updatet he Virtual DOM tree and re-render the specific DOM element !!
+Simple word: its talks about the `diffing algorithm`, React uses `key` attribute, make sure its unique !!
+According to the `diffing algorithm`, we update the Virtual DOM tree and re-render the specific DOM element !!
 
 
 
 #### React Portals
 
-Render the `tooltips`, `Modal` code out of the `<body>{...}</body>` element, somethings looks like this:
+Render the `tooltips`, `Modal` code out of the `<body>{...}</body>` element, something looks like this:
 
 ```js
 <body>

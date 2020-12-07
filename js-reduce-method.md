@@ -1,6 +1,6 @@
-### JS Reduce Method
+### JavaScript Reduce Method
 
-There are few cases of using javascript reduce method:
+There are few cases of using JavaScript reduce method:
 
 Before start case, there is an sample data:
 ``` js
@@ -127,7 +127,7 @@ const flatten = (acc, element) => {
 
 cleanupVersion = nestedArray.reduce((acc, element) => flatten(acc, element), []);
 
-console.log('After flatten interation, the destructured array: ', cleanupVersion);
+console.log('After flatten interaction, the destructured array: ', cleanupVersion);
 ```
 
 

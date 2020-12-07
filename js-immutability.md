@@ -1,9 +1,9 @@
-### Javascript Immutability
+### JavaScript Immutability
 
 #### Concept:
 
 In JavaScript, if the variable is mutable, when we modifies the copy also the original variable get modified.
-If ariable is immutable, when we modifies the copy, the copy does not affect the original variable.
+If variable is immutable, when we modifies the copy, the copy does not affect the original variable.
 
 2 major variable types: 
 - primitive type: `string`, `null`, `undefined`, `boolean`, `number` and `symbol` (Immutable) [(Unchangable)]
@@ -41,7 +41,7 @@ var values = [{name: 'dameng', happy: true}, {name: 'unknown', happy: false}];
 console.log('Output happy value(s)', values.filter(value => value.happy === true));
 console.log('Output original values array: ', values); // values array stay unchanged
 
-// spread operator: immutabel way handle data (basically assign to a new variable)
+// spread operator: immutable way handle data (basically assign to a new variable)
 const newValues = [...values, {name: 'haha', happy: 'true'}];
 console.log('Output newValues array: ', newValues);
 console.log('Output original values array: ', values); // values array stay unchanged
@@ -66,10 +66,10 @@ const concatValues = values.concat([{name: 'huhu', happy: true}]);
 console.log('Output concatValues array: ', concatValues);
 console.log('Output original values array: ', values); // values array stay unchanged
 
-// Conclision: in redux, we use concat instead of push to handle our data !!!!
+// Conclusion: in redux, we use concat instead of push to handle our data !!!!
 ```
 
 
-In React, `immutability` makes state more predictable, thats why we need `immutable` way to handle our variable values, especially `state`.
+In React, `immutability` makes state more predictable, that's why we need `immutable` way to handle our variable values, especially `state`.
 
 Good tool: <a href="https://immutable-js.github.io/immutable-js/" target="_blank">immutable.js</a>

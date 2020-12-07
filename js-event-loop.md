@@ -2,17 +2,17 @@
 
 #### Concept:
 
-Event loop is how JavaScript handle events, according to my current understanding, we can understand like this:
+Event loop is how JavaScript handle events, also related with JavScript coding running sequence, according to my current understanding:
 
-we have 4 compoennts to describe how JavaScript code running sequence, `heap`, `stack`, `web APIs` and `event queue`.
+we have 4 components to describe the JavaScript code running sequence, `heap`, `stack`, `web APIs` and `event queue`.
 
 Step 1: heap -> stack (pass code to run on stack)
 
-Step 2: stack -> web APIs (eg: `setTimeout()` could be like web APIs, and it will run behind the scense, making sure nothing blocked)
+Step 2: stack -> web APIs (eg: `setTimeout()` could be like web APIs, and it will run behind the scene, making sure nothing blocked)
 
-Step 3: webAPIs -> event queue (pass function event into event queue and event queue will listen if stack run out of tasks, then pass the function event back to stack and run)
+Step 3: web APIs -> event queue (pass function event into event queue and event queue will listen if stack running out of tasks, then pass the function event back to stack and run)
 
-stack run the function event and when it finished, Javascript function are finished running.
+stack run the web APIs function event and when it finished, all code are finished running.
 
 Classic Example:
 

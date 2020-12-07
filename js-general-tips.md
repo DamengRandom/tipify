@@ -1,4 +1,4 @@
-### Javascript General Tips 
+### JavaScript General Tips 
 
 * (Only record the knowledge I always forget)
 
@@ -85,8 +85,8 @@ for(var item of items) {
 ```js
 Object.assign(obj, {newKey: newValue});
 // example:
-var assigneObject= Object.assign({}, {'newKey': 'newValue'});
-assigneObject; // {newKey: 'newValue'}
+var assignObject= Object.assign({}, {'newKey': 'newValue'});
+assignObject; // {newKey: 'newValue'}
 
 
 Object.defineProperty(obj, prop, descriptor); // descriptor is an object which contains value and decide whether this object value is able to be reassigned or not=

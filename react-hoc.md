@@ -1,10 +1,10 @@
 ### React High Order Component (HOC)
 
-High order component concept: basically is for reusing the component logic
-  - pass a input component as a 'Parameter' and return a new output component.
+`High Order Component` concept: basically is for reusing the component logic
+  - Pass a input component as a 'Parameter' and return a new output component.
   - HOC is same concept with High Order Function in JavaScript
 
-Please never use HOC inside render function
+*** Please never use HOC inside render function ***
 
 Example of fetch data with loader HOC: <a href="https://stackblitz.com/edit/react-kv6hgk?file=src/Components/Todo.js" target="_blank">Click here</a>
 

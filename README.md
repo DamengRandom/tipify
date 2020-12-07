@@ -12,8 +12,7 @@ yarn dev // which will run the project locally, you can follow yhe terminal and 
 yarn docs:build // will build up the project and make the latest editions available on the browser
 ```
 
-### :tada::tada: [Thanks](./thanks.html)  :tada::tada:
-### [What is tipify?](./tipify.html)
+### :tada::tada: [What is tipify?](./tipify.html)  :tada::tada:
 ### [Git general commands](./git-tips-one.html)
 ### [React tips one](./react-tips-one.html)
 ### [JavaScript reduce method](./js-reduce-method.html)
@@ -25,8 +24,6 @@ yarn docs:build // will build up the project and make the latest editions availa
 ### [JavaScript Event Loop](./js-event-loop.html)
 ### [JavaScript Hoisting](./js-hoisting.html)
 ### [JavaScript Closure](./js-closure.html)
-### [.Net CLI commands](./dotnet-cli-commands.html)
-### [.Net files meaning](./dotnet-files-meaning.html)
 ### [.NET CQRS pattern](./dotnet-cqrs.html)
 ### [React HOC](./react-hoc.html)
 ### [Server Side Rendering](./sever-side-rendering.html)

@@ -26,9 +26,9 @@ let word; // cause ERROR
 
 #### Quick word for JavaScript strict mode:
 
-`"user strict"` is a mode ensure develoepr write better and secure code:
+`"user strict"` is a mode ensure developer write better and secure code:
 
-Under these mode, developer cannot do these:
+Under these modes, developer cannot do these:
 
 ``` js
 // 1. None of these keywords can be used as variable name:

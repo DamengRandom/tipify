@@ -2,7 +2,7 @@
 
 #### Tip 1: Quick recall tips (In case forgot)
 1. <>: not equal (Operator)
-2. 1. IN is = ANY (shorthand for multiple OR conditions) in PostgreSQL
+2. IN is = ANY (shorthand for multiple OR conditions) in PostgreSQL
 
 ```sql
 SELECT * FROM Customers
@@ -10,10 +10,10 @@ WHERE Country NOT IN ('Germany', 'France', 'UK', 'USA');
 ```
 
 3. Joins:
-- inner joins: common area
-- left join: full left table + common area between left and right tables
-- right join: full right table + common area between left and right tables
-- full outer join: left join: full left and right tables
+- `inner join`: common area
+- `left join`: full left table + common area between left and right tables
+- `right join`: full right table + common area between left and right tables
+- `full outer join`: left join: full left and right tables
 
 ![joins table](https://res.cloudinary.com/dameng/image/upload/v1607324509/tipify/joins.png)
 
@@ -26,7 +26,7 @@ JSON is stored in its plan text format
 JSONB is stored in a binary representation
 JSONB is faster, coz already in binary format, no need transform
 
-In PostgresSQL, the difference between text format and json format inside database is json format as double quotes (eg: “name”), text format has no quote symbol (eg: name)
+In PostgreSQL, the difference between text format and json format inside database is json format as double quotes (eg: “name”), text format has no quote symbol (eg: name)
 
  
 JSONB general examples:

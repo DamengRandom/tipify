@@ -27,7 +27,7 @@ Basically, we are writing `Meditor.Send(object)` inside controller level, and se
 
 The map: API controller (`Meditor.Send(object)`) -> object (into handler) -> Handler doing the magic logics -> object (as the handler result) -> API controller (with the response)
 
-1. Commande Hanlder:
+1. Command Handler:
 
 Example story:
 
@@ -37,4 +37,4 @@ We try to create an activity object inside `CreateActivityController`, and we se
 
 Example story:
 
-We try to get an acitivty data from `GetActivityController`, we pass teh data id as object into `GetActivityCommandHandler` and inside handler we check whether the activity exists or not, abd if activity has been found, we pass it into ActivityDTO (Data Transfer Object) and return ActivityDTO back to `GetActivityController`. Finally, controller will send `OK(activity)` as response back to APi consumer.
+We try to get an activity data from `GetActivityController`, we pass the data id as object into `GetActivityCommandHandler` and inside handler we check whether the activity exists or not, and if activity has been found, we pass it into ActivityDTO (`Data Transfer Object`) and return ActivityDTO back to `GetActivityController`. Finally, controller will send `OK(activity)` as response back to API consumer.

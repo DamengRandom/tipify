@@ -1,6 +1,6 @@
 ### BEM (Block, Element & Modifier) Methodology
 
-Concept:
+`Concept`: Block, Element and Modifier -> provide a modular structure to your CSS project, also provide relationship between CSS and HTML.
 
 
 Example 1:

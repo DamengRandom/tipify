@@ -5,7 +5,6 @@ module.exports = {
       { text: 'Github', link: 'https://github.com/DamengRandom/tipify' }
     ],
     sidebar: [
-      'thanks.html',
       'tipify.html',
       'git-tips-one.html',
       'react-tips-one.html',
@@ -18,8 +17,6 @@ module.exports = {
       'js-event-loop.html',
       'js-hoisting.html',
       'js-closure.html',
-      'dotnet-cli-commands.html',
-      'dotnet-files-meaning.html',
       'dotnet-cqrs.html',
       'react-hoc.html',
       'server-side-rendering.html',

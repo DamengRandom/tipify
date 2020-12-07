@@ -25,8 +25,10 @@ let doubled = arr.map(num => {
 
 
 3. `autoprefixer`: is a tool to automatically write the vendor properties,
+it has been used fo support more properties for different browsers, such as IE, (polyfill consideration)
 
-eg:
+Example:
+
 ```css
 a {
     transition: transform 1s;
@@ -39,10 +41,8 @@ a {
 }
 ```
 
-Support more properties for different browsers, such as IE, (polypill consideration)
 
-
-4. `composition funcion`:
+4. `composition function`:
 
 ```js
 const x = a => a + 1;

@@ -26,11 +26,11 @@
 - `FROM`: setup the image (which image is going to be used for this docker configuration) [very first step]
 - `RUN`: execute the commands on top of the current image
 - `WORKDIR`: setup working directory for `RUN`, `CMD`, `ENTRYPOINT`, `COPY` and `ADD` instructions that follow it in the `Dockerfile`
-- `COPY`: copy local folder path to contaner folder path (from `src` to `dest`)
+- `COPY`: copy local folder path to container folder path (from `src` to `dest`)
 - `EXPOSE`: tell docker which port need to be listened on at runtime
-- `ENTRYPOINT`: config execyutable command, such as `node`
+- `ENTRYPOINT`: config executable command, such as `node`
 - `CMD`: the following commands after entrypoint, eg: `server/index.js`, so combine together: `node server/index.js`
-- `ENV`: setup environment variable for docker container to read/use
+- `ENV`: setup environment variable for docker container to read (use)
 - `ADD`: copy new files/directories from `src` to `dest`
 
 

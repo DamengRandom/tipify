@@ -1,9 +1,9 @@
-### TS bascis
+### TypeScript bascis
 
-This post is recording the bascics knowledge of Typesicrpt (TS).
+<i>This post is recording the basics knowledge of TypeScript (TS).</i>
 
-What is typescript (TS)?
-Is a superset of Javascript (JS), which is strongly typed lanaguage, which also eventually will complies the code down to the JAvascript level, because browser only understands Javscript.
+What is TypeScript (TS)?
+Is a superset of JavaScript (JS), which is strongly typed language, which also eventually will complies the code down to the JavaScript level, because browser only understands JavaScript.
 
 Essential concepts:
 
@@ -16,9 +16,9 @@ Essential concepts:
   <li>Access Modifiers</li>
 </ol>
 
-Before start, setup basics environment to run typescript code:
+Before start, setup basics environment to run TypeScript code:
 
-Please install typescript in your browser first by running this command:
+Please install TypeScript in your browser first by running this command:
 ```js
 // Install first
 npm install -g typescript
@@ -29,7 +29,7 @@ tsc -v
 How to compile a `.ts` file to `.js` file (ts -> js)?
 ```js
 // eg: create a xxx.ts file first
-// Then run comand 
+// Then run command 
 tsc xxx.ts
 // you will see js file has been generated as
 // xxx.js
@@ -43,7 +43,7 @@ The reason of using types:
 <ol style="padding-left: 3rem;">
   <li>Static type checking</li>
   <li>Give hint about what's going wrong?</li>
-  <li>Intelligence suggestions, eg: if you define a number num, then you type num., you will find the suggestions only related with numermic type of APIs</li>
+  <li>Intelligence suggestions, eg: if you define a number `num`, then you type `num.`, you will find the suggestions only related with numeric type of APIs</li>
 </ol>
 
 Here are the basics implementations for recording purpose only:
@@ -52,7 +52,7 @@ Here are the basics implementations for recording purpose only:
 // When the time we see this warning: Cannot redeclare block-scoped variable 'message'.ts(2451)
 // we add export {}; to resolve it
 export {};
-let message = "Ahoy, Dmaon !!";
+let message = "Ahoy, Damon !!";
 console.log(message);
 
 
@@ -62,7 +62,7 @@ let isTrue: boolean = false; // boolean
 let number: number = 1; // number
 
 
-// Sub type can be used for initialise a variable or reassign the value to a declared variable 
+// Sub type can be used for initialize a variable or reassign the value to a declared variable 
 let n = null; // sub-type null
 let u = undefined; // sub-type undefined
 isTrue = n; 
@@ -89,7 +89,7 @@ console.log('Enum color with value: ', ColorWithValue.Green);
 
 
 // When to use type 'any'?
-// When the time we need to reasign value to different type, Eg: 
+// When the time we need to reassign value to different type, Eg: 
 let valueReadFromLibrary: any = 10;
 valueReadFromLibrary = false;
 
@@ -103,7 +103,7 @@ console.log(noReassignTypeAny.name); // object, wrong (X)
 // Type 'unknown':
 let unknownVariableType: unknown = 10;
 unknownVariableType = 'become a string';
-// console.log(unknownVariableType.toUpperCase()); // If not define a type in advance, ts will give us error hint, so we need to predefine liek this: 'variable as type'
+// console.log(unknownVariableType.toUpperCase()); // If not define a type in advance, ts will give us error hint, so we need to predefine like this: 'variable as type'
 console.log((unknownVariableType as string).toUpperCase());
 
 
@@ -117,7 +117,7 @@ multipleTypeVariable = false;
 // Big topic: functions for TS
 function sum(n1: number, n2?: number): number {
 // ? means value is optional, can be fill in or leave it as empty
-// the last : number means we defined the function sum output MUST be a number type value
+// the last: number means we defined the function sum output MUST be a number type value
   return n1 + n2;
 };
 
@@ -136,7 +136,7 @@ console.log('n2 can be optional: ', preDefinedValueThenSum(1)); // value is 1 !!
 
 
 // Another big topic of Interface:
-// We can specifiy the object as type in typescript -> Interface !!!!!!
+// We can specify the object as type in TypeScript -> Interface !!!!!!
 // Use case:
 function fullName(person: {firstName: string, lastName: string}) {
   return `${person.firstName}, ${person.lastName}`;
@@ -149,7 +149,7 @@ let p = {
 
 console.log(fullName(p));
 
-// So in above case, we see person: {firstName: string, lastName: string}, which might be repeated for later usage, so if we have function B, C D ..., we all need to defined person like this format, person: {firstName: string, lastName: string}, which is bad practice, here comes with Interface !!!!
+// So in above case, we see person: {firstName: string, lastName: string}, which might be repeated for later usage, so if we have function B, C D ..., we all need to defined person like this format, person: {firstName: string, lastName: string}, which is a bad practice, here comes with Interface !!!!
 
 interface Person {
   firstName: string,
@@ -187,14 +187,14 @@ let emp1 = new Employee('Damon');
 console.log("What is the instance variable value: ", emp1.employeeName); // Important concept
 console.log(emp1.greet());
 
-// Now we introduce 'super' suage for another class: (How inheritance works)
+// Now we introduce 'super' usage for another class: (How inheritance works)
 class Manager extends Employee {
   constructor(managerName: string) {
     super(managerName);
   }
 
   delegateNameForManager() {
-    console.log('Manager class can call employee class method and assign its value emplyee class liek below result: ');
+    console.log('Manager class can call employee class method and assign its value emplyee class like below result: ');
   }
 }
 
@@ -204,7 +204,7 @@ console.log('Employee class variable got value from Manager class: ', m1.employe
 m1.greet();
 
 
-// Access Modifer
+// Access Modifier
 // public: (default one) enable to be access by any class or functions
 // private: only can be accessed by its own class, not outside the class
 // protected: can be access only when within the class and subclasses)
@@ -236,6 +236,4 @@ console.log('whats p1? ', p1);
 let instanceOfB = new B('Damon', "IT");
 console.log(instanceOfB.message());
 // console.log(instanceOfB.name); // got error for accessing instanceOfB.name
-
-// In a word, I don't like protected, nothing but useless for my current understanding
 ```

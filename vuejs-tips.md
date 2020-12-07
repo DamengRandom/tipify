@@ -1,4 +1,4 @@
-### Vuejs Tips
+### VueJS Tips
 
 1. VueJS component contains 3 parts:
     - template: html view
@@ -7,17 +7,17 @@
 
 2. `data()`: contains all the data (eg API returns) for the component
 
-3. `methods`: a place to write all customised functions 
+3. `methods`: a place to write all customized functions 
 
 4. Vue LifeCycle methods:
-  - beforeCreate(): before template get ready
-  - created(): able to get `data()` attributes value fro this component
-  - beforeMount(): runs before `initial render` after `template` or `render functions` have been compiled
-  - mounted(): component finish `rendered` [proves that component has finished load process (we can shw some data after `mounted`)]
-  - beforeUpdate(): get running after `data changed` and before `DOM re-rendered`
-  - updated(): trigger DOM re-render
-  - beforeDestroy(): reset some values before component `vanished`
-  - destroyed(): `destroyed` component
+  - `beforeCreate()`: before template get ready
+  - `created()`: able to get `data()` attributes value for this component
+  - `beforeMount()`: runs before `initial render` after `template` or `render functions` have been compiled
+  - `mounted()`: component finish `rendered` [proves that component has finished load process (we can shw some data after `mounted`)]
+  - `beforeUpdate()`: get running after `data changed` and before `DOM re-rendered`
+  - `updated()`: trigger DOM re-render
+  - `beforeDestroy()`: reset some values before component `vanished`
+  - `destroyed()`: `destroyed` component
 
   beforeCreate && created -> initialization
   beforeMount && mounted -> render
@@ -37,7 +37,7 @@
   ```
   - `v-on:click`: trigger clicks event, define method inside `methods` object [another syntax sugar: `@click`]
   - `v-bind:value`: bind the value with `data()` function value [another syntax sugar: `:value`]
-  - `@input="handleChange($event)"`: 2 way data binding, eg below:
+  - `@input="handleChange($event)"`: 2 way data binding, example below:
   ``` html
     <input type="text" :value="textString" @input="handleChange($event)" />
     or simpler solution: using `v-model`:
@@ -63,12 +63,12 @@
 
 - <a href="https://vuejs.org/v2/guide/computed.html#Computed-vs-Watched-Property" target="_blank">here</a> is the difference between `computed` and `watch`.
 
-- computed: create a `new` property & do `recalculatin` if any `dependent properties` get updated, `cannot` pass any aruguments
+- computed: create a `new` property & do `re-calculation` if any `dependent properties` get updated, `cannot` pass any arguments
 
 - watch: does `NOT` create new property, watch changes only for `one` specific property and has arguments `new` and `old`
 
 
-9. Vue Reactivity concept: simple word, when we change a element data value, the page will reflect the changes and get value updated as latest value !!!! This <a href="https://www.vuemastery.com/courses/advanced-components/build-a-reactivity-system/" target="_blank">video</a> is like `must` watch !!
+9. Vue Reactivity concept: simple word, when we change a element data value, the page will reflect the changes and get value updated as latest value !!!! This <a href="https://www.vuemastery.com/courses/advanced-components/build-a-reactivity-system/" target="_blank">video</a> is like `must` watch!!
 
 10. `$emit`: trigger an event and also allows to pass data from child to parent level, example:
 ```js
@@ -94,7 +94,7 @@ onClickChild(value) {
 11. event bus: allow to pass data between components, example:
 <a href="https://medium.com/@andrejsabrickis/https-medium-com-andrejsabrickis-create-simple-eventbus-to-communicate-between-vue-js-components-cdc11cd59860" target="_blank">Reference</a> lazy today ~~~
 
-12. `mixins`: is similar concept with sass mixin functions, basically just make code DRY !!! Example:
+12. `mixins`: is similar concept with sass mixin functions, basically just make code DRY!!! Example:
 ```js
 // create a mixin function (extract same function block code out to an independent file)
 export default {
@@ -111,7 +111,7 @@ export default {
   methods: ...,
   mixins: [mixinFunction]
 }
-// now your code no longer repeated !!
+// now your code no longer repeated!!
 ```
 
 13. `dynamic component`: change component view based on condition, 2 key words:
@@ -133,4 +133,4 @@ Example:
 ```
 
 
-<i>Please send to me by email to correct me <a href="mailto:damonwu0605@gmail.com">here</a> if it's worng</i>
+<i>Please send to me by email to correct me <a href="mailto:damonwu0605@gmail.com">here</a> if it's wrong</i>

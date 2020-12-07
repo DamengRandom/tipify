@@ -64,13 +64,13 @@ download(url, process);
 
 #### Important Tips for Promise:
 
-Technically, the reason why we need Promise is we need to make things happen `asynchronously` without `waiting`, better performance and got error handlings as well.
+Technically, the reason why we need `Promise` is we need to make things happen `asynchronously` without `waiting`, better performance and got error handlings as well.
 
-Imagine when you call server to get data, you don't know server is down or gives back with a slower response. In this case, you don't want to make the entire process blocked, so you choose `asynchronous` way to deal with this situation, making sure nothing is blocked !
+Imagine when you call server to get data, you don't know server is down or gives back with a slower response. In this case, you don't want to make the entire process blocked, so you choose `asynchronous` way to deal with this situation, making sure nothing is blocked!
 
-Another reason for using Promnise is to avoid callback hell.
+Another reason for using `Promise` is to avoid callback hell.
 
-Prommise has 3 states:
+Promise has 3 states:
 
 1. Pending: waiting for response
 2. Fulfilled: happy ending with response
@@ -89,7 +89,7 @@ var buyEllaGift = true;
 var willBuyEllaGiftPromise = new Promise((resolve, reject) => {
   if(buyEllaGift) {
     var gift = {
-      name: 'wawa'
+      name: 'test'
     };
     resolve(gift);
   } else {
@@ -103,7 +103,7 @@ var receiveGiftPromise = gift => {
   return Promise.resolve(message);
 };
 
-var buyingAndReciving = () => {
+var buyingAndReceiving = () => {
   console.log("Before buying gift for Ella .."); // run order: 1
   willBuyEllaGiftPromise
     .then(receiveGiftPromise)
@@ -117,7 +117,7 @@ var buyingAndReciving = () => {
   console.log("After buying check whether Ella received gift or not .."); // run order: 2
 };
 
-buyingAndReciving();
+buyingAndReceiving();
 ```
 
 
@@ -128,8 +128,8 @@ Basic Concept: also a way to handle things `asynchronously`. Better version of P
 Example compared with Promise:
 
 ``` js
-// Using Async await way to write buyingAndReciving() function:
-var buyingAndReciving = async () => {
+// Using Async await way to write buyingAndReceiving() function:
+var buyingAndReceiving = async () => {
   console.log("Before buying gift for Ella .."); // run order: 1
   try {
     const gift = await callWillBuyEllaGiftPromise;

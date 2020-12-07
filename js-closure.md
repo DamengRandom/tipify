@@ -1,10 +1,10 @@
 ### JavaScript Closure
 
-Before everything, we need to know JavaScript has 2 types of variables, `global` & `local` variable !!
+Before everything, we need to know JavaScript has `2` types of variables, `global` & `local` variable!!
 
 #### Concept:
 
-function having access to parent scope, especially function can use variable which defined outside of the function !!!
+function having access to parent scope, especially function can use variable which is defined outside of the function!!!
 
 Example:
 

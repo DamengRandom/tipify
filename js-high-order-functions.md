@@ -1,4 +1,4 @@
-### JavascScript High Order Functions
+### JavasScript High Order Functions
 
 #### Concept:
 
@@ -20,4 +20,4 @@ const sumup = x => y => x + y;
 sumup(1)(2); // results is: 3
 ```
 
-The typical examples of using high order functions are array methods: map, filter and reduce.
+The typical examples of using high order functions are array methods: `map`, `filter` and `reduce`.

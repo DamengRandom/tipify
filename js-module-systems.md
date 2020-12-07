@@ -1,31 +1,31 @@
-### JavaScript Module Systems Undersatnding
+### JavaScript Module Systems Understanding
 
 *** Never forget I failed on interview with this question !!! ***
 
 #### Main types:
 
-1. CommonJS: 
-  - implemented by nodejs
+1. `CommonJS`: 
+  - implemented by NodeJS
   - used for `server side` when you have modules installed
-  - `no` tree shaking (because when you import you get an object)
-  - import (`require`), export (`modulex.exports`)
+  - `no` tree shaking (because when you import, you get an object)
+  - import (`require`), export (`module.exports`)
   - you always got a copy of an object, `no live changes` in module itself
 
-2. AMD (Async Module Definition)
+2. `AMD` (Async Module Definition)
   - implemented by require.js
-  - used for `client side` when you dynamiclly loading of modules
+  - used for `client side` when you dynamically loading of modules
   - import via `require`
 
-3. UMD (Universal Module Definition)
+3. `UMD` (Universal Module Definition)
   - combination of `CommonJS + AMD`
   - can be used for both CommonJS or AMD `environment`
   - capable of working on both `client` and `server` side
 
-4. Harmony (ES6)
-  - utilised for both `client` & `server` side
+4. `Harmony` (ES6)
+  - utilized for both `client` & `server` side
   - using `import` & `export` syntax
   - able to `tree shake`
-  - static analysing: can determine `imports` and `exports` at `compile` time 
+  - static analyzing: can determine `imports` and `exports` at `compile` time 
   - support for `live changes` in module itself
 
 
@@ -34,15 +34,15 @@
 1. webpack: 
     - bundle/package up js files for usage in a browser
     - uses CommonJS module system
-    - features: code spliting, async loading & tree shaking
+    - features: code splitting, async loading & tree shaking
 2. rollup: 
-    - complies small pieces of js code into something larger, eg: library or application
+    - complies small pieces of JavaScript code into something larger, eg: library or application
     - uses ES6 module system
     - features: support tree shaking, but not async loading
 
 Tips: Babel: is a transpiler  (just transpile, never bundle code)
 
-Suggestion: using rollup for building `library`, using webpack for budiling `application`
+Suggestion: using rollup for building `library`, using webpack for building `application`
 
 
 
