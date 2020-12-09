@@ -52,4 +52,22 @@ console.log(x(y(5)))
 ```
 
 
-5. TBD
+5. `ORM` [Object Relational Mapper]
+- concept: its a technique which helps developer talk to database more easier
+
+
+6. `Service Worker`: A service worker is a `script` that stands between your website and the network, giving you, among other things, the ability to intercept network requests and respond to them in different ways.
+ 
+
+7. Copy file by terminal commands
+
+```shell
+cp -a /source_folder/. /destination_folder/
+```
+
+<a href="https://askubuntu.com/questions/86822/how-can-i-copy-the-contents-of-a-folder-to-another-folder-in-a-different-directo" target="_blank">
+    Reference
+</a>
+
+
+8. 
