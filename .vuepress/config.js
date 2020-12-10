@@ -31,6 +31,7 @@ module.exports = {
       'docker-basics.html',
       'vuejs-tips.html',
       './postgres-tips.html',
+      'sql-tips.html',
     ],
     searchMaxSuggestions: 20
   },

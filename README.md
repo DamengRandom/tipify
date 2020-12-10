@@ -37,4 +37,5 @@ yarn docs:build // will build up the project and make the latest editions availa
 ### [Vuex General Terms need to know](./vuex-terms.html)
 ### [VueJS Tips](./vuejs-tips.html)
 ### [Postgres SQL Tips](./postgres-tips.html)
+### [SQL Tips](./sql-tips.html)
 ### [Docker Basic knowledge (recall)](./docker-basics.html)
