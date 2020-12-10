@@ -32,6 +32,7 @@ module.exports = {
       'vuejs-tips.html',
       './postgres-tips.html',
       'sql-tips.html',
+      'webpack-tips.html',
     ],
     searchMaxSuggestions: 20
   },

@@ -38,4 +38,5 @@ yarn docs:build // will build up the project and make the latest editions availa
 ### [VueJS Tips](./vuejs-tips.html)
 ### [Postgres SQL Tips](./postgres-tips.html)
 ### [SQL Tips](./sql-tips.html)
+### [Webpack basics Tips](./webpack-tips.html)
 ### [Docker Basic knowledge (recall)](./docker-basics.html)
