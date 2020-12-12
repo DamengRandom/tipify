@@ -11,8 +11,10 @@
 
 
 #### Remembers:
-1. `publicPath`: tells webpack where the generic files are located, eg: 
+1. `publicPath`: tells webpack where the generic files are located
+
 2. `file-loader` example:
+
 ``` js
   rules: [
     {
@@ -25,7 +27,9 @@
     }
   ]
 ```
+
 3. Example of support scss:
+
 ```js
   {
     test: /\.scss$/,
@@ -37,6 +41,7 @@
 ```
 
 4. babel example:
+
 ```js
   {
     test: /\.js$/,
@@ -62,8 +67,49 @@ filename: 'styles.[contenthash].js'
 // DON'T forget to use CleanWebpackPlugin plugin tool to remove old cached files inside dist folder
 ```
 
-6. TBD
+6. `optimization` option:
+Use case: inside a file, we import an extra library like lodash, and we can use `splitChunks` to optimize each bundle (or just one bundle) file size so we can reduce file size for imported dependencies
 
+```js
+optimization: {
+  splitChunks: {
+    chunks: 'all', // all types of chunks
+    minSize: 10000, // minimized size for a chunk to be generated
+    automaticNameDelimiter: '_' // specify the delimiter to use for the generated names
+  }
+}
+
+// for each path
+new HtmlWebpackPlugin({
+    filename: 'hello-world.html',
+    chunks: ['hello-world'], // import it !!!!
+    title: 'Hello world',
+    ... ...
+}),
+```
+
+7. How `NodeJS` read `static` files, like css, images, other types of assets files:
+
+```js
+// In node file:
+app.use('/static', express.static(path.resolve(__dirname, '../dist')));
+
+// In webpack file:
+publicPath: '/static/'
+
+// we define the static path in express `/static` and then we webpack read it as `/static/`
+```
+
+8. How NodeJS output html file like SSR:
+```js
+['route1', 'route2'].forEach(function(route) { // multiple routes/pages
+  app.get('/' + route + '/', function(req, res) {
+    const pathToHtmlFile = path.resolve(__dirname, '../dist/' + route + '.html');
+    const contentFromHtmlFile = fs.readFileSync(pathToHtmlFile, 'utf-8');
+    res.send(contentFromHtmlFile);
+  });
+});
+```
 
 
 <i>Please send to me by email to correct me <a href="mailto:damonwu0605@gmail.com">here</a> if it's wrong</i>
