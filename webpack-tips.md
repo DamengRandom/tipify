@@ -1,4 +1,4 @@
-### Webpack basics recalls
+### Webpack 5 basics recalls
 
 `Webpack`: its module bundler which bundle styles, assets, scripts and generate as bundle files for hosting somewhere
 
@@ -40,7 +40,7 @@
   // the running sequence is: sass-loader (with node-sass library) then css-loader and then style-loader !!!
 ```
 
-4. babel example:
+4. `babel` rule example:
 
 ```js
   {
@@ -111,5 +111,157 @@ publicPath: '/static/'
 });
 ```
 
+9. `module federation` (webpack 5 feature):
+- is a concept which allows one application loads modules which comes from another application at run time!!
 
+Example:
+
+```js
+// 1. sub-module setup:
+
+// create sub-module interface page:
+class HelloWorldPage {
+  render() {
+    const heading = new Heading();
+    heading.render('hello world');
+    const helloWorldButton = new HelloWorldButton();
+    helloWorldButton.render();
+  }
+}
+// webpack settings:
+const { ModuleFederationPlugin } = require('webpack').container;
+
+// entry as sub-module page name:
+entry: './src/hello-world.js',
+
+// set a public path:
+output: {
+  ... ...
+  publicPath: 'http://localhost:9001/'
+},
+
+// module need to be exposed: 
+new ModuleFederationPlugin({
+  name: 'HelloWorldApp',
+  filename: 'remoteEntry.js',
+  exposes: {
+    './HelloWorldButton': './src/components/hello-world-button/hello-world-button.js', // one of components
+    './HelloWorldPage': './src/components/hello-world-page/hello-world-page.js' // sub-module page !!!
+  }
+})
+
+
+// 2. major module setup:
+
+// calling in parent module JS file:
+import('HelloWorldApp/HelloWorldButton')
+  .then(HelloWorldButtonModule => {
+    const HelloWorldButton = HelloWorldButtonModule.default;
+    const helloWorldButton = new HelloWorldButton();
+    helloWorldButton.render();
+  });
+
+// In NodeJS file: make sure the path is: '/'
+app.use('/', express.static(path.resolve(__dirname, '../dist')));
+
+// webpack settings:
+const { ModuleFederationPlugin } = require('webpack').container;
+
+// entry as sub-module page name:
+entry: './src/parentModule.js',
+
+// set a public path:
+output: {
+  ... ...
+  publicPath: 'http://localhost:9002/'
+},
+
+// calling sub-module:
+new ModuleFederationPlugin({
+  name: 'ParentModuleApp',
+  remotes: {
+    HelloWorldApp: 'HelloWorldApp@http://localhost:9001/remoteEntry.js'
+  }
+})
+```
+
+10. webpack font(s) import:
+
+```js
+// copy a font file, like google fonts
+// inside webpack file, we need set a rule, eg:
+{
+  test: /\.(ttf)$/,
+  use: [
+    {
+      loader: 'file-loader',
+      options: {
+        name: '[name].[ext]',
+        outputPath: 'fonts/'
+      }
+    }
+  ]
+}
+```
+
+```css
+/* also need to import css files */
+@font-face {
+  font-family: 'Langar', cursive;
+  font-weight: 300;
+  src: url('./fonts/Langar-Regular.ttf');
+}
+
+html {
+  body {
+    font-family: 'Langar', cursive;
+    font-weight: 300;
+  }
+}
+```
+
+11. Adding `eslint` (nothing to do with webpack, just add it):
+
+```js
+// step 1: create a `.eslintrc` file
+{
+  "extends": "eslint:recommended",
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "rules": {
+    "no-console": 0 // allow console log
+  }
+}
+
+// step 2: create a `.eslintignore` file to avoid the file to do lint checking:
+node_modules/
+/dist
+/build
+...
+
+// step 3: In package.json add new command:
+"lint": "eslint ."
+```
+
+12. npm webpack `production` vs `development` command example:
+
+```js
+"build": "webpack --config webpack.production.config.js",
+"dev": "webpack serve --config webpack.dev.config.js --hot",
+```
+
+13. References:
+
+- Recall knowledge from webpack 5 Udemy course <a href="https://www.udemy.com/course/webpack-from-beginner-to-advanced/learn/lecture/12761343#overview" target="_blank">here</a>
+- <a href="https://webpack.js.org/concepts/why-webpack/" target="_blank">why webpack?</a>
+
+<br/>
+<br/>
 <i>Please send to me by email to correct me <a href="mailto:damonwu0605@gmail.com">here</a> if it's wrong</i>
