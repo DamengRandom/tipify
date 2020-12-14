@@ -35,5 +35,18 @@
     order by first_name desc
   ```
   -  `LIMIT`: top number of records (eg: top 10 records)
-  -  `JOIN ON`:  join two tables together
-  
+  -  `JOIN ON`:  join two tables together, if we type JOIN means inner join, eg:
+  ```sql
+  join tableName on condition (tableA.AttributeId == tableB.AttributeId) 
+  join customers on orders.customer_id = customers.customer_id 
+  select oi.order_id, oi.unit_price from order_items oi join products p on p.product_id = oi.product_id
+  ```
+  -  `JOIN`: join across multiple dbs
+  - outer join: `LEFT JOIN` & `RIGHT JOIN`:
+    - eg: join start from left table or start from right table
+    - left: we get all the data from left table (which is from TableName) whether the condition is true or not 
+    - right: we get all the data from right table (which is from TableName) whether the condition is true or not 
+  ``` sql
+  select p.product_id, p.name, oi.quantity from products p left join order_items oi on p.product_id = oi.product_id
+  ```
+  - 
