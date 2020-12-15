@@ -1,5 +1,10 @@
 ### SQL General recalls
 
+0. Common tips:
+  - double hash `(--)` means not run the code
+  - Usually in SQL, we use `single quote`
+  - `<>` is same as `!=`, which means not equal to 
+
 1. `SQL`: Structured Query Language
 
 2. Important Query Commands:
@@ -49,4 +54,35 @@
   ``` sql
   select p.product_id, p.name, oi.quantity from products p left join order_items oi on p.product_id = oi.product_id
   ```
-  - 
+  - `USING`: is a shortcut for p.product_id = oi.product_id, just using this USING(product_id) [ONLY for the SAME attribute name]
+  - `UNION`: combine data from multiple queries [can be from same table or different table, can be same from same db or different db]!!! eg: 
+  ``` sql
+  select *
+  from orders
+  where order_id >= 8
+  union
+  select *
+  from orders
+  where shipper_id >= 3
+  ```
+  - `INSERT INTO`: add data to db table, eg:
+  ``` sql
+  INSERT INTO customers (first_name, last_name, brith_date, address, city, state)
+  VALUES (DEFAULT, 'ella', 'wu', '2018-06-01', NULL, 'Newington', 'Sydney', 'CA', '10000')
+  ```
+  - `UPDATE`: modify current record, eg:
+  ``` sql
+  UPADTE table name SET columns with updated value WHERE which data needs to be updated
+  -- eg:
+  UPDATE sql_store.NewTable SET status = 3 WHERE order_id = 9
+  ```
+  - `DELETE`: remove a record(s), eg:
+  ```sql 
+  DELETE FROM which table WHERE: which record
+  -- eg:
+  DELETE FROM sql_store.NewTable WHERE status = 3;
+  ```
+  - `CREATE TABLE`: used fro copy a table and its records, eg:
+  ```sql
+  create table NewTableNAME as select * from orders; 
+  ```
