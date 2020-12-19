@@ -33,6 +33,7 @@ module.exports = {
       './postgres-tips.html',
       'sql-tips.html',
       'webpack-tips.html',
+      'redux-tips.html',
     ],
     searchMaxSuggestions: 20
   },

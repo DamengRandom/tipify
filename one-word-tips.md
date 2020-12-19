@@ -70,4 +70,38 @@ cp -a /source_folder/. /destination_folder/
 </a>
 
 
-8. 
+8. `pure` function vs `impure` function
+- Pure function is predictable, because the output is based on the input and return a new value, which won't overwrite the previous value, it generates a new value, eg:
+
+```js
+// input: x and output: x * x
+function square(x) {
+    return x * x;
+}
+// items: previous value and new value: items.map(square)
+function squareIt(items) {
+    return items.map(square);
+}
+```
+  * (note: reducer is pure function, because we need to make state predictable)
+
+- Impure function has change effect, which means it may call database, do some logic to overwrite values and so on, eg:
+
+```js
+let outputs = [];
+
+function square(x) {
+  const newX = updateDatabase(x); // call database change value
+  return newX * newX;
+};
+
+function squareIt(items) {
+  for(let i = 0; i < items.length; i++) {
+    items[i] = square(items[i]);
+    // console.log(items[i]);
+    outputs.push(items[i]);
+  }
+  return outputs;
+};
+// outputs overwrite items, output as a new array
+```
