@@ -94,4 +94,6 @@ Common: all of these 3 are stored inside browser ..
     7. server `validate` user request & grant access 
     8. when user `logout`, token will be `cleared` by client storage
 
-6. 
+6. Command `npx`:
+
+The ability of `npx` is to run the scripts from npm packages without having to install them
