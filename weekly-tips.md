@@ -112,3 +112,19 @@ Explanation: after date, you asked your girlfriend to send you a message once sh
 Example: Messaging/Notification app: once you sends out some dat via API, then maybe API can tell someone else you have successfully sent the data out, the notification message will be sent after your action is doen.
 
 Simple word: you did something, then some other things will be triggered after your action, and also let you know what happened.
+
+9. Redis:
+
+It refers to a cache tool which helps devs to save some data as cache so when user refetch the data, user can get it from cache instead of making another API call, eg:
+
+```js
+cacheMiddleware() {
+  // is a function to save data into redis server for cache purpose
+  ...
+}
+app.get('/path/route', cacheMiddleware, () => { cb ... });
+```
+
+Reference <a href="https://www.youtube.com/watch?v=oaJq1mQ3dFI" target="_blank">Link</a>
+
+10. TBD
