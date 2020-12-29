@@ -97,3 +97,18 @@ Common: all of these 3 are stored inside browser ..
 6. Command `npx`:
 
 The ability of `npx` is to run the scripts from npm packages without having to install them
+
+7. VSCode Copy && Moving Code Block Hotkeys (Mac users):
+
+```js
+shift + option + down key // copying current line of code to next line (handy one)
+alt + up / down // moving code up or down
+```
+
+8. Webhook concept:
+
+Explanation: after date, you asked your girlfriend to send you a message once she reached to home. Then, after your girlfriend reached home, then she sends you a message. Then, you feel happy.
+
+Example: Messaging/Notification app: once you sends out some dat via API, then maybe API can tell someone else you have successfully sent the data out, the notification message will be sent after your action is doen.
+
+Simple word: you did something, then some other things will be triggered after your action, and also let you know what happened.
