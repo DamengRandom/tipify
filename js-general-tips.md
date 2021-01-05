@@ -102,8 +102,50 @@ obj.newProp; // OUTPUT is 'prop value' because the writable is false !!!
 
 10. `bind()`, `apply()`, `call()`:
 
-- bind(): TBD
+- `bind()`: Simple memo: you don't want to lose `this` for another function
+Example:
 
-- apply(): TBD
+```js
+var numberObject = {
+  value: 100
+}
 
-- call(): TBD
+var outputValue = function(){
+  console.log(this.value);
+}
+
+outputValue(); // undefined
+
+var afterBindOutput = outputValue.bind(numberObject);
+
+afterBindOutput(); // 100
+```
+
+<a href="https://javascript.info/bind#solution-2-bind" target="_blank">Please read</a>
+
+- `apply()`: calls a function with a given `this` value and arguments provided as an array
+
+Example:
+
+```js
+// we call name attribute from another object
+var guy = {
+  name: function() {
+    return "name: " + this.guyName;
+  }
+};
+
+var anotherGuy = {
+  name: "Another Guy"
+};
+
+console.log(guy.name.apply(anotherGuy));
+
+// we use apply to merge array
+const array = [1, 2];
+const newElements = ['a', 'b'];
+
+arrray.push.apply(array, newElements); // [1, 2, 'a', 'b']
+```
+
+- `call()`: TBD
