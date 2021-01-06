@@ -136,10 +136,10 @@ var guy = {
 };
 
 var anotherGuy = {
-  name: "Another Guy"
+  guyName: "Another Guy"
 };
 
-console.log(guy.name.apply(anotherGuy));
+console.log(guy.name.apply(anotherGuy)); // name: Another Guy
 
 // we use apply to merge array
 const array = [1, 2];
@@ -148,4 +148,27 @@ const newElements = ['a', 'b'];
 arrray.push.apply(array, newElements); // [1, 2, 'a', 'b']
 ```
 
-- `call()`: TBD
+- `call()`: calls a function with a given `this` value and arguments provided individually
+
+Example:
+
+```js
+// using t chain constructors for an object
+function Item(name) {
+  this.name = name;
+}
+
+function AnotherItem(name) {
+  Item.call(this, name);
+  this.newAttr = 'new attribute';
+}
+
+console.log(new AnotherItem('damon').name); // damon
+
+// we also can use as this referer
+var thisVar = '1';
+function show() {
+  return this.thisVar;
+}
+console.log(show.call()); // 1
+```
