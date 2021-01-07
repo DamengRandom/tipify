@@ -127,4 +127,74 @@ app.get('/path/route', cacheMiddleware, () => { cb ... });
 
 Reference <a href="https://www.youtube.com/watch?v=oaJq1mQ3dFI" target="_blank">Link</a>
 
-10. TBD
+10. How Vue event bus working? An simple example:
+
+```js
+// Why we need event bus? We want to share the data/props .. between siblings components
+
+// Example Case: we want to share the title between Header and Footer components (siblings)
+
+// Step 1: create event bus instance inside main function
+export const bus = new Vue();
+
+// Step 2: using bus and emit event for another component to listen to [For fire the event]
+bus.$emit('titleChanged', 'New header title');
+
+// completed version of Header Component:
+
+// <template>
+//   <div>
+//     <h4 @click="changeTitle">{{ title }}</h4>
+//   </div>
+// </template>
+
+// <script>
+//   import { bus } from '../../main';
+//   export default {
+//     data() {
+//       return {
+//         title: 'Header before change'
+//       }
+//     },
+//     methods: {
+//       changeTitle: function() {
+//         this.title = 'New header title'; // we trigger Header component title update
+//         bus.$emit('titleChanged', 'New header title'); // we trigger Footer component title update
+//       }
+//     }
+//   }
+// </script>
+
+// Step 3: the component which wants to get the updated data will listen and trigger the changes when another component fired the event bus [For listening the event]
+bus.$on('titleChanged', data => {
+  this.titleProp = data;
+});
+
+// completed version of Footer Component:
+
+// <template>
+//   <div>
+//     <h4>{{ titleProp || 'default footer content' }}</h4>
+//   </div>
+// </template>
+
+// <script>
+//   import { bus } from '../../main';
+//   export default {
+//     props: {
+//       titleProp: {
+//         type: String,
+//         required: true
+//       }
+//     },
+//     created() {
+//       bus.$on('titleChanged', data => {
+//         this.titleProp = data;
+//       });
+//     }
+//   }
+// </script>
+
+```
+
+11. 
