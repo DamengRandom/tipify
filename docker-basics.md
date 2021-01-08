@@ -9,7 +9,7 @@
 
 - `docker build -t docker-container-name:latest .`: copy your local app code to docker container
 - `docker images`: check all images docker are running
-- `docker ps`: check docker container(s) currently up & running
+- `docker ps`: check docker container(s) currently `up & running`
 - `docker ps -a`: check all the docker containers (even not running ones)
 - `docker run -it -p portYouWant:originalPort docker-container-name:latest`: run the docker container !!
 - `docker stop docker-container-hash-ID`: shutdown docker container from running
@@ -44,3 +44,37 @@ Normally we have `-it` command, which means it make container start look like a 
 docker volume create --name=localstore
 ```
 - Recent Practice: <a href="https://github.com/DamengRandom/docker-node-mongo" target="_blank">Run A Simple Node API Locally by using Express + MongoDB + Docker</a>
+
+
+### Docker concepts (again):
+
+1. Image: can treated as a `CD` which contains `Windows XP OS` inside
+
+2. Container: `having image(s)` inside and also run the image(s), inside container we have `kernel` (middleware) to connect processes running on your PC with your PC hardware
+
+3. docker run `behind the scenes`: docker client (user PC) -> docker server (docker cloud) -> pull/download docker related images (based on commands user typed) -> create a docker container and run the downloaded image
+[Formula: docker run = docker create + docker start] 
+
+4. `docker start -a`: `-a` means print the container logs to the user terminal !!!!!
+
+5. `docker system prune`: `delete` all containers & images from your PC
+
+6. docker stop vs kill: 
+stop is only for `stopping` the container, and having a `10` seconds to do some clean up before container get stopped, kill means `shut down immediately` no time to do clean up
+
+7. Meaning of `docker exec -it <container-id> commands`:
+```
+docker: docker client 
+exec: run another command
+-it: allow developer to provide input for the container
+  -i: allow user to do some input 
+  -t: make log more informative (helpful logs will print out)
+command: execute the command
+
+eg: docker exec -it <redi-container-id> redis-cli
+```
+
+8. `docker exec -it <redi-container-id> sh`: sh means shell, which allows developer to type shell commands inside docker container for debugging purposes (Type `Ctrl + D` to exit the shell terminal)
+[eg: docker run -it busybox sh]
+
+9. 
