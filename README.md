@@ -40,4 +40,5 @@ yarn docs:build // will build up the project and make the latest editions availa
 ### [SQL Tips](./sql-tips.html)
 ### [Webpack basics Tips](./webpack-tips.html)
 ### [Redux recalls](./redux-tips.html)
+### [Errors I saw](./errors-I-saw.html)
 ### [Docker Basic knowledge (recall)](./docker-basics.html)

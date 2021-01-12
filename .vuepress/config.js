@@ -34,6 +34,7 @@ module.exports = {
       'sql-tips.html',
       'webpack-tips.html',
       'redux-tips.html',
+      'errors-I-saw.html',
     ],
     searchMaxSuggestions: 20
   },

@@ -33,14 +33,14 @@ mapArray.get(0); // OUTPUT: value 1
 4. `Sets`: a unique value collections of data set, code example:
 
 ```js
-const setUnique = new Set([1,2,3,4,4,7,8,94,1,2]); // OUTPUT: {1,2,3,4,7,8,94}
+const setUnique = new Set([1,2,3,4,4,7,8,94,1,2]); // OUTPUT: {1,2,3,4,7,8,94,1,2}
 // convert setUnique set data to array format
-const convertToArray = Array.from(setUnique); // OUTPUT: [1,2,3,4,7,8,94]
+const convertToArray = Array.from(setUnique); // OUTPUT: [1,2,3,4,7,8,94,1,2]
 // Quick knowledge recall:
 const obj = {a: 1, b: 2};
 Object.keys(obj); // ['a', 'b']
 Object.values(obj); // [1, 2]
-Object.assign(obj, {c: 3});
+Object.assign(obj, {c: 3}); // {a:1, b:2, c:3}
 ```
 
 5. `class` is a `function` type in ES6, example:
@@ -112,6 +112,7 @@ var numberObject = {
 
 var outputValue = function(){
   console.log(this.value);
+  return this.value;
 }
 
 outputValue(); // undefined
