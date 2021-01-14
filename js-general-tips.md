@@ -40,7 +40,7 @@ const convertToArray = Array.from(setUnique); // OUTPUT: [1,2,3,4,7,8,94,1,2]
 const obj = {a: 1, b: 2};
 Object.keys(obj); // ['a', 'b']
 Object.values(obj); // [1, 2]
-Object.assign(obj, {c: 3}); // {a:1, b:2, c:3}
+Object.assign(obj, {c: 3}); // {a: 1, b: 2, c: 3}
 ```
 
 5. `class` is a `function` type in ES6, example:
@@ -76,7 +76,7 @@ obj.hi(); // OUTPUT: hello
 ```js
 var items = Array.of(...[1,2,3]);
 for(var item of items) {
-    console.log(item)
+  console.log(item)
 }
 ```
 
