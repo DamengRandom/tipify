@@ -105,3 +105,10 @@ function squareIt(items) {
 };
 // outputs overwrite items, output as a new array
 ```
+
+9. `docker-compose`: A tool for running multiple docker containers at same time !!
+
+- allow developers to input multiple commands based on different services (such as database services, api services and web app services and etc)
+- Inside docker-compose file, dash (-) refers to array !!!
+
+10. 

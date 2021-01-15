@@ -74,3 +74,37 @@ Render the `tooltips`, `Modal` code out of the `<body>{...}</body>` element, som
   {... model code logics ...}
 </div>
 ```
+
+
+#### How to remove warning message inside useEffect like `[]`?
+
+Concept is to set the function as a `ref`:
+
+```js
+// define a ref
+const currentFetchRef = useRef(() => {});
+
+// assign to current
+currentFetchRef.current = async function fetchRandomData(pageNumber) {
+  const response = await fetch(`https://randomuser.me/api?page=${pageNumber}`)
+    .then((data) => data.json())
+    .catch((error) => console.error(error));
+
+  setStates({
+    ...states,
+    dataString: JSON.stringify(response.results, null, 2),
+    totalDataLoaded: [
+      ...states.totalDataLoaded,
+      { [`page-${pageNumber}`]: response.results }
+    ]
+  });
+};
+
+// use the current ref function !!!
+useEffect(() => {
+  currentFetchRef.current(1);
+}, []);
+```
+
+Example: <a href="https://codesandbox.io/s/hungry-brook-qb0g9?file=/src/App.js">Coded by me</a>
+
