@@ -17,3 +17,19 @@ function outputValue() {
 };
 outputValue();
 ```
+
+Another Example for scope of `this`:
+
+```js
+var person = {
+  name: 'damon',
+  printPersonAttribute() {
+    console.log('this.name: ', this.name); // damon
+    function unableToPrintPersonAttribute() {
+      console.log('nested this.name is not working: ', this.name); // undefined
+    };
+    unableToPrintPersonAttribute();
+  },
+}
+person.printPersonAttribute();
+```

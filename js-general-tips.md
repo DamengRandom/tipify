@@ -85,11 +85,11 @@ for(var item of items) {
 ```js
 Object.assign(obj, {newKey: newValue});
 // example:
-var assignObject= Object.assign({}, {'newKey': 'newValue'});
+var assignObject = Object.assign({}, {'newKey': 'newValue'});
 assignObject; // {newKey: 'newValue'}
 
 
-Object.defineProperty(obj, prop, descriptor); // descriptor is an object which contains value and decide whether this object value is able to be reassigned or not=
+Object.defineProperty(obj, prop, descriptor); // descriptor is an object which contains value and decide whether this object value is able to be reassigned or not
 // example:
 var obj = Object.defineProperty({}, 'newProp', {
     value: 'prop value',

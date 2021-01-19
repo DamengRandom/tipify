@@ -197,4 +197,20 @@ bus.$on('titleChanged', data => {
 
 ```
 
-11. 
+11. deploy docker container with CI/CD tool (Travis):
+
+create a `.travis.yml` file and do the following setups:
+
+```
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t damengrandom/docker-flow -f Dockerfile.dev .
+
+script:
+  - docker run damengrandom/docker-flow yarn run test --watchAll=false --coverage
+```
+
+Then connect travis with your github account: read doc and find the related github repository and connect it with Travis
