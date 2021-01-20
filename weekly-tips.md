@@ -213,4 +213,5 @@ script:
   - docker run damengrandom/docker-flow yarn run test --watchAll=false --coverage
 ```
 
-Then connect travis with your github account: read doc and find the related github repository and connect it with Travis
+Then connect travis with your github account: read doc and find the related github repository and connect it with Travis (every time commits a new PR, as long as merge into master, the Travis will get triggered to deploy the changes to certain environment)
+

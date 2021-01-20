@@ -111,4 +111,6 @@ function squareIt(items) {
 - allow developers to input multiple commands based on different services (such as database services, api services and web app services and etc)
 - Inside docker-compose file, dash (-) refers to array !!!
 
-10. 
+10. Instead of using `array[0]`, we can use `array.find(e => e == !!e)` (handy one) !!
+
+11. TBD
