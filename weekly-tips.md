@@ -4,9 +4,11 @@
 `href` resources are loaded based on a trigger
 `src` resources are loaded automatically.
 
+
 2. Ajax (Asynchronous JavaScript And XML): update a web page `without reloading` the page 
 
 Using XMLHttpRequest to create a http request and send to sever, and then server send data back to browser, and finally update page content
+
 
 3. `splice` usage for remove one element from array:
 
@@ -24,6 +26,7 @@ var removeTheOne = (value) => {
 var afterRemove5 = removeTheOne(5);
 console.log(afterRemove5); // [1,2,3,4,77,6]
 ```
+
 
 4. `session storage` vs `local storage` vs `cookie`
 
@@ -66,6 +69,7 @@ Common: all of these 3 are stored inside browser ..
 // when deal with server, use cookie, deal with browser use session.local storage
 ```
 
+
 5. Please watch this video for recall token && session based authentications
 <a href="https://www.youtube.com/watch?v=2PPSXonhIck" target="_blank">Link</a>
 
@@ -94,9 +98,11 @@ Common: all of these 3 are stored inside browser ..
     7. server `validate` user request & grant access 
     8. when user `logout`, token will be `cleared` by client storage
 
+
 6. Command `npx`:
 
 The ability of `npx` is to run the scripts from npm packages without having to install them
+
 
 7. VSCode Copy && Moving Code Block Hotkeys (Mac users):
 
@@ -105,6 +111,7 @@ shift + option + down key // copying current line of code to next line (handy on
 alt + up / down // moving code up or down
 ```
 
+
 8. Webhook concept:
 
 Explanation: after date, you asked your girlfriend to send you a message once she reached to home. Then, after your girlfriend reached home, then she sends you a message. Then, you feel happy.
@@ -112,6 +119,7 @@ Explanation: after date, you asked your girlfriend to send you a message once sh
 Example: Messaging/Notification app: once you sends out some dat via API, then maybe API can tell someone else you have successfully sent the data out, the notification message will be sent after your action is doen.
 
 Simple word: you did something, then some other things will be triggered after your action, and also let you know what happened.
+
 
 9. Redis:
 
@@ -126,6 +134,7 @@ app.get('/path/route', cacheMiddleware, () => { cb ... });
 ```
 
 Reference <a href="https://www.youtube.com/watch?v=oaJq1mQ3dFI" target="_blank">Link</a>
+
 
 10. How Vue event bus working? An simple example:
 
@@ -197,6 +206,7 @@ bus.$on('titleChanged', data => {
 
 ```
 
+
 11. deploy docker container with CI/CD tool (Travis):
 
 create a `.travis.yml` file and do the following setups:
@@ -214,6 +224,7 @@ script:
 ```
 
 Then connect travis with your github account: read doc and find the related github repository and connect it with Travis (every time commits a new PR, as long as merge into master, the Travis will get triggered to deploy the changes to certain environment)
+
 
 12. Common regex:
 
@@ -233,3 +244,40 @@ console.log(newStr); // "Remove extra spaces inside string text content"
 ```
 
 Reference: <a herf="freecodecamp.org/news/javascript-regex-match-use-replace-on-string/" target="_blank">Link</a>
+
+
+13. JWT (JSON Web Token)
+
+3 parts: Header, Signature, Payload
+
+Header: 
+```js
+{
+  "alg": "HS256", // JWT algorithm
+  "typ": "JWT" // JWT type
+}
+```
+
+Signature:  to verify the message wasn't changed along the way
+
+```js
+// If we use SHA256 algorithm, this is how signature looks like:
+HMACSHA256(
+  base64UrlEncode(header) + "." +
+  base64UrlEncode(payload),
+  secret)
+```
+
+Payload: contains tge data to be sent
+
+```js
+{
+  name: 'damon',
+  handsome: true
+}
+```
+
+Good way to integrate is Auth0.
+
+
+14. 
