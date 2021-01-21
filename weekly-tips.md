@@ -215,3 +215,21 @@ script:
 
 Then connect travis with your github account: read doc and find the related github repository and connect it with Travis (every time commits a new PR, as long as merge into master, the Travis will get triggered to deploy the changes to certain environment)
 
+12. Common regex:
+
+```js
+// email validator:
+function isValidEmail(email) {
+   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
+
+// replace all occurance in this string
+stringTextVariable.replace(/filter/g, '&filter');
+
+// 
+var str = "Remove  extra   spaces    inside  string       text          content";
+var newStr = str.replace(/\s\s+/g, " ");
+console.log(newStr); // "Remove extra spaces inside string text content"
+```
+
+Reference: <a herf="freecodecamp.org/news/javascript-regex-match-use-replace-on-string/" target="_blank">Link</a>
