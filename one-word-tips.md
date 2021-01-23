@@ -106,11 +106,28 @@ function squareIt(items) {
 // outputs overwrite items, output as a new array
 ```
 
+
 9. `docker-compose`: A tool for running multiple docker containers at same time !!
 
 - allow developers to input multiple commands based on different services (such as database services, api services and web app services and etc)
 - Inside docker-compose file, dash (-) refers to array !!!
 
+
 10. Instead of using `array[0]`, we can use `array.find(e => e == !!e)` (handy one) !!
 
-11. TBD
+
+11. `httpOnly: true` : don't want any javascript in browser to read or view the credentials like cookie
+
+
+12. CI/CD:
+
+CI -> Continuous Integration -> means merge code into current codebase
+CD -> Continuous Deployment -> means deploy the latest changes to certain environment, like production
+
+Tools: (Travis, Buildkite, Github actions and etc)
+
+13. For handlerbars: if you don't want Handlebars to escape a value, use the "triple-stash", `{{{`
+
+<a href="https://www.topjavatutorial.com/handlebars-js/handlebars-js-escape-display-special-html-characters/" target="_blank">Reference here</a>
+
+14. 
