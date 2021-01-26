@@ -124,10 +124,15 @@ function squareIt(items) {
 CI -> Continuous Integration -> means merge code into current codebase
 CD -> Continuous Deployment -> means deploy the latest changes to certain environment, like production
 
-Tools: (Travis, Buildkite, Github actions and etc)
+Tools: (Travis, BuildKite, Github actions and etc)
 
 13. For handlebars: if you don't want Handlebars to escape a value, use the "triple-stash", `{{{`
 
 <a href="https://www.topjavatutorial.com/handlebars-js/handlebars-js-escape-display-special-html-characters/" target="_blank">Reference here</a>
 
-14. 
+14. `useMemo` vs `useCallback`:
+
+<p>useMemo: returns the value of that callback function</p>
+<p>useCallback: returns the callback function</p>
+
+15. 

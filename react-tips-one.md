@@ -13,13 +13,40 @@ Due to the fact that JavaScript events are async, when you make an API call, the
 
 
 
-#### React Synthentic Events
+#### React Synthetic Events
 
-Concept: whenever we are triggering an event in React Component, we are not actually dealing with the real DOM event, instead we are cope with React's custom event type, a synthentic event
+Concept: whenever we are triggering an event in React Component, we are not actually dealing with the real DOM event, instead we are cope with React's custom event type, a synthetic event
 
 Examples: `onClick()`, `onChange()`, `onBlur()` and etc ...
 
-* Note: if you want to access the event properties in an asynchronous way, you need to use `event.persist()`. Normally, for synthentic events, we can't access event properties in an asynchronous way.
+* Note: if you want to access the event properties in an asynchronous way, you need to use `event.persist()`. Normally, for synthetic events, we can't access event properties in an asynchronous way.
+
+
+When we use `event.persist()`?
+
+Code example:
+
+```js
+export class PageChecker extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { page: 1 };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(event) {
+    event.persist(); // we need to use persist because of event has been used inside setState() callback function
+    this.setState(prevState => ({
+      page: prevState + event.target.value // event is used inside setState() callback function (here)
+    }));
+  }
+
+  render() {
+    return <button onClick={this.handleClick}>Check Page</button>;
+  }
+}
+// Reference: https://deepscan.io/docs/rules/react-missing-event-persist#:~:text=persist()%20should%20be%20called,inside%20an%20asynchronous%20callback%20function&text=This%20rule%20applies%20when%20a,callback%20function%20without%20calling%20event.&text=If%20you%20need%20to%20access,an%20asynchronous%20callback%20function%2C%20event.
+```
 
 Reference: <a href="https://dev.to/nagwan/react-synthetic-events-34e5" target="_blank">here</a> And <a href="https://reactjs.org/docs/events.html" target="_blank">here</a>
 
@@ -70,8 +97,8 @@ Render the `tooltips`, `Modal` code out of the `<body>{...}</body>` element, som
   {... body code logics ...}
 </body>
 // below part is React Portals code !!!
-<div class="model"> 
-  {... model code logics ...}
+<div class="portal-modal"> 
+  {... modal code logics ...}
 </div>
 ```
 
@@ -112,3 +139,46 @@ Example: <a href="https://codesandbox.io/s/hungry-brook-qb0g9?file=/src/App.js">
 
 The idea of error boundary is a generic component that takes care of the errors for its children
 
+
+#### forwardRef
+
+Code example:
+
+```js
+import React from "react";
+
+const ForwardInput = React.forwardRef((props, ref) => {
+  return (
+    <input
+      {...props}
+      ref={ref}
+      name="forwardInput"
+      placeholder="trigger input focus effect by clicking button"
+    />
+  );
+});
+
+export class InputWrapper extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  inputRef = React.createRef();
+
+  handleClick() {
+    this.inputRef.current.focus();
+  }
+
+  render() {
+    return (
+      <div>
+        <ForwardInput ref={this.inputRef} />
+        <button onClick={this.handleClick}>Click me to focus on input</button>
+      </div>
+    );
+  }
+}
+
+export default InputWrapper;
+```
