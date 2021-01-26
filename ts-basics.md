@@ -1,4 +1,4 @@
-### TypeScript bascis
+### TypeScript basics
 
 <i>This post is recording the basics knowledge of TypeScript (TS).</i>
 

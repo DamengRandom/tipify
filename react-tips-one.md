@@ -108,3 +108,7 @@ useEffect(() => {
 
 Example: <a href="https://codesandbox.io/s/hungry-brook-qb0g9?file=/src/App.js">Coded by me</a>
 
+#### Error Boundaries
+
+The idea of error boundary is a generic component that takes care of the errors for its children
+

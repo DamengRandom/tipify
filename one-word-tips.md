@@ -126,7 +126,7 @@ CD -> Continuous Deployment -> means deploy the latest changes to certain enviro
 
 Tools: (Travis, Buildkite, Github actions and etc)
 
-13. For handlerbars: if you don't want Handlebars to escape a value, use the "triple-stash", `{{{`
+13. For handlebars: if you don't want Handlebars to escape a value, use the "triple-stash", `{{{`
 
 <a href="https://www.topjavatutorial.com/handlebars-js/handlebars-js-escape-display-special-html-characters/" target="_blank">Reference here</a>
 

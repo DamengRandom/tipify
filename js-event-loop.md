@@ -33,9 +33,26 @@ core();
 // web API task 1
 ```
 
-One word: runing all normal heap stack task first, then run web API function event tasks
+One word: running all normal heap stack task first, then run web API function event tasks
 
 
 #### References
 1. <a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ" target="_blank">Reference 1</a>
 2. <a href="https://www.youtube.com/watch?v=XzXIMZMN9k4" target="_blank">Reference 2</a>
+
+Extra tip: example of JavaScript running order:
+
+```js
+function x() {
+  console.log('run function x');
+  function y () {
+    console.log('run function y');
+  }
+  y();
+}
+x();
+console.log('run it');
+// run function x (order 1)
+// run function y (order 2)
+// run it (order 3)
+```

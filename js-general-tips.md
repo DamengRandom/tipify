@@ -107,13 +107,13 @@ Example:
 
 ```js
 var numberObject = {
-  value: 100
-}
+  value: 100,
+};
 
-var outputValue = function(){
+var outputValue = function() {
   console.log(this.value);
   return this.value;
-}
+};
 
 outputValue(); // undefined
 
@@ -142,11 +142,11 @@ var anotherGuy = {
 
 console.log(guy.name.apply(anotherGuy)); // name: Another Guy
 
-// we use apply to merge array
+// we use apply to merge/combine array
 const array = [1, 2];
 const newElements = ['a', 'b'];
 
-arrray.push.apply(array, newElements); // [1, 2, 'a', 'b']
+array.push.apply(array, newElements); // [1, 2, 'a', 'b']
 ```
 
 - `call()`: calls a function with a given `this` value and arguments provided individually

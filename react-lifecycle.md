@@ -13,6 +13,7 @@ React lifecycle methods can be categorized as:
   - component is initialized
   - receiving new props whether they are getting changes or not
   - parent component is re-rendered
+(Only purpose is enabling for updating internal state as results of changes in props)
 
 `render`: make sure the component is rendered / mounted in the DOM properly
 
