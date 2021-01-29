@@ -21,7 +21,7 @@ This is due to the fact that JavaScript functions are `first-class objects` whic
 
 #### Important tips for Callback:
 
-<i><strong>Callback ensure the a function will not going to be called before the task is completed, but it will be called right after the task completed.</strong></i>
+<i><strong>Callback ensures a function will not going to be called before the task is completed, but it will be called right after the task completed.</strong></i>
 
 1. A JavaScript Callback Function is a function that is passed as a parameter to another JavaScript function, and the callback function is run inside of the function it was passed into
 

@@ -125,3 +125,43 @@ export default function Home() {
 
 #### useReducer
 
+- TBD
+
+
+#### Another useMemo/memo, useCallback example
+
+Normally we try to avoid unnecessary re-render, we use memo or useMemo, and we parent passes `array or object (reference type of data)` to child, we need to use useMemo to avoid the re-render issue !!
+
+When we pass function to child, we use useCallback for it
+
+Code example of using useMemo:
+
+```jsx
+// Find code from: https://github.com/DamengRandom/hooks-recall/blob/master/src/components/useMemoUseCallbackThirdExample/TheParent.jsx#L12
+// parent component:
+const arrayReference = React.useMemo(() => [1, 2, 3], []);
+
+// child component:
+<SecondChild arrayReference={arrayReference} />
+```
+
+Code example of using useCallback:
+
+```jsx
+// parent component
+const fetcher = React.useCallback((type) => {
+  return fetch(`https://jsonplaceholder.typicode.com/${type}/1`)
+    .then(response => response.json())
+    .then(json => console.log(json));
+}, []);
+
+React.useEffect(() => {
+  fetcher('todos');
+}, [fetcher]);
+
+// child component:
+<ThirdChild fetcher={fetcher} />
+```
+
+<b>Last point: when every time we saw the dependencies comes from parent level, we may need to consider whether shall we use related useMemo/memo or useCallback hooks to enhance the performance</b>
+

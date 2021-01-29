@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Tipify (DM): Recall some tips',
+  title: 'Tipify (DamengRandom)',
   themeConfig: {
     nav: [
       { text: 'Github', link: 'https://github.com/DamengRandom/tipify' }
