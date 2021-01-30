@@ -35,6 +35,7 @@ module.exports = {
       'webpack-tips.html',
       'redux-tips.html',
       'errors-I-saw.html',
+      'css-tips.html', 
     ],
     searchMaxSuggestions: 20
   },
