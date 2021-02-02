@@ -135,4 +135,18 @@ Tools: (Travis, BuildKite, Github actions and etc)
 <p>useMemo: returns the value of that callback function</p>
 <p>useCallback: returns the callback function</p>
 
-15. 
+15. Router: Like React router: just `switch one component views`, change DOM Node elements
+  - hash: `window.addEventListener('hashChange', () => { ... });`
+  - history: `history.pushState();`
+
+Example: <a href="https://dev.to/kodnificent/how-to-build-a-router-with-vanilla-javascript-2a18" target="_blank">here</a>
+
+
+16. Vue computed VS watcher:
+
+Computed: for complex computations 
+Watch: for API data fetching handling (eg: debounce)
+
+Details in <a href="https://vuejs.org/v2/guide/computed.html#Computed-vs-Watched-Property" target="_blank">here</a> And <a href="https://vuejs.org/v2/guide/computed.html#Watchers" target="_blank">here</a>
+
+17. 

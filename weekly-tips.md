@@ -289,3 +289,9 @@ Eg: ~1.2.3: means will use release from 1.2.3 to <1.3.0
 Eg: ^2.3.4: means will use release from 2.3.4 to <3.0.0
 
 Good reference <a href="https://stackoverflow.com/questions/22343224/whats-the-difference-between-tilde-and-caret-in-package-json" target="_blank">here</a>
+
+15. Create VanillaJS Router
+
+```js
+
+```
