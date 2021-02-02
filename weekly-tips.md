@@ -280,4 +280,12 @@ Payload: contains tge data to be sent
 Good way to integrate is Auth0.
 
 
-14. 
+14. tilde (~) vs Caret (^) in npm:
+
+~version means: approximately equivalent to version. (update patch version)
+Eg: ~1.2.3: means will use release from 1.2.3 to <1.3.0
+
+^version means: compatible with version (update minor version)
+Eg: ^2.3.4: means will use release from 2.3.4 to <3.0.0
+
+Good reference <a href="https://stackoverflow.com/questions/22343224/whats-the-difference-between-tilde-and-caret-in-package-json" target="_blank">here</a>
