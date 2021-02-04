@@ -292,6 +292,171 @@ Good reference <a href="https://stackoverflow.com/questions/22343224/whats-the-d
 
 15. Create VanillaJS Router
 
-```js
+```html
+<!-- HTML part -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #category ul {
+      list-style-type: none;
+      display: flex;
+    }
 
+    #category ul li {
+      flex-grow: 1;
+      cursor: pointer;
+    }
+
+    .show {
+      display: block;
+    }
+
+    .hide {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="category">
+    <ul>
+      <li id="pageOne">pageOne</li>
+      <li id="pageTwo">pageTwo</li>
+      <li id="pageThree">pageThree</li>
+    </ul>
+  </div>
+  <div>
+    <div id="pageOneRenderer" class="viewComponent"></div>
+    <div id="pageTwoRenderer" class="viewComponent"></div>
+    <div id="pageThreeRenderer" class="viewComponent"></div>
+    <div id="errorRenderer" class="viewComponent"></div>
+  </div>
+  <script type="text/javascript" async defer src="main.js"></script>
+</body>
+</html>
+```
+
+```js
+// Javascript part: main.js
+const constants = {
+  pageOne: [
+    {
+      id: 1,
+      name: 'book 1'
+    },
+    {
+      id: 2,
+      name: 'book 2'
+    },
+    {
+      id: 3,
+      name: 'book 3'
+    }
+  ],
+  pageTwo: [
+    {
+      id: 1,
+      name: 'laptop 1'
+    },
+    {
+      id: 2,
+      name: 'laptop 2'
+    },
+    {
+      id: 3,
+      name: 'laptop 3'
+    }
+  ],
+  pageThree: [
+    {
+      id: 1,
+      name: 'shoe 1'
+    },
+    {
+      id: 2,
+      name: 'shoe 2'
+    },
+    {
+      id: 3,
+      name: 'shoe 3'
+    }
+  ],
+};
+
+const routes = ['pageOne', 'pageTwo', 'pageThree'];
+
+document.getElementById('category').addEventListener('click', (e) => {
+  // change url from url bar
+  location.href = `${location.origin}${location.pathname}#${e.target.id}`;
+
+  const nodes = document.getElementsByClassName('viewComponent');
+  const pathHash = location.hash.substr(1);
+
+  for (let index = 0; index < nodes.length; index++) {
+    if (nodes[index].id.includes(pathHash) || location.href.includes(nodes[index].id)) {
+      nodes[index].classList.remove('hide');
+      nodes[index].classList.add('show');
+    } else {
+      nodes[index].classList.remove('show');
+      nodes[index].classList.add('hide');
+    }
+  }
+});
+
+window.addEventListener('popstate', () => {
+  module.renderOnPageLoadOrURLChange();
+});
+
+window.onload = () => {
+  module.renderOnPageLoadOrURLChange();
+}
+
+var module = {
+  renderSpecificItems: (data, selector) => {
+    var div = document.createElement('div');
+    div.setAttribute('id', `component-${selector}`);
+    
+    if (!document.getElementById(`component-${selector}`)) {
+      if (typeof data === 'object') {
+        data.map(item => {
+          var span = document.createElement('span');
+          span.innerText = item.name;
+          div.appendChild(span);
+          div.appendChild(document.createElement('br'));
+        });
+      } else {
+        div.innerHTML = "<p>Default Home Component</p>";
+      }
+  
+      return document.querySelector(`#${selector}`).appendChild(div);
+    }
+  },
+  renderOnPageLoadOrURLChange: () => {
+    var currentPath = location.hash.substr(1);
+
+    routes.map(route => currentPath === route ? module.renderSpecificItems(constants[route], `${route}Renderer`) : false);
+
+    // using map just one line, using switch too many lines
+
+    // switch(currentPath) {
+    //   case 'pageOne':
+    //     module.renderSpecificItems(constants.pageOne, 'pageOneRenderer');
+    //     break;
+    //   case 'pageTwo':
+    //     module.renderSpecificItems(constants.pageTwo, 'pageTwoRenderer');
+    //     break;
+    //   case 'pageThree':
+    //     module.renderSpecificItems(constants.pageThree, 'pageThreeRenderer');
+    //     break;
+    //   default:
+    //     module.renderSpecificItems(constants.error, 'errorRenderer');
+    //     break;
+    // }
+  }
+}
+
+// After few hours coding, just found that I just coded a big tab ...
 ```
