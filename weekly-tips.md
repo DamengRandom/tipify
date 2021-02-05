@@ -290,7 +290,7 @@ Eg: ^2.3.4: means will use release from 2.3.4 to <3.0.0
 
 Good reference <a href="https://stackoverflow.com/questions/22343224/whats-the-difference-between-tilde-and-caret-in-package-json" target="_blank">here</a>
 
-15. Create VanillaJS Router
+15. Create VanillaJS Router <b>(Sorry, this is a bad failed example, just another experience of coding Vanilla JS)</b>
 
 ```html
 <!-- HTML part -->
@@ -332,7 +332,7 @@ Good reference <a href="https://stackoverflow.com/questions/22343224/whats-the-d
     <div id="pageOneRenderer" class="viewComponent"></div>
     <div id="pageTwoRenderer" class="viewComponent"></div>
     <div id="pageThreeRenderer" class="viewComponent"></div>
-    <div id="errorRenderer" class="viewComponent"></div>
+    <!-- <div id="errorRenderer" class="viewComponent"></div> -->
   </div>
   <script type="text/javascript" async defer src="main.js"></script>
 </body>
@@ -345,43 +345,43 @@ const constants = {
   pageOne: [
     {
       id: 1,
-      name: 'book 1'
+      name: 'one 1'
     },
     {
       id: 2,
-      name: 'book 2'
+      name: 'one 2'
     },
     {
       id: 3,
-      name: 'book 3'
+      name: 'one 3'
     }
   ],
   pageTwo: [
     {
       id: 1,
-      name: 'laptop 1'
+      name: 'two 1'
     },
     {
       id: 2,
-      name: 'laptop 2'
+      name: 'two 2'
     },
     {
       id: 3,
-      name: 'laptop 3'
+      name: 'two 3'
     }
   ],
   pageThree: [
     {
       id: 1,
-      name: 'shoe 1'
+      name: 'three 1'
     },
     {
       id: 2,
-      name: 'shoe 2'
+      name: 'three 2'
     },
     {
       id: 3,
-      name: 'shoe 3'
+      name: 'three 3'
     }
   ],
 };
@@ -410,8 +410,10 @@ window.addEventListener('popstate', () => {
   module.renderOnPageLoadOrURLChange();
 });
 
+// popstate: is fired when active history entry get changed
+
 window.onload = () => {
-  module.renderOnPageLoadOrURLChange();
+  module.renderOnPageLoadOrURLChange(); // get current route page content when page loaded
 }
 
 var module = {
@@ -439,7 +441,7 @@ var module = {
 
     routes.map(route => currentPath === route ? module.renderSpecificItems(constants[route], `${route}Renderer`) : false);
 
-    // using map just one line, using switch too many lines
+    // using `map` just one line, using `switch` too many lines, thats the powerful place of using map method, better performance !!
 
     // switch(currentPath) {
     //   case 'pageOne':
@@ -459,4 +461,5 @@ var module = {
 }
 
 // After few hours coding, just found that I just coded a big tab ...
+// I was feeling like SPA is a big tab, each component is the tab content, each link is the tab title !!! 
 ```

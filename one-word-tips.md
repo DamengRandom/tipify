@@ -149,4 +149,12 @@ Watch: for API data fetching handling (eg: debounce)
 
 Details in <a href="https://vuejs.org/v2/guide/computed.html#Computed-vs-Watched-Property" target="_blank">here</a> And <a href="https://vuejs.org/v2/guide/computed.html#Watchers" target="_blank">here</a>
 
-17. 
+
+17. `history.pushState` && `addEventListener('popState', () => {})`
+
+history.pushState: adds an entry to browser history session stack !!
+addEventListener('popState', () => {}): `popState` is fired when active history entry get changed
+
+Just remember: history.pushState will never trigger popState event !!!!
+
+18.
