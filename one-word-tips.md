@@ -157,4 +157,8 @@ addEventListener('popState', () => {}): `popState` is fired when active history 
 
 Just remember: history.pushState will never trigger popState event !!!!
 
-18.
+18. JavaScript `delete` keyword:
+
+The delete operator is used to delete all the variables and objects used in the program ,but it does not delete variables declared with var keyword.
+
+19. 
