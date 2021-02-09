@@ -67,12 +67,12 @@
   ```
   - `INSERT INTO`: add data to db table, eg:
   ``` sql
-  INSERT INTO customers (first_name, last_name, brith_date, address, city, state)
+  INSERT INTO customers (first_name, last_name, birth_date, address, city, state)
   VALUES (DEFAULT, 'ella', 'wu', '2018-06-01', NULL, 'Newington', 'Sydney', 'CA', '10000')
   ```
   - `UPDATE`: modify current record, eg:
   ``` sql
-  UPADTE table name SET columns with updated value WHERE which data needs to be updated
+  UPDATE table name SET columns with updated value WHERE which data needs to be updated
   -- eg:
   UPDATE sql_store.NewTable SET status = 3 WHERE order_id = 9
   ```
