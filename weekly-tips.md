@@ -463,3 +463,23 @@ var module = {
 // After few hours coding, just found that I just coded a big tab ...
 // I was feeling like SPA is a big tab, each component is the tab content, each link is the tab title !!! 
 ```
+
+16. How to delete object from array by using forEach:
+
+```js
+// data to use
+var data = [{x: 1, y: 2}, {a: 1, b: 2}, {special: 'hahaha'}];
+// functionality
+data.forEach(val => {
+  if(val.special === 'hahaha') {
+    const valIndex = data.indexOf(val);
+    if(valIndex > -1) {
+      data.splice(valIndex, 1);
+    }
+  }
+});
+// output:
+data; // [{x: 1, y: 2}, {a: 1, b: 2}]
+```
+
+17. 
