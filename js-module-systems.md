@@ -54,13 +54,13 @@ Basic configuration for webpack tree shaking:
 ```js
   // Base Webpack Config for Tree Shaking
   const config = {
-  mode: 'production',
-  optimization: {
-    usedExports: true,
-    minimizer: [
-    new TerserPlugin({...})
-    ]
-  }
+    mode: 'production',
+    optimization: {
+      usedExports: true,
+      minimizer: [
+      new TerserPlugin({...})
+      ]
+    }
   };
 ```
 

@@ -17,6 +17,6 @@ create a store [step 0]
   --> create 4 basic methods inside module file (`state`, `getters`, `actions`, `mutations`) [step 2]
   --> create the action method and mutation method, so mutation method will be `called by action` method!!! (It something like `chaining`, `coming together` ...) [step 3]
   --> Go to `component` level, and start calling this module file defined action methods, interacting with vue `directive` methods (eg: `@click`, `@change` ...) [step 4]
-  --> so far, we can see we generated a state tracking circle, from `action -> mutation -> store`
+  --> so far, we can see we generated a state tracking circle, from `action -> mutation -> store` [step 5]
 
 <i>Please send to me an email to correct me <a href="mailto:damonwu0605@gmail.com">here</a> if it's wrong</i>

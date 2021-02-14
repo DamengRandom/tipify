@@ -123,7 +123,7 @@ Simple word: you did something, then some other things will be triggered after y
 
 9. Redis:
 
-It refers to a cache tool which helps devs to save some data as cache so when user refetch the data, user can get it from cache instead of making another API call, eg:
+It refers to a cache tool which helps developers to save some data as cache so when user refetch the data, user can get it from cache instead of making another API call, eg:
 
 ```js
 cacheMiddleware() {
@@ -234,7 +234,7 @@ function isValidEmail(email) {
    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
 
-// replace all occurance in this string
+// replace all occurrence in this string
 stringTextVariable.replace(/filter/g, '&filter');
 
 // 
@@ -282,10 +282,10 @@ Good way to integrate is Auth0.
 
 14. tilde (~) vs Caret (^) in npm:
 
-~version means: approximately equivalent to version. (update patch version)
+~version means: approximately equivalent to version. (update <b>patch</b> version)
 Eg: ~1.2.3: means will use release from 1.2.3 to <1.3.0
 
-^version means: compatible with version (update minor version)
+^version means: compatible with version (update <b>minor</b> version)
 Eg: ^2.3.4: means will use release from 2.3.4 to <3.0.0
 
 Good reference <a href="https://stackoverflow.com/questions/22343224/whats-the-difference-between-tilde-and-caret-in-package-json" target="_blank">here</a>
