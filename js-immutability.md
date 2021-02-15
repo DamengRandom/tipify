@@ -112,3 +112,17 @@ Immutable.List.of(str) // ['text']
 List.of("a", "b", "c"); // ["a", "b", "c"]
 List(["a", "b", "c"]); // ["a", "b", "c"]
 ```
+
+5. Beside Spread Operator, another way to make it immutable:
+
+```js
+let object = { x: 1 }; // undefined
+let mutableObject = object; // undefined
+mutableObject.x = 2; // 2
+mutableObject; // {x: 2}
+object; // {x: 2}
+let immutableObject = JSON.parse(JSON.stringify(object));
+immutableObject.x = 3; // 3
+object; // {x: 2}
+immutableObject; // {x: 3}
+```
