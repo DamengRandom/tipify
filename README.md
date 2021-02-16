@@ -2,7 +2,7 @@
 Welcome to tipify app and open each link to view the contents, :hugs:
 :::
 
-### How to run the project:
+### How to run the project (locally):
 
 ```
 yarn dev // which will run the project locally, you can follow yhe terminal and open up the localhost URL: http://localhost:8080
