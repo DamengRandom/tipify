@@ -4,6 +4,8 @@
 
 Higher-order functions are functions that take other functions as arguments or return functions as their results.
 
+<i>Redux thunk middleware is one of best examples of get a function as parameter and return a new function as output !!!</i>
+
 
 #### Code Example:
 
