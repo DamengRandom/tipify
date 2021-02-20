@@ -173,3 +173,159 @@ function show() {
 }
 console.log(show.call()); // 1
 ```
+
+
+11. Another tips from egghead.io:
+ 
+```js
+// Tip 1: not everything in JavaScript is an Object !!!!
+console.log(typeof 'hi'); // string
+console.log(typeof 1); // number
+console.log(typeof false); // boolean
+console.log(typeof 1n); // bigint
+console.log(typeof Symbol()); // symbol
+console.log(typeof null); // object - javascript initial bug (haven't fixed yet)
+console.log(typeof undefined); // undefined
+ 
+// Apart from value null, the rest of console values are not object - which means not everything in JavaScript is an Object !!!!
+ 
+ 
+// Tip 2: mutating object, but cannot mutate primitive type values
+ 
+// object mutate: (mutable)
+let obj = { x: 1 };
+const mutateObj = (objectValue) => {
+ objectValue.x = 2;
+};
+mutateObj(obj);
+obj; // {x: 2}
+ 
+// primitive number cannot be mutated: (immutable)
+let num = 1;
+const tryToMutateNumber = (num) => {
+ num = 2;
+ console.log(num); // 2
+};
+tryToMutateNumber(num);
+num; // 1
+ 
+ 
+// Tip 3: primitive type autoBoxing
+'string'.length // 6
+// the primitive with dot means `primitive type autoBoxing`, that turns primitive into an object and call API .length, so people usually call everything in JavaScript is an object.
+// Because of autoboxing, we treated JavaScript primitive type value as an `object`
+ 
+// Tip 4: JavaScript dunder proto: __proto__
+var obj = {};
+obj.toString(); // "[object Object]"
+ 
+// normally this dunder proto can be used for inheritance
+var obj = {};
+obj.toString = function() {return true;};
+var out = Object.create(obj);
+ 
+out.toString(); // true (out value is inherited from obj value !!!!!)
+ 
+ 
+// Tip 5: how to understand prototype in JavaScript
+function foo() {};
+foo.prototype.text = "aloha";
+foo.prototype; // { text: "aloha" constructor: ƒ foo() __proto__: Object }
+let instance = new foo();
+instance.text; // "aloha"
+ 
+// Thus function.prototype will create a dunder proto object + constructor function everytime !!!!!!
+ 
+ 
+// Tip 6: Global functions in JavaScript
+Object
+Array
+Map
+Set
+// ...
+ 
+// These functions are global function, which has JavaScript builtin API in it, eg: Array.prototype.map() ... (Array.prototype.map === [].map // true)
+ 
+ 
+// Tip 7: var && let in functional && block scope
+// var in functional scope:
+var x = 1;
+function y() {
+ var x = 2;
+ console.log(x);
+};
+y(); // 2
+x; // 1
+ 
+// var in block scope:
+var xx = 10;
+{
+ var xx = 20;
+ console.log(xx); // 20
+}
+xx; // 20
+ 
+// let in functional scope
+let x = 1;
+function y() {
+ let x = 2;
+ console.log(x);
+};
+y(); // 2
+x; // 1
+ 
+// let in block scope:
+let xx = 10;
+{
+ let xx = 20;
+ console.log(xx); // 20
+}
+xx; // 10
+ 
+ 
+// Tip 8: powerful of window object + this can use window object !!!
+window.name = 'Damon';
+ 
+function thisValueFromWindow() {
+ return `Hi window object, I am ${this.name}.`;
+}
+ 
+thisValueFromWindow(); // Hi window object, I am Damon.
+ 
+// Another example of reading this value from arrow function:
+window.name = 'Ella';
+const lexicalScope = {
+ variable: 1,
+ readThisFromAnotherArrowFunction: () => {
+   return `hi ${this.name} ..`;
+ }
+}
+console.log(lexicalScope.readThisFromAnotherArrowFunction());
+ 
+ 
+// Tip 9: bind for this in JavaScript (access different scope variable)
+var person = {
+ name: 'ella'
+};
+ 
+function readName() {
+ return this.name;
+}
+ 
+const newBind = readName.bind(person);
+console.log(newBind());
+ 
+ 
+// Tip 10: closure recall
+let globalScope = 'hello ';
+ 
+function parent() {
+ let functionScope = 'I am ';
+ return function() {
+   let localVariable = 'Ella';
+   return `${globalScope}${functionScope}${localVariable}`;
+ };
+};
+ 
+console.log('-> ', parent()());
+```
