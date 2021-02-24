@@ -1,5 +1,5 @@
 ::: tip
-Welcome to tipify app and open each link to view the contents, :hugs:
+Welcome to tipify app and open each link to view the contents, if some contents are incorrect, please send me a <a href="mailto:damonwu0605@gmail.com">mail</a> :hugs:
 :::
 
 ### How to run the project (locally):
