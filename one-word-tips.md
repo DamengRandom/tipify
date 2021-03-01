@@ -161,4 +161,6 @@ Just remember: history.pushState will never trigger popState event !!!!
 
 The delete operator is used to delete all the variables and objects used in the program ,but it does not delete variables declared with var keyword.
 
-19. 
+19. Using `screen.debug()` to check HTML DOM: <a href="https://testing-library.com/docs/queries/about/#debugging" target="_blank">reference</a> [Its handy one !]
+
+20. 
