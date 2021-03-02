@@ -329,3 +329,61 @@ function parent() {
  
 console.log('-> ', parent()());
 ```
+
+11. Optional Chaining concept:
+Try to avoid errors like:
+`notExistedFunctionName is not a function`
+or 
+`object.notExistedAttribute is not undefined`
+
+How we fix these error by default? using ? or ?.
+
+Example below:
+
+```js
+class Person {
+  constructor(name, address, hobbies) {
+    this.name = name;
+    this.address = address;
+    this.hobbies = hobbies;
+  }
+
+  print() {
+    console.log(this);
+  }
+};
+
+function printPersonStreet(person) {
+  console.log(person?.address?.street); // variable? is quite powerful prevent error of undefined !!!!! its called optional chaining and which always returns undefined instead of output an error !!!!
+  // If we don't put ?, we will get error for UI for sure !!!!!!!!
+  
+  // console.log(person.address.street); // normal case
+}
+
+// normal case
+// const damon = new Person(
+//   'kyle',
+//   { street: '1st street', city: 'Jinan' },
+//   ['jogging', 'movie', 'reading']
+// );
+
+// get data like undefined case!!!
+const damon = new Person(
+  'kyle',
+  undefined
+);
+
+// damon.print();
+
+printPersonStreet(damon);
+
+
+
+// ?. : run the function if function is existed !!! (also try to avoid errors for UI !!!!) Example here:
+damon.printName(); // function does not exist (General error: damon.printName is not a function)
+damon.printName?.(); // not run because function does not existed
+damon.print?.(); // normal case
+
+// also works well for array: Example:
+damon.hobbies?.[0]; // undefined (can be used for detect first element inside an array, especially the for case you don't know whether you can get first element from current array or not !!!!!)
+```
