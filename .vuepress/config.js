@@ -36,7 +36,8 @@ module.exports = {
       'redux-tips.html',
       'errors-I-saw.html',
       'css-tips.html',
-      'tips-to-read.html'
+      'tips-to-read.html',
+      'tricky-js-recalls.html'
     ],
     searchMaxSuggestions: 20
   },
