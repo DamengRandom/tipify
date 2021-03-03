@@ -163,4 +163,29 @@ The delete operator is used to delete all the variables and objects used in the 
 
 19. Using `screen.debug()` to check HTML DOM: <a href="https://testing-library.com/docs/queries/about/#debugging" target="_blank">reference</a> [Its handy one !]
 
-20. 
+20. Using keyword `defer` for writing script tag inside `<header>` section, Example:
+
+```html
+<html>
+  <head>
+    <script src="main.js" defer></script>
+  </head>
+  <body> ... </body>
+</html>
+```
+
+<i>Top version is <b>better</b> than bottom version, because JavaScript downloads file at last because of the script tag put at last ...</i>
+
+```html
+<html>
+  <head>
+    ...
+  </head>
+  <body>
+    <p>html doms ...</p>
+    <script src="main.js"></script>
+  </body>
+</html>
+```
+
+21. 
