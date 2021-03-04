@@ -188,4 +188,13 @@ The delete operator is used to delete all the variables and objects used in the 
 </html>
 ```
 
-21. 
+21. Add some styles for console log (🎏🎏🎏🎏)
+
+```js
+var x = 'Damon',
+    y = 120;
+console.log(`%c${x} with Tax: %c$${y}`, 'font-weight: bold; color: red;', 'color: green;');
+// first %c is for setting up first comma css stylings, second %c for second comma styling setup !!!
+```
+
+22. 
