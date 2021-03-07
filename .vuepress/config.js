@@ -37,7 +37,8 @@ module.exports = {
       'errors-I-saw.html',
       'css-tips.html',
       'tips-to-read.html',
-      'tricky-js-recalls.html'
+      'tricky-js-recalls.html',
+      'css-scroll-images-layout.html'
     ],
     searchMaxSuggestions: 20
   },

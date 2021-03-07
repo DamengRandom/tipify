@@ -44,4 +44,5 @@ yarn docs:build // will build up the project and make the latest editions availa
 ### [Docker Basic knowledge (recall)](./docker-basics.html)
 ### [CSS Tips](./css-tips.html)
 ### [Tricky JS Recalls](./tricky-js-recalls.html)
+### [CSS Scroll Image Effect Demo](./css-scroll-images-layout.html)
 ### [Tips before interview](./tips-to-read.html)
