@@ -38,7 +38,8 @@ module.exports = {
       'css-tips.html',
       'tips-to-read.html',
       'tricky-js-recalls.html',
-      'css-scroll-images-layout.html'
+      'css-scroll-images-layout.html',
+      'node-tips.html',
     ],
     searchMaxSuggestions: 20
   },
