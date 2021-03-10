@@ -147,3 +147,109 @@ Visual comparison:
 </body>
 </html>
 ```
+
+3. CSS Position recalls
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Position Recall</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .parent {
+      padding: 5px;
+      background-color: #00AAFF;
+    }
+
+    .child {
+      padding: 5px;
+    }
+
+    .child-one {
+      background-color: rgb(116, 255, 116);
+    }
+
+    .child-two {
+      background-color: rgb(248, 117, 117);
+    }
+
+    .child-three {
+      background-color: rgb(255, 116, 232);
+    }
+
+    .parent {
+      position: relative;
+      height: 100%;
+    }
+
+    .child {
+      
+    }
+
+    .child-one {
+      width: 20%;
+      position: fixed;
+      right: 0;
+    }
+
+    .child-two {
+      position: absolute;
+      width: 70%;
+      top: 50%;
+    }
+
+    .child-three {
+      width: 200px;
+      position: sticky;
+      top: 100%;
+      bottom: 0;
+      left: 50%;
+      right: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    Parent
+    <div class="child-one child">
+      One
+    </div>
+    <div class="child-two child">
+      Two
+    </div>
+    <div class="child-three child">
+      Three
+    </div>
+    <!-- static: default position -->
+    <!-- 
+      relative: very similar with static positioning
+      diff between static and relative position:
+      relative allows developer to change top left bottom and right element, static no allowed
+     -->
+     <!-- absolute:
+      you want to set element into specific position, and never want other elements to change any position (stay where they are)
+      Common usage: set parent as relative element, and child as absolute element, so define element position specifically
+    -->
+    <!-- fixed: 
+      always fixed the element based on entire HTML DOM (webpage screen), nothing to do with parents or children
+      fixed position, after scroll, element stays where it was, if using absolute, then position will be moving based on parent element 
+    -->
+    <!-- sticky:
+      (relative + fixed = sticky) position
+      example: sticky footer, when scroll, always make footer at bottom without changing position
+    -->
+  </div>
+</body>
+</html>
+```
+
+4. 
