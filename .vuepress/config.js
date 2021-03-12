@@ -40,6 +40,7 @@ module.exports = {
       'tricky-js-recalls.html',
       'css-scroll-images-layout.html',
       'node-tips.html',
+      'npms.html',
     ],
     searchMaxSuggestions: 20
   },

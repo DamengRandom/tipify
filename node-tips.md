@@ -17,7 +17,7 @@ In NodeJS, Dependency Injection (DI) is a common design pattern for your codebas
 eg:
 
 ```js
-// class 1: walawala class file
+// function 1: walawala function file
 module.exports = function() {
   return {
     walawala: function() {
@@ -26,7 +26,7 @@ module.exports = function() {
   }
 }
 
-// class 2: aloha class file
+// function 2: aloha function file
 module.exports = function(walawalaClass) {
   return {
     aloha: function() {
