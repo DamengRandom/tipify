@@ -69,4 +69,30 @@ val.a.b[0].value;
 // at <anonymous>:1:12
 ```
 
-2. TBD
+
+2. Uncaught ReferenceError: `variable` is not defined
+
+```js
+  function error() {
+    let y = 2;
+  }
+
+  error();
+  console.log('y: ', y); // Uncaught ReferenceError: y is not defined
+```
+
+
+3. Uncaught TypeError: `functionName` is not a function
+
+```js
+aloha();
+// TypeError
+
+var aloha = function aloha() {
+    console.log("Hello!");
+};
+
+// TypeError means we're trying to do something with a value that is not allowed
+```
+
+4. 

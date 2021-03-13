@@ -154,7 +154,7 @@ array.push.apply(array, newElements); // [1, 2, 'a', 'b']
 Example:
 
 ```js
-// using t chain constructors for an object
+// using the chain constructors for an object
 function Item(name) {
   this.name = name;
 }
@@ -166,7 +166,7 @@ function AnotherItem(name) {
 
 console.log(new AnotherItem('damon').name); // damon
 
-// we also can use as this referer
+// we also can use as this referrer
 var thisVar = '1';
 function show() {
   return this.thisVar;
@@ -387,3 +387,49 @@ damon.print?.(); // normal case
 // also works well for array: Example:
 damon.hobbies?.[0]; // undefined (can be used for detect first element inside an array, especially the for case you don't know whether you can get first element from current array or not !!!!!)
 ```
+
+
+12. Quick word for JavaScript strict mode:
+
+`"user strict"` is a mode ensure developer write better and secure code:
+
+Under these modes, developer cannot do these:
+
+``` js
+// 1. None of these keywords can be used as variable name:
+// implements
+// interface
+// let
+// package
+// private
+// protected
+// public
+// static
+// yield
+// eval
+
+// eg:
+var public = 1; // cause error in strict mode
+var eval = 3.14; // The word "eval" cannot be used as a variable
+
+// 2. Octal numeric literals are not allowed
+var x = 010;
+
+// 3. Octal escape characters are not allowed
+var x = "\010";
+
+// 4. Writing to a read-only property is not allowed
+var obj = {};
+Object.defineProperty(obj, "x", {value:0, writable:false});
+obj.x = 3.14;
+
+// 5. Writing to a get-only property is not allowed
+var obj = {get x() {return 0} };
+obj.x = 3.14;
+
+// 6. Deleting an undeletable property is not allowed
+delete Object.prototype;
+```
+
+
+13. 

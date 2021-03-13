@@ -1,12 +1,28 @@
 ### JavaScript Hoisting
 
+
+#### Before start:
+
+```js
+// Normal variable lifecycle
+let variable;                 // Declaration
+variable = "hoisting";        // Assignment
+console.log(variable);        // Usage
+```
+
+
 #### Concept:
 
-You can use the variable before the variable get declared
+`Hoisting` is a JavaScript default behavior of moving all declarations to the top of current scope (eg: top of function or script file)
 
-<i>* Note: In strict mode, you must declare the variable first before use the variable.</i>
+Normally we said: "You can use the variable before the variable get declared"
 
-Example:
+<i>* Note: In strict mode, you must declare the variable first before use the variable !!</i>
+
+
+#### Examples:
+
+Example 1: general case (global level)
 
 ``` js
 // Workable example:
@@ -19,49 +35,62 @@ var num; // Declare num
 // ERROR example:
 word = 'hi';
 console.log(word);
-let word; // cause ERROR
+let word; // cause: Uncaught ReferenceError: Cannot access 'word' before initialization
 // or
-// const word; // cause ERROR
+// const word; // cause: Uncaught SyntaxError: Missing initializer in const declaration
+// or
+// var word; // 'hi'
 ```
 
-#### Quick word for JavaScript strict mode:
+Example 2: assign undeclared variable to GLOBAL variable
 
-`"user strict"` is a mode ensure developer write better and secure code:
+```js
+  function hoisting() {
+    x = 1; // by default, if we didn't put let or var or const, x will be treated as global variable
+    // principle: assign undeclared variable to GLOBAL variable
+    let y = 2;
+    
+  }
 
-Under these modes, developer cannot do these:
-
-``` js
-// 1. None of these keywords can be used as variable name:
-// implements
-// interface
-// let
-// package
-// private
-// protected
-// public
-// static
-// yield
-// eval
-
-// eg:
-var public = 1; // cause error in strict mode
-var eval = 3.14; // The word "eval" cannot be used as a variable
-
-// 2. Octal numeric literals are not allowed
-var x = 010;
-
-// 3. Octal escape characters are not allowed
-var x = "\010";
-
-// 4. Writing to a read-only property is not allowed
-var obj = {};
-Object.defineProperty(obj, "x", {value:0, writable:false});
-obj.x = 3.14;
-
-// 5. Writing to a get-only property is not allowed
-var obj = {get x() {return 0} };
-obj.x = 3.14;
-
-// 6. Deleting an undeletable property is not allowed
-delete Object.prototype;
+  hoisting();
+  console.log('x: ', x); // x: 1
+  console.log('y: ', y); // Uncaught ReferenceError: y is not defined
 ```
+
+Example 3: scoped function hoisting error
+
+```js
+function scoped() {
+  console.log(name); // undefined
+  var name = 'damon';
+}
+
+scoped();
+```
+
+Example 4: function hoisting
+
+```js
+// No error case
+hi();
+
+function hi () {
+  console.log("Hello!");
+};
+
+// Error case
+
+aloha();
+// TypeError
+
+var aloha = function aloha() {
+    console.log("Hello!");
+};
+
+// TypeError means we're trying to do something with a value that is not allowed
+```
+
+
+#### Conclusion:
+
+<strong>Please always declare all variables at the beginning of every scope, this is how JavaScript interprets the code, it is always a good rule to follow</strong>
