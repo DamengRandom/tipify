@@ -8,4 +8,6 @@
 
 Example of fetch data with loader HOC: <a href="https://stackblitz.com/edit/react-kv6hgk?file=src/Components/Todo.js" target="_blank">Click here</a>
 
+Second Example of Loader HOC <a href="https://codesandbox.io/s/hoc-trial-02-crqyn?file=/HOC/LoaderHOC.js" target="_blank">Click here</a>
+
 Another good <a href="https://dev.to/gethackteam/from-higher-order-components-hoc-to-react-hooks-2bm9"  target="_blank">reference</a> HOC replacement solution by using hooks
