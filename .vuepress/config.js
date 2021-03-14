@@ -41,6 +41,7 @@ module.exports = {
       'css-scroll-images-layout.html',
       'node-tips.html',
       'npms.html',
+      'restful-api.html',
     ],
     searchMaxSuggestions: 20
   },
