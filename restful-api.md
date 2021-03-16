@@ -97,3 +97,7 @@ app.get('/posts/:postId/comments', (req, res) => {
 
 app.listen(3000, () => console.log('server started'));
 ```
+
+References:
+
+1. <a href="https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/" target="_blank">Restful API design</a> 

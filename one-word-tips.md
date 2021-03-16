@@ -197,4 +197,13 @@ console.log(`%c${x} with Tax: %c$${y}`, 'font-weight: bold; color: red;', 'color
 // first %c is for setting up first comma css stylings, second %c for second comma styling setup !!!
 ```
 
-22. 
+22. DevDependency vs Dependency:
+
+-- `DevDependency` packages are only used for `development` !!
+
+-- `Dependency` packages are used for `development` and `runtime` both !!
+
+<a href="https://medium.com/@dylanavery720/npmmmm-1-dev-dependencies-dependencies-8931c2583b0c#:~:text=The%20difference%20between%20these%20two,an%20npm%20install%20%2D%2Dsave." target="_blank">reference</a>
+
+
+23. 
