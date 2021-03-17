@@ -42,6 +42,7 @@ module.exports = {
       'node-tips.html',
       'npms.html',
       'restful-api.html',
+      'concepts.html'
     ],
     searchMaxSuggestions: 20
   },
