@@ -38,7 +38,6 @@ module.exports = {
       'css-tips.html',
       'tips-to-read.html',
       'tricky-js-recalls.html',
-      'css-scroll-images-layout.html',
       'node-tips.html',
       'npms.html',
       'restful-api.html',
