@@ -354,4 +354,52 @@ Demo:
 ```
 
 
-5. 
+5. Example of `grid-column` && `grid-row-start`:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Layout Example 2</title>
+  <style>
+    .container {
+      display: grid;
+      grid-gap: 20px;
+      height: 100vh;
+      grid-template-columns: 100px 200px auto auto;
+    }
+
+    .grid-item {
+      background-color: skyblue;
+    }
+
+    .grid-item:nth-of-type(2) {
+      grid-row-start: span 2; /* extended 2 rows */
+    }
+
+    .grid-item:nth-of-type(6) {
+      /* grid-column-start: 3; */
+      /* grid-column-end: 5; */ /* first version */
+      /* grid-column-end: span 2; */
+
+      grid-column: 3 / span 2; /* shortcut expression */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+  </div>
+</body>
+</html>
+```
+
+6. 
