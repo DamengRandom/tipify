@@ -37,4 +37,17 @@ Library > framework (library contains framework), your code will get called by t
 -- Available after React v16.8
 
 
-4. 
+4. 5 patterns we need to know as Senior developer:
+<a href="https://www.youtube.com/watch?v=FLmBqI3IKMA" target="_blank">Click</a>
+
+
+* Singleton pattern: like a given class can only has one instance at a time, doing functionalities eg: list of client configurations, database driver, current state in the app (redux store maybe) and etc ..
+
+* Adapter(Bridge) pattern: like a database driver, can have a common driver interface, and multiple concrete implementations like, mongo database, or dynamodb database. (We can have an abstract class for multi-purposes, think about camera connector can have multiple different lens !!)
+
+* Observer pattern: 2 roles (publisher: give stuff [eg: event(s)] && subscriber: listen stuff [eg: event(s)]), it allow losing coupling between publisher and subscriber !!
+
+
+🎏 Mindset: Use these patterns when we found codebase(s) need them !!!!!!!!!!!!!!
+
+5. 
