@@ -32,6 +32,7 @@ Example 2:
   </style>
 ```
 
-References: 
+References:
+
 1. <a href="https://seesparkbox.com/foundry/bem_by_example" target="_blank">Reference 1</a>
 2. <a href="https://css-tricks.com/bem-101/" target="_blank">Reference 2</a>

@@ -33,9 +33,13 @@ export default store;
 // reference: https://egghead.io/lessons/react-redux-store-methods-getstate-dispatch-and-subscribe
 ```
 
+
+
 #### For simple Redux flow recall
 
 Please check codebase <a href="https://github.com/DamengRandom/react-redux-typescipt">react-redux-typescipt</a> ~~ (For year 2021)
+
+
 
 #### How to implement Redux Saga (Basic workflow for recall only !!)
 

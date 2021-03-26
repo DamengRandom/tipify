@@ -12,7 +12,8 @@ let family = [
 ```
 
 
-Case 1: Use for count number of element inside array
+<b>Case 1:</b> Use for count number of element inside array:
+
 ```js
 let countResult = undefined;
 countResult = family.reduce((acc, person) => {
@@ -24,7 +25,8 @@ console.log('use for count: ', countResult);
 ```
 
 
-Case 2: Use for sum elements, such as sum ages:
+<b>Case 2:</b> Use for sum elements, such as sum ages:
+
 ```js
 let sumAgesResult = undefined;
 sumAgesResult = family.reduce((acc, person) => {
@@ -37,7 +39,8 @@ console.log('use for sum ages: ', sumAgesResult);
 ```
 
 
-Case 3: Use for build a new array of names, like map function:
+<b>Case 3:</b> Use for build a new array of names, like map function:
+
 ```js
 let arrayOfNames = undefined;
 arrayOfNames = family.reduce((acc, person) => {
@@ -48,7 +51,8 @@ console.log('use for array of names: ', arrayOfNames);
 ```
 
 
-Case 4: Use for find an element, such as find a name
+<b>Case 4:</b> Use for find an element, such as find a name:
+
 ```js
 let findByName = undefined;
 
@@ -64,7 +68,8 @@ console.log('find by name: ', findByName('Ella'));
 ```
 
 
-Case 5: Use for return a conditional result:
+<b>Case 5:</b> Use for return a conditional result:
+
 ```js
 let recordOver18 = undefined;
 
@@ -85,7 +90,8 @@ console.log('record age over 18: ', recordOver18);
 ```
 
 
-Case 6: Use for count occurrences:
+<b>Case 6:</b> Use for count occurrences:
+
 ```js
 let statusData = [
   {id: '1', status: 'Pending'},
@@ -107,7 +113,8 @@ console.log('count occurrences: ', occurrences);
 ```
 
 
-Case 7: flatten: (destructure nested arrays into one array)
+<b>Case 7:</b> flatten: (destructure nested arrays into one array):
+
 ```js
 let nestedArray = [
   'element 1',

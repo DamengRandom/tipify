@@ -1,6 +1,6 @@
 ### Just one word for knowledge recall
 
-1. foreach vs map:
+<b>1.</b> foreach vs map:
 
 `forEach()` — executes a provided function once for each array element.
 `map()` — creates a new array with the results of calling a provided function on every element in the calling array.
@@ -21,10 +21,10 @@ let doubled = arr.map(num => {
 ```
 
 
-2. `viewport`: The viewport is the user's visible area of a web page.
+<b>2.</b> `viewport`: The viewport is the user's visible area of a web page.
 
 
-3. `autoprefixer`: is a tool to automatically write the vendor properties,
+<b>3.</b> `autoprefixer`: is a tool to automatically write the vendor properties,
 it has been used fo support more properties for different browsers, such as IE, (polyfill consideration)
 
 Example:
@@ -42,7 +42,7 @@ a {
 ```
 
 
-4. `composition function`:
+<b>4.</b> `composition function`:
 
 ```js
 const x = a => a + 1;
@@ -52,14 +52,14 @@ console.log(x(y(5)))
 ```
 
 
-5. `ORM` [Object Relational Mapper]
+<b>5.</b> `ORM` [Object Relational Mapper]
 - concept: its a technique which helps developer talk to database more easier
 
 
-6. `Service Worker`: A service worker is a `script` that stands between your website and the network, giving you, among other things, the ability to intercept network requests and respond to them in different ways.
+<b>6.</b> `Service Worker`: A service worker is a `script` that stands between your website and the network, giving you, among other things, the ability to intercept network requests and respond to them in different ways.
  
 
-7. Copy file by terminal commands
+<b>7.</b> Copy file by terminal commands
 
 ```shell
 cp -a /source_folder/. /destination_folder/
@@ -70,7 +70,7 @@ cp -a /source_folder/. /destination_folder/
 </a>
 
 
-8. `pure` function vs `impure` function
+<b>8.</b> `pure` function vs `impure` function
 - Pure function is predictable, because the output is based on the input and return a new value, which won't overwrite the previous value, it generates a new value, eg:
 
 ```js
@@ -83,7 +83,8 @@ function squareIt(items) {
     return items.map(square);
 }
 ```
-  * (note: reducer is pure function, because we need to make state predictable)
+
+* (note: reducer is pure function, because we need to make state predictable)
 
 - Impure function has change effect, which means it may call database, do some logic to overwrite values and so on, eg:
 
@@ -107,42 +108,42 @@ function squareIt(items) {
 ```
 
 
-9. `docker-compose`: A tool for running multiple docker containers at same time !!
+<b>9.</b> `docker-compose`: A tool for running multiple docker containers at same time !!
 
 - allow developers to input multiple commands based on different services (such as database services, api services and web app services and etc)
 - Inside docker-compose file, dash (-) refers to array !!!
 
 
-10. Instead of using `array[0]`, we can use `array.find(e => e == !!e)` (handy one) !!
+<b>10.</b> Instead of using `array[0]`, we can use `array.find(e => e == !!e)` (handy one) !!
 
 
-11. `httpOnly: true` : don't want any javascript in browser to read or view the credentials like cookie
+<b>11.</b> `httpOnly: true` : don't want any javascript in browser to read or view the credentials like cookie
 
 
-12. CI/CD:
+<b>12.</b> CI/CD:
 
 CI -> Continuous Integration -> means merge code into current codebase
 CD -> Continuous Deployment -> means deploy the latest changes to certain environment, like production
 
 Tools: (Travis, BuildKite, Github actions and etc)
 
-13. For handlebars: if you don't want Handlebars to escape a value, use the "triple-stash", `{{{`
+<b>13.</b> For handlebars: if you don't want Handlebars to escape a value, use the "triple-stash", `{{{`
 
 <a href="https://www.topjavatutorial.com/handlebars-js/handlebars-js-escape-display-special-html-characters/" target="_blank">Reference here</a>
 
-14. `useMemo` vs `useCallback`:
+<b>14.</b> `useMemo` vs `useCallback`:
 
 <p>useMemo: returns the value of that callback function</p>
 <p>useCallback: returns the callback function</p>
 
-15. Router: Like React router: just `switch one component views`, change DOM Node elements
+<b>15.</b> Router: Like React router: just `switch one component views`, change DOM Node elements
   - hash: `window.addEventListener('hashChange', () => { ... });`
   - history: `history.pushState();`
 
 Example: <a href="https://dev.to/kodnificent/how-to-build-a-router-with-vanilla-javascript-2a18" target="_blank">here</a>
 
 
-16. Vue computed VS watcher:
+<b>16.</b> Vue computed VS watcher:
 
 Computed: for complex computations 
 Watch: for API data fetching handling (eg: debounce)
@@ -150,20 +151,20 @@ Watch: for API data fetching handling (eg: debounce)
 Details in <a href="https://vuejs.org/v2/guide/computed.html#Computed-vs-Watched-Property" target="_blank">here</a> And <a href="https://vuejs.org/v2/guide/computed.html#Watchers" target="_blank">here</a>
 
 
-17. `history.pushState` && `addEventListener('popState', () => {})`
+<b>17.</b> `history.pushState` && `addEventListener('popState', () => {})`
 
 history.pushState: adds an entry to browser history session stack !!
 addEventListener('popState', () => {}): `popState` is fired when active history entry get changed
 
 Just remember: history.pushState will never trigger popState event !!!!
 
-18. JavaScript `delete` keyword:
+<b>18.</b> JavaScript `delete` keyword:
 
 The delete operator is used to delete all the variables and objects used in the program ,but it does not delete variables declared with var keyword.
 
-19. Using `screen.debug()` to check HTML DOM: <a href="https://testing-library.com/docs/queries/about/#debugging" target="_blank">reference</a> [Its handy one !]
+<b>19.</b> Using `screen.debug()` to check HTML DOM: <a href="https://testing-library.com/docs/queries/about/#debugging" target="_blank">reference</a> [Its handy one !]
 
-20. Using keyword `defer` for writing script tag inside `<header>` section, Example:
+<b>20.</b> Using keyword `defer` for writing script tag inside `<header>` section, Example:
 
 ```html
 <html>
@@ -188,7 +189,7 @@ The delete operator is used to delete all the variables and objects used in the 
 </html>
 ```
 
-21. Add some styles for console log (🎏🎏🎏🎏)
+<b>21.</b> Add some styles for console log (🎏🎏🎏🎏)
 
 ```js
 var x = 'Damon',
@@ -197,7 +198,7 @@ console.log(`%c${x} with Tax: %c$${y}`, 'font-weight: bold; color: red;', 'color
 // first %c is for setting up first comma css stylings, second %c for second comma styling setup !!!
 ```
 
-22. DevDependency vs Dependency:
+<b>22.</b> DevDependency vs Dependency:
 
 -- `DevDependency` packages are only used for `development` !!
 
@@ -206,4 +207,4 @@ console.log(`%c${x} with Tax: %c$${y}`, 'font-weight: bold; color: red;', 'color
 <a href="https://medium.com/@dylanavery720/npmmmm-1-dev-dependencies-dependencies-8931c2583b0c#:~:text=The%20difference%20between%20these%20two,an%20npm%20install%20%2D%2Dsave." target="_blank">reference</a>
 
 
-23. 
+<b>23.</b> 

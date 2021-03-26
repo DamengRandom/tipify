@@ -1,16 +1,16 @@
 ### Tips for quick recall
 
-1. `href` vs `src`: 
+<b>1.</b> `href` vs `src`: 
 `href` resources are loaded based on a trigger
 `src` resources are loaded automatically.
 
 
-2. Ajax (Asynchronous JavaScript And XML): update a web page `without reloading` the page 
+<b>2.</b> Ajax (Asynchronous JavaScript And XML): update a web page `without reloading` the page 
 
 Using XMLHttpRequest to create a http request and send to sever, and then server send data back to browser, and finally update page content
 
 
-3. `splice` usage for remove one element from array:
+<b>3.</b> `splice` usage for remove one element from array:
 
 ```js
 var list = [1,2,3,4,77,5,6];
@@ -28,7 +28,7 @@ console.log(afterRemove5); // [1,2,3,4,77,6]
 ```
 
 
-4. `session storage` vs `local storage` vs `cookie`
+<b>4.</b> `session storage` vs `local storage` vs `cookie`
 
 Common: all of these 3 are stored inside browser ..
 
@@ -70,7 +70,7 @@ Common: all of these 3 are stored inside browser ..
 ```
 
 
-5. Please watch this video for recall token && session based authentications
+<b>5.</b> Please watch this video for recall token && session based authentications
 <a href="https://www.youtube.com/watch?v=2PPSXonhIck" target="_blank">Link</a>
 
   - Session based authentication: stateful, using cookie
@@ -99,12 +99,12 @@ Common: all of these 3 are stored inside browser ..
     8. when user `logout`, token will be `cleared` by client storage
 
 
-6. Command `npx`:
+<b>6.</b> Command `npx`:
 
 The ability of `npx` is to run the scripts from npm packages without having to install them
 
 
-7. VSCode Copy && Moving Code Block Hotkeys (Mac users):
+<b>7.</b> VSCode Copy && Moving Code Block Hotkeys (Mac users):
 
 ```js
 shift + option + down key // copying current line of code to next line (handy one)
@@ -112,7 +112,7 @@ alt + up / down // moving code up or down
 ```
 
 
-8. Webhook concept:
+<b>8.</b> Webhook concept:
 
 Explanation: after date, you asked your girlfriend to send you a message once she reached to home. Then, after your girlfriend reached home, then she sends you a message. Then, you feel happy.
 
@@ -121,7 +121,7 @@ Example: Messaging/Notification app: once you sends out some dat via API, then m
 Simple word: you did something, then some other things will be triggered after your action, and also let you know what happened.
 
 
-9. Redis:
+<b>9.</b> Redis:
 
 It refers to a cache tool which helps developers to save some data as cache so when user refetch the data, user can get it from cache instead of making another API call, eg:
 
@@ -136,7 +136,7 @@ app.get('/path/route', cacheMiddleware, () => { cb ... });
 Reference <a href="https://www.youtube.com/watch?v=oaJq1mQ3dFI" target="_blank">Link</a>
 
 
-10. How Vue event bus working? An simple example:
+<b>10.</b> How Vue event bus working? An simple example:
 
 ```js
 // Why we need event bus? We want to share the data/props .. between siblings components
@@ -207,7 +207,7 @@ bus.$on('titleChanged', data => {
 ```
 
 
-11. deploy docker container with CI/CD tool (Travis):
+<b>11.</b> deploy docker container with CI/CD tool (Travis):
 
 create a `.travis.yml` file and do the following setups:
 
@@ -226,7 +226,7 @@ script:
 Then connect travis with your github account: read doc and find the related github repository and connect it with Travis (every time commits a new PR, as long as merge into master, the Travis will get triggered to deploy the changes to certain environment)
 
 
-12. Common regex:
+<b>12.</b> Common regex:
 
 ```js
 // email validator:
@@ -246,7 +246,7 @@ console.log(newStr); // "Remove extra spaces inside string text content"
 Reference: <a herf="freecodecamp.org/news/javascript-regex-match-use-replace-on-string/" target="_blank">Link</a>
 
 
-13. JWT (JSON Web Token)
+<b>13.</b> JWT (JSON Web Token)
 
 3 parts: Header, Signature, Payload
 
@@ -280,7 +280,7 @@ Payload: contains tge data to be sent
 Good way to integrate is Auth0.
 
 
-14. tilde (~) vs Caret (^) in npm:
+<b>14.</b> tilde (~) vs Caret (^) in npm:
 
 ~version means: approximately equivalent to version. (update <b>patch</b> version)
 Eg: ~1.2.3: means will use release from 1.2.3 to <1.3.0
@@ -290,7 +290,8 @@ Eg: ^2.3.4: means will use release from 2.3.4 to <3.0.0
 
 Good reference <a href="https://stackoverflow.com/questions/22343224/whats-the-difference-between-tilde-and-caret-in-package-json" target="_blank">here</a>
 
-15. Create VanillaJS Router <b>(Sorry, this is a bad failed example, just another experience of coding Vanilla JS)</b>
+
+<b>15.</b> Create VanillaJS Router <b>(Sorry, this is a bad failed example, just another experience of coding Vanilla JS)</b>
 
 ```html
 <!-- HTML part -->
@@ -464,7 +465,7 @@ var module = {
 // I was feeling like SPA is a big tab, each component is the tab content, each link is the tab title !!! 
 ```
 
-16. How to delete object from array by using forEach:
+<b>16.</b> How to delete object from array by using forEach:
 
 ```js
 // data to use
@@ -482,4 +483,4 @@ data.forEach(val => {
 data; // [{x: 1, y: 2}, {a: 1, b: 2}]
 ```
 
-17. 
+<b>17.</b> 

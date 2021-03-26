@@ -3,9 +3,11 @@
 ### Example codebase
 Please find my personal react hooks practices <a href="https://github.com/DamengRandom/hooks-recall" target="_blank">here</a>.
 
+
 #### useMemo vs useCallback
 - <p>useMemo: returns the value of that callback function</p>
 - <p>useCallback: returns the callback function</p>
+
 
 #### useContext
 
@@ -17,7 +19,6 @@ Usage: share state values between components
 // Step 1: Define a context:
 import { createContext } from 'react';
 export default createContext(null);
-
 
 // Step 2: set context provider value:
 import UserContext from '../src/context/UserContext';
@@ -91,7 +92,6 @@ export default function App() {
   )
 }
 
-
 // Step 3: use context value in components:
 import UseContext from '../context/UserContext';
 
@@ -122,6 +122,7 @@ export default function Home() {
 
 // Find details on codebase: mern-jwt-trial-front-end
 ```
+
 
 #### useReducer
 
@@ -164,4 +165,3 @@ React.useEffect(() => {
 ```
 
 <b>Last point: when every time we saw the dependencies comes from parent level, we may need to consider whether shall we use related useMemo/memo or useCallback hooks to enhance the performance</b>
-

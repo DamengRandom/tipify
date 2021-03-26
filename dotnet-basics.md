@@ -13,9 +13,7 @@ This post is related with .Net introduction which is mainly talking about what i
 1). `.NET CLR`: Common Language Runtime which provide the runtime environment to compile the C# code and then make the app run
 (Reference Link: <a href="https://docs.microsoft.com/en-us/dotnet/standard/clr" target="_blank">.Net CLR</a>)
 
-
 2). `BCL`: Base Class Library is a standard C# runtime library, its like a base library, which contains `System.String`, `System.DateTime` and etc.
-
 
 3). Concepts similarities:
   -- CLR = JVM (The CLR is similar with JVM [Java Vritual Machine])
@@ -30,7 +28,6 @@ This post is related with .Net introduction which is mainly talking about what i
 5). The reason why we use `sqlite`: easier to start and its a file based database, you can use db name same as your project name
 
 More contents: To be added later .. 💤
-
 
 
 #### .Net CLI commands
@@ -60,25 +57,20 @@ dotnet watch run
 ```
 
 
-
 #### .Net Files Meaning
 
 ```csharp
 // 1. ProjectName.sln: a solution file which is file to run by IDEs
-
 
 // 2. ProjectName.csproj: it contains
   // reference to microsoft SDK
   // reference of other project
   // target framework reference eg: netstandard2.0
 
-
 // 3. Program.cs: it has Main() which is the root of your application, its like App.js in JavaScript
-
 
 // 4. appsettings.json: is a config file used to store config settings
   // eg: db connection strings setup
-
 
 // 5. Startup.cs: this is where we add the application configuration
   // eg: dependency injection settings
@@ -89,7 +81,6 @@ dotnet watch run
 
 // 6. Properties/launchSettings.json: contains the environment settings
   // eg: localhost:5000 url settings
-
 
 // 7. Controllers/ControllerName.cs: it contains
   // [Route("api/[controller]")]: it defines the API attributes

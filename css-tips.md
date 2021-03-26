@@ -1,6 +1,6 @@
 ### CSS General recalls
 
-1. inline block vs block vs inline
+<b>1.</b> inline block vs block vs inline
 
 inline block:
   - respect `top bottom left right` margin and paddings
@@ -18,7 +18,8 @@ Visual comparison:
 
 ![inline vs inline block vs block](https://res.cloudinary.com/dameng/image/upload/v1612006266/tipify/block_inline-block_inline.png)
 
-2. CSS Grid layout Examples
+
+<b>2.</b> CSS Grid layout Examples
 
 <i>Example 1:</i>
 
@@ -148,7 +149,8 @@ Visual comparison:
 </html>
 ```
 
-3. CSS Position recalls
+
+<b>3.</b> CSS Position recalls
 
 ```html
 <!DOCTYPE html>
@@ -252,7 +254,8 @@ Visual comparison:
 </html>
 ```
 
-4. CSS Practical Example: CSS scroll images effect
+
+<b>4.</b> CSS Practical Example: CSS scroll images effect
 
 Demo:
 
@@ -354,7 +357,7 @@ Demo:
 ```
 
 
-5. Example of `grid-column` && `grid-row-start`:
+<b>5.</b> Example of `grid-column` && `grid-row-start`:
 
 ```html
 <!DOCTYPE html>
@@ -402,4 +405,4 @@ Demo:
 </html>
 ```
 
-6. 
+<b>6.</b> 

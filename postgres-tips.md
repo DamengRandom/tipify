@@ -1,15 +1,17 @@
 ### Postgres SQL General tips
 
 #### Tip 1: Quick recall tips (In case forgot)
-1. <>: not equal (Operator)
-2. IN is = ANY (shorthand for multiple OR conditions) in PostgreSQL
+
+1). <>: not equal (Operator)
+
+2). IN is = ANY (shorthand for multiple OR conditions) in PostgreSQL
 
 ```sql
 SELECT * FROM Customers
 WHERE Country NOT IN ('Germany', 'France', 'UK', 'USA');
 ```
 
-3. Joins:
+3). Joins:
 - `inner join`: common area
 - `left join`: full left table + common area between left and right tables
 - `right join`: full right table + common area between left and right tables
@@ -18,10 +20,12 @@ WHERE Country NOT IN ('Germany', 'France', 'UK', 'USA');
 ![joins table](https://res.cloudinary.com/dameng/image/upload/v1607324509/tipify/joins.png)
 
 
-#### Tip 2: JSONB
-1. JSONB refers to Binary JSON 
 
-2. Why JSONB? Answer:
+#### Tip 2: JSONB
+
+1). JSONB refers to Binary JSON 
+
+2). Why JSONB? Answer:
 JSON is stored in its plan text format
 JSONB is stored in a binary representation
 JSONB is faster, coz already in binary format, no need transform
@@ -65,8 +69,8 @@ select body #> '{organisationLevel, bu}' as school from excursion_spaces
 
 - Simple explain:
 
-1. Concept: `@>`: In general `@>` is the "contains" operator.
-2. Difference:
+1). Concept: `@>`: In general `@>` is the "contains" operator.
+2). Difference:
 `<@`: was left part of right?
 `@>`: was right part of left?
 
@@ -133,5 +137,6 @@ select jsonb_object_keys(body -> 'organisationLevel') from excursion_spaces
 
 
 #### References:
+
 1. <a href="https://www.postgresql.org/docs/9.4/functions-json.html#FUNCTIONS-JSONB-OP-TABLE" target="_blank">PostgreSQL Doc</a>
 2. <a href="https://devhints.io/postgresql-json" target="_blank">PostgreSQL JSON</a>

@@ -56,10 +56,12 @@ let message = "Ahoy, Damon !!";
 console.log(message);
 
 
+
 // Basic types
 let name: string = 'damon'; // string
 let isTrue: boolean = false; // boolean
 let number: number = 1; // number
+
 
 
 // Sub type can be used for initialize a variable or reassign the value to a declared variable 
@@ -69,14 +71,17 @@ isTrue = n;
 name = u;
 
 
+
 // 2 ways to define array:
 let arr1: number[] = [1,2,3];
 let arr2: Array<number> = [1,2,3,4];
 
 
+
 // Tuple type example:
 // number of items inside array is fixed & order must be same as declarations
 let mixArr: [string, number, boolean] = ['damon', 123, true];
+
 
 
 // Enum:
@@ -88,10 +93,12 @@ enum ColorWithValue {Red="Red", Green="Green", Blue="Blue"};
 console.log('Enum color with value: ', ColorWithValue.Green);
 
 
+
 // When to use type 'any'?
 // When the time we need to reassign value to different type, Eg: 
 let valueReadFromLibrary: any = 10;
 valueReadFromLibrary = false;
+
 
 
 // If we only use type 'any' WITHOUT any reassignment, typescript won't give us any error, which cause huge effort for code debugging, eg:
@@ -100,11 +107,13 @@ let noReassignTypeAny: any = 10;
 console.log(noReassignTypeAny.name); // object, wrong (X)
 
 
+
 // Type 'unknown':
 let unknownVariableType: unknown = 10;
 unknownVariableType = 'become a string';
 // console.log(unknownVariableType.toUpperCase()); // If not define a type in advance, ts will give us error hint, so we need to predefine like this: 'variable as type'
 console.log((unknownVariableType as string).toUpperCase());
+
 
 
 // Multiple type variable:
@@ -202,6 +211,7 @@ let m1 = new Manager('Ella');
 m1.delegateNameForManager();
 console.log('Employee class variable got value from Manager class: ', m1.employeeName);
 m1.greet();
+
 
 
 // Access Modifier

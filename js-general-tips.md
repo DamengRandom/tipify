@@ -2,14 +2,16 @@
 
 * (Only record the knowledge I always forget)
 
-1. When you pass a function by name without parentheses, you are passing the function object itself. When you pass it with parentheses, you are passing the result of executing that function.
+<b>1.</b> When you pass a function by name without parentheses, you are passing the function object itself. When you pass it with parentheses, you are passing the result of executing that function.
 
-2. Why we use filter instead of find?
+
+<b>2.</b> Why we use filter instead of find?
 
 The `find()` method doesn’t work in IE <= 11. The `filter()` method works in all browsers, including IE9+.
 <a href="https://www.c-sharpcorner.com/blogs/find-vs-filter-in-javascrtipt#:~:text=Find%20and%20Filter&text=The%20find()%20method%20returns,values%20in%20the%20array%20collection.&text=The%20filter()%20method%20returns,an%20array%20from%20the%20collection" target="_blank">Reference</a>
 
-3. `Maps`:
+
+<b>3.</b> `Maps`:
 In ES6: `Map` method which uses `get` and `set` methods to get and set values, code example:
 
 ```js
@@ -30,7 +32,8 @@ const mapArray = new Map([
 mapArray.get(0); // OUTPUT: value 1
 ```
 
-4. `Sets`: a unique value collections of data set, code example:
+
+<b>4.</b> `Sets`: a unique value collections of data set, code example:
 
 ```js
 const setUnique = new Set([1,2,3,4,4,7,8,94,1,2]); // OUTPUT: {1,2,3,4,7,8,94,1,2}
@@ -43,14 +46,16 @@ Object.values(obj); // [1, 2]
 Object.assign(obj, {c: 3}); // {a: 1, b: 2, c: 3}
 ```
 
-5. `class` is a `function` type in ES6, example:
+
+<b>5.</b> `class` is a `function` type in ES6, example:
 
 ```js
 class A { ... }
 typeof A // OUTPUT: function
 ```
 
-6. ES6: Another way to declare function (`['functionName'](){}`)
+
+<b>6.</b> ES6: Another way to declare function (`['functionName'](){}`)
 
 ```js
 var obj = {
@@ -62,7 +67,8 @@ var obj = {
 obj.hi(); // OUTPUT: hello
 ```
 
-7. `Iterators` VS `Iterable`:
+
+<b>7.</b> `Iterators` VS `Iterable`:
 
 - Iterators: is a pointer for traversing the elements of a data structure
 
@@ -71,7 +77,7 @@ obj.hi(); // OUTPUT: hello
     - plain objects are not iterable ..
 
 
-8. Try to use `for-of` instead of using normal for loop, code example:
+<b>8.</b> Try to use `for-of` instead of using normal for loop, code example:
 
 ```js
 var items = Array.of(...[1,2,3]);
@@ -80,7 +86,8 @@ for(var item of items) {
 }
 ```
 
-9. `Object.assign()` && `Object.defineProperty()`:
+
+<b>9.</b> `Object.assign()` && `Object.defineProperty()`:
 
 ```js
 Object.assign(obj, {newKey: newValue});
@@ -100,7 +107,8 @@ obj.newProp; // OUTPUT is 'prop value' because the writable is false !!!
 
 ```
 
-10. `bind()`, `apply()`, `call()`:
+
+<b>10.</b> `bind()`, `apply()`, `call()`:
 
 - `bind()`: Simple memo: you don't want to lose `this` for another function
 Example:
@@ -175,7 +183,7 @@ console.log(show.call()); // 1
 ```
 
 
-11. Another tips from egghead.io:
+<b>11.</b> Another tips from egghead.io:
  
 ```js
 // Tip 1: not everything in JavaScript is an Object !!!!
@@ -330,7 +338,9 @@ function parent() {
 console.log('-> ', parent()());
 ```
 
-11. Optional Chaining concept:
+
+<b>12.</b> Optional Chaining concept:
+
 Try to avoid errors like:
 `notExistedFunctionName is not a function`
 or 
@@ -389,7 +399,7 @@ damon.hobbies?.[0]; // undefined (can be used for detect first element inside an
 ```
 
 
-12. Quick word for JavaScript strict mode:
+<b>13.</b> Quick word for JavaScript strict mode:
 
 `"user strict"` is a mode ensure developer write better and secure code:
 
@@ -432,4 +442,4 @@ delete Object.prototype;
 ```
 
 
-13. 
+<b>14.</b> 

@@ -19,6 +19,7 @@ Caller(PassingAsAVariable);
 This is due to the fact that JavaScript functions are `first-class objects` which can be passed as variable format.
 
 
+
 #### Important tips for Callback:
 
 <i><strong>Callback ensures a function will not going to be called before the task is completed, but it will be called right after the task completed.</strong></i>
@@ -62,6 +63,7 @@ function process(url) {
 
 download(url, process);
 ```
+
 
 
 #### Important Tips for Promise:
@@ -121,6 +123,7 @@ var buyingAndReceiving = () => {
 
 buyingAndReceiving();
 ```
+
 
 
 #### Important tips for Async Await

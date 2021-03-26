@@ -11,9 +11,9 @@
 
 
 #### Remembers:
-1. `publicPath`: tells webpack where the generic files are located
+1). `publicPath`: tells webpack where the generic files are located
 
-2. `file-loader` example:
+2). `file-loader` example:
 
 ``` js
   rules: [
@@ -28,7 +28,7 @@
   ]
 ```
 
-3. Example of support scss:
+3). Example of support scss:
 
 ```js
   {
@@ -40,7 +40,7 @@
   // the running sequence is: sass-loader (with node-sass library) then css-loader and then style-loader !!!
 ```
 
-4. `babel` rule example:
+4). `babel` rule example:
 
 ```js
   {
@@ -57,7 +57,7 @@
   // installed: npm i @babel/core babel-loader @babel/preset-env @babel/plugin-proposal-class-properties -D
 ```
 
-5. Browser cache:
+5). Browser cache:
 
 ```js
 // avoid unnecessary loading, just cache if something unchanged
@@ -67,7 +67,7 @@ filename: 'styles.[contenthash].js'
 // DON'T forget to use CleanWebpackPlugin plugin tool to remove old cached files inside dist folder
 ```
 
-6. `optimization` option:
+6). `optimization` option:
 Use case: inside a file, we import an extra library like lodash, and we can use `splitChunks` to optimize each bundle (or just one bundle) file size so we can reduce file size for imported dependencies
 
 ```js
@@ -88,7 +88,7 @@ new HtmlWebpackPlugin({
 }),
 ```
 
-7. How `NodeJS` read `static` files, like css, images, other types of assets files:
+7). How `NodeJS` read `static` files, like css, images, other types of assets files:
 
 ```js
 // In node file:
@@ -100,7 +100,7 @@ publicPath: '/static/'
 // we define the static path in express `/static` and then we webpack read it as `/static/`
 ```
 
-8. How NodeJS output html file like SSR:
+8). How NodeJS output html file like SSR:
 ```js
 ['route1', 'route2'].forEach(function(route) { // multiple routes/pages
   app.get('/' + route + '/', function(req, res) {
@@ -111,7 +111,7 @@ publicPath: '/static/'
 });
 ```
 
-9. `module federation` (webpack 5 feature):
+9). `module federation` (webpack 5 feature):
 - is a concept which allows one application loads modules which comes from another application at run time!!
 
 Example:
@@ -185,7 +185,7 @@ new ModuleFederationPlugin({
 })
 ```
 
-10. webpack font(s) import:
+10). webpack font(s) import:
 
 ```js
 // copy a font file, like google fonts
@@ -220,7 +220,7 @@ html {
 }
 ```
 
-11. Adding `eslint` (nothing to do with webpack, just add it):
+11). Adding `eslint` (nothing to do with webpack, just add it):
 
 ```js
 // step 1: create a `.eslintrc` file
@@ -250,14 +250,14 @@ node_modules/
 "lint": "eslint ."
 ```
 
-12. npm webpack `production` vs `development` command example:
+12). npm webpack `production` vs `development` command example:
 
 ```js
 "build": "webpack --config webpack.production.config.js",
 "dev": "webpack serve --config webpack.dev.config.js --hot",
 ```
 
-13. References:
+References:
 
 - Recall knowledge from webpack 5 Udemy course <a href="https://www.udemy.com/course/webpack-from-beginner-to-advanced/learn/lecture/12761343#overview" target="_blank">here</a>
 - <a href="https://webpack.js.org/concepts/why-webpack/" target="_blank">why webpack?</a>

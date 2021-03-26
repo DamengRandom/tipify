@@ -2,9 +2,9 @@
 
 #### Simple understanding
 
-1. Command: modifies state, should not return a value (post data) [POST, PUT, DELETE]
+1). Command: modifies state, should not return a value (post data) [POST, PUT, DELETE]
 
-2. Query: answer a question, never modify state (fetch data) [GET]
+2). Query: answer a question, never modify state (fetch data) [GET]
 
 Circle Map:
 
@@ -27,13 +27,13 @@ Basically, we are writing `Meditor.Send(object)` inside controller level, and se
 
 The map: API controller (`Meditor.Send(object)`) -> object (into handler) -> Handler doing the magic logics -> object (as the handler result) -> API controller (with the response)
 
-1. Command Handler:
+1). Command Handler:
 
 Example story:
 
 We try to create an activity object inside `CreateActivityController`, and we send object from Meditor.Send(object). Then we pass it to `CreateActivityCommandHandler` in order to save object into database, and return a value back to `CreateActivityController` Layer and then once controller knows everything is done, then controller will give a response with `OK(withReturns)` to tell API consumer the activity has been created successfully.
 
-2. Query Handler:
+2). Query Handler:
 
 Example story:
 

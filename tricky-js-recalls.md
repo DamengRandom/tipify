@@ -1,6 +1,6 @@
 ### Tricky and dirty JS recalls (before interview)
 
-1. this value can be read by arrow function: Example
+<b>1.</b> this value can be read by arrow function: Example
 
 ```js
 // First example: value can be read by arrow function
@@ -68,4 +68,4 @@ arrowFunction(); // Ella
 normalFunction(); // Ella
 ```
 
-2. TBD
+<b>2.</b> TBD

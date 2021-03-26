@@ -5,6 +5,7 @@ React lifecycle methods can be categorized as:
   - Updating: shouldComponentUpdate -> getDerivedStateFromProps -> getSnapshotBeforeUpdate -> componentDidUpdate
   - Unmounting: componentWillUnmount
 
+
 #### Details of lifecycle methods:
 
 `constructor`: always run first, usually where to set the state and get the props (if component has parent component)

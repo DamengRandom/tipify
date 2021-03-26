@@ -29,6 +29,8 @@ REST determines how the API looks like, developers can set bunch of rules to cre
 - multipart/form-data
 ```
 
+
+
 #### Rules to follow:
 
 *. Accept and respond with JSON
@@ -100,4 +102,4 @@ app.listen(3000, () => console.log('server started'));
 
 References:
 
-1. <a href="https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/" target="_blank">Restful API design</a> 
+1. <a href="https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/" target="_blank">Restful API design</a>

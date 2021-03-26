@@ -103,6 +103,7 @@ Render the `tooltips`, `Modal` code out of the `<body>{...}</body>` element, som
 ```
 
 
+
 #### How to remove warning message inside useEffect like `[]`?
 
 Concept is to set the function as a `ref`:
@@ -135,9 +136,12 @@ useEffect(() => {
 
 Example: <a href="https://codesandbox.io/s/hungry-brook-qb0g9?file=/src/App.js">Coded by me</a>
 
+
+
 #### Error Boundaries
 
 The idea of error boundary is a generic component that takes care of the errors for its children
+
 
 
 #### forwardRef
@@ -182,6 +186,8 @@ export class InputWrapper extends React.Component {
 
 export default InputWrapper;
 ```
+
+
 
 #### React JSX
 

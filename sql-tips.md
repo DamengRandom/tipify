@@ -1,13 +1,15 @@
 ### SQL General recalls
 
-0. Common tips:
+<b>1.</b> Common tips:
   - double hash `(--)` means not run the code
   - Usually in SQL, we use `single quote`
   - `<>` is same as `!=`, which means not equal to 
 
-1. `SQL`: Structured Query Language
 
-2. Important Query Commands:
+<b>2.</b> `SQL`: Structured Query Language
+
+
+<b>3.</b> Important Query Commands:
   -  `USE`: use database TEST
   -  `SELECT`: select database columns (eg: select *)
   -  `FROM`: from which database table

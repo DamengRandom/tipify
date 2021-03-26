@@ -11,6 +11,7 @@ console.log(variable);        // Usage
 ```
 
 
+
 #### Concept:
 
 `Hoisting` is a JavaScript default behavior of moving all declarations to the top of current scope (eg: top of function or script file)
@@ -18,6 +19,7 @@ console.log(variable);        // Usage
 Normally we said: "You can use the variable before the variable get declared"
 
 <i>* Note: In strict mode, you must declare the variable first before use the variable !!</i>
+
 
 
 #### Examples:
@@ -89,6 +91,7 @@ var aloha = function aloha() {
 
 // TypeError means we're trying to do something with a value that is not allowed
 ```
+
 
 
 #### Conclusion:

@@ -4,7 +4,7 @@
 
 -- its a middleware like redux-sage which is used for handling action creator asynchronously !!!
 
--- One word: waiting for API request is done, then trigger dispatch action to put latest state data into reducer !!!
+-- one word: waiting for API request is done, then trigger dispatch action to put latest state data into reducer !!!
 
 Classic Example:
 
@@ -34,10 +34,10 @@ Library > framework (library contains framework), your code will get called by t
 
 -- can create own/customized hook functions to be reusable
 
--- Available after React v16.8
+-- available after React v16.8
 
 
-4. 5 patterns we need to know as Senior developer:
+4. <strong>5 patterns we need to know as Senior developer</strong>
 <a href="https://www.youtube.com/watch?v=FLmBqI3IKMA" target="_blank">Click</a>
 
 

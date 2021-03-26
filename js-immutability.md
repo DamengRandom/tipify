@@ -13,7 +13,7 @@ We often use `map`, `filter`, `reduce` array methods to deal with variable value
 
 #### Code Examples:
 
-1. Primitive (Immutable) Type vs Reference (Mutable) Type
+1). Primitive (Immutable) Type vs Reference (Mutable) Type
 ```js
 // Primitive Example
 var a = 10;
@@ -35,7 +35,7 @@ x.name; // unknown -> value of x get updated
 ```
 
 
-2. Immutable way of handling data !!!!!
+2). Immutable way of handling data !!!!!
 ```js
 // filter array method:
 var values = [{name: 'dameng', happy: true}, {name: 'unknown', happy: false}];
@@ -55,7 +55,7 @@ numbers.slice(0,3); // output as [1,2,3]
 ```
 
 
-3. Difference between `push` and `concat`:
+3). Difference between `push` and `concat`:
 ```js
 // push method: (is mutable)
 const values = [];
@@ -79,7 +79,7 @@ In React, `immutability` makes state more predictable, that's why we need `immut
 Good tool: <a href="https://immutable-js.github.io/immutable-js/" target="_blank">immutable.js</a>
 
 
-4. Common library `Immutable.JS` usages:
+4). Common library `Immutable.JS` usages:
 
 `Map()`:
 
@@ -113,7 +113,7 @@ List.of("a", "b", "c"); // ["a", "b", "c"]
 List(["a", "b", "c"]); // ["a", "b", "c"]
 ```
 
-5. Beside Spread Operator, another way to make it immutable:
+5). Beside Spread Operator, another way to make it immutable:
 
 ```js
 let object = { x: 1 }; // undefined

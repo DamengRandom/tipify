@@ -1,6 +1,6 @@
 ### Git: General commands
 
-1. -- pull vs fetch vs merge:
+<b>1.</b> -- pull vs fetch vs merge:
 
 `Git Pull`: perform as a fetch additionally merge changes into your local branch  
 (``` git pull = git fetch + git merge ```)
@@ -12,7 +12,7 @@
 `Git Merge`: merge changes from remote to local
 
 
-2. -- git pull vs git pull rebase:
+<b>2.</b> -- git pull vs git pull rebase:
 
 `git pull = git fetch + git merge`
 
@@ -26,7 +26,7 @@ Simple word: `git pull --rebase` made `code reviewer` life much easier to review
 *** after git rebase, if we have conflicts, we normally `git add .` + `git rebase --continue` + `git push` ***
 
 
-3. -- git push commands:
+<b>3.</b> -- git push commands:
 
 ``` js
 -u: `-u` means `--set-upstream`, eg: `git push -u origin master`
@@ -36,7 +36,7 @@ Simple word: `git pull --rebase` made `code reviewer` life much easier to review
 git push origin HEAD:master: Push the current branch to the remote ref matching master in the origin repository. This form is convenient to push the current branch without thinking about its local name.
 
 
-4. -- How to combine old commits into 1 commit before merge (Equivalent with `Squash`):
+<b>4.</b> -- How to combine old commits into 1 commit before merge (Equivalent with `Squash`):
 
 ``` js
 `git reset --soft the-commit-hash-before-the-first-commit-for-this-branch`
@@ -44,12 +44,12 @@ git push origin HEAD:master: Push the current branch to the remote ref matching 
 Then, do ``` git push -f ``` to update code for that branch
 
 
-5. -- `git push --force-with-lease`:
+<b>5.</b> -- `git push --force-with-lease`:
 
 it helps developers to double check whether someone has already push something, (try to avoid overwrite other developer's code)
 
 
-6. -- `git cherry-pick`:
+<b>6.</b> -- `git cherry-pick`:
 
 Branch A has 3 commits, Branch B has 6 commits, and we only need Branch B second commit and put into Branch A, this is story case, we can use `cherry-pick` command in `Branch A`. After the cherry-pick, the commit which get cherry picked will be set as the `topest/latest` commit for Branch A.
 
@@ -57,7 +57,7 @@ If we cherry pick multiple files (this is the command): `git cherry-pick #hash-1
 If we have conflicts during cherry pick, so we `first` resolve the conflicts and then use `git cherry-pick --continue`
 
 
-7. -- git revert vs git reset:
+<b>7.</b> -- git revert vs git reset:
 
 *** danger level: checkout -> revert -> reset ***
 
@@ -73,7 +73,7 @@ git reset: reset to a specific spot of previous commit, it deletes a range of co
 [<a href="https://www.youtube.com/watch?v=RIYrfkZjWmA&ab_channel=TheNetNinja" target="_blank">Reference</a>]
 
 
-8. -- git logs:
+<b>8.</b> -- git logs:
 
 - `git reflog`
 - `git log --oneline`

@@ -2,6 +2,7 @@
 
 *** Never forget I failed on interview with this question !!! ***
 
+
 #### Main types:
 
 1. `CommonJS`: 
@@ -29,6 +30,7 @@
   - support for `live changes` in module itself
 
 
+
 #### General module bundler:
 
 1. webpack: 
@@ -43,6 +45,7 @@
 Tips: Babel: is a transpiler  (just transpile, never bundle code)
 
 Suggestion: using rollup for building `library`, using webpack for building `application`
+
 
 
 
@@ -63,6 +66,7 @@ Basic configuration for webpack tree shaking:
     }
   };
 ```
+
 
 
 At the end, how to create your own library, here is a better <a href="" target="_blank">reference</a>
