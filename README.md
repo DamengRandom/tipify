@@ -49,3 +49,4 @@ yarn docs:build // will build up the project and make the latest editions availa
 ### [Tips before interview](./tips-to-read.html)
 ### [Some Concepts recalls](./concepts.html)
 ### [RESTFul API tips](./restful-api.html)
+### [Avoid using ELSE statement](./avoid-using-else.html)
