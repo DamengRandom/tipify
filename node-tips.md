@@ -42,5 +42,3 @@ alohaClass.aloha(); // ma mi ma mi hong ..
 ```
 
 * Practical example codebase: <a href="https://github.com/DamengRandom/node-dependency-injection-concept" target="_blank">click here</a>
-
-<b>2. TBD</b>

@@ -1,6 +1,6 @@
 ### Recall some concepts knowledge
 
-1. <strong>Redux Thunk (RT)</strong>
+<strong>1. Redux Thunk (RT)</strong>
 
 -- its a middleware like redux-sage which is used for handling action creator asynchronously !!!
 
@@ -21,12 +21,12 @@ export function fetchProducts() {
 ```
 
 
-2. <strong>Framework vs library</strong>
+<strong>2. Framework vs library</strong>
  
 Library > framework (library contains framework), your code will get called by the framework functions and your code will call the library functions
 
 
-3. <strong>React Hooks</strong>
+<strong>3. React Hooks</strong>
 
 -- its a function hooks react state and lifecycle functions for functional components
 
@@ -37,7 +37,7 @@ Library > framework (library contains framework), your code will get called by t
 -- available after React v16.8
 
 
-4. <strong>5 patterns we need to know as Senior developer</strong>
+<strong>4. 5 patterns we need to know as Senior developer</strong>
 <a href="https://www.youtube.com/watch?v=FLmBqI3IKMA" target="_blank">Click</a>
 
 
@@ -50,4 +50,13 @@ Library > framework (library contains framework), your code will get called by t
 
 🎏 Mindset: Use these patterns when we found codebase(s) need them !!!!!!!!!!!!!!
 
-5. 
+
+<strong>5. S.O.L.I.D principle in web development</strong>
+
+1). <b>S</b>ingle Responsibility Principle:
+
+In JS, a class/function should ONLY has one job/task to do, nothing more, typical examples: React web component, only one functionality per component, and factory pattern in code design
+
+Reference: <a href="https://medium.com/@cramirez92/s-o-l-i-d-the-first-5-priciples-of-object-oriented-design-with-javascript-790f6ac9b9fa" target="_blank">here</a>
+
+2).
