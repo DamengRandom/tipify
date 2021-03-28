@@ -57,6 +57,139 @@ Library > framework (library contains framework), your code will get called by t
 
 In JS, a class/function should ONLY has one job/task to do, nothing more, typical examples: React web component, only one functionality per component, and factory pattern in code design
 
-Reference: <a href="https://medium.com/@cramirez92/s-o-l-i-d-the-first-5-priciples-of-object-oriented-design-with-javascript-790f6ac9b9fa" target="_blank">here</a>
+2). Open/Close Principle:
 
-2).
+Open for extension, but closed for modification ->
+
+Think about a function support 3 types of functionalities (eg: create, read, update), and now we add a new functionality called delete, so we don’t need to write new logic, just add this new type and the current existing function should be able to handle this new type of functionality [the original function should not be modified and new type of functionality should be extended/supported !!!]
+
+Code example:
+
+```js
+// BEFORE without open close rule (basic version)
+function printQuiz(questions) {
+  questions.forEach(question => {
+    console.log(question.description);
+
+    switch(question.type) {
+      case 'boolean':
+        console.log('1. True');
+        console.log('2. False');
+        break;
+      case 'multipleChoice':
+        question.options.forEach((option, index) => {
+          console.log(`${index + 1}. ${option}`);
+        });
+        break;
+      case 'text':
+        console.log('Answer: ________________');
+        break;
+      default:
+        console.log('no type detected ...');
+    }
+  });
+}
+
+const questions = [
+  {
+    type: 'boolean',
+    description: 'boolean question detected ..'
+  },
+  {
+    type: 'multipleChoice',
+    options: [
+      'option 1',
+      'option 2',
+      'option 3',
+      'option 4'
+    ],
+    description: 'multiple choice question detected ..'
+  },
+  {
+    type: 'text',
+    description: 'text question detected ..'
+  },
+];
+
+printQuiz(questions);
+
+
+// AFTER implemented open close rule (better version)
+
+// based on the question types (boolean, text, multipleChoice ..), we can bring into different classes:
+
+// use class to represent each type of data: this is a typical class usage, basically we categorized question types into few different classes !!!!!
+
+class BooleanQuestion {
+  constructor(description) {
+    this.description = description;
+  }
+
+  printQuestionContent() {
+    console.log('1. True');
+    console.log('2. False');
+  }
+}
+
+class MultipleChoiceQuestion {
+  constructor(description, options) {
+    this.description = description;
+    this.options = options;
+  }
+
+  printQuestionContent() {
+    this.options.forEach((option, index) => {
+      console.log(`${index + 1}. ${option}`);
+    });
+  }
+}
+
+class TextQuestion {
+  constructor(description) {
+    this.description = description;
+  }
+
+  printQuestionContent() {
+    console.log('Answer: ________________');
+  }
+}
+
+class RangeQuestion {
+  constructor(description) {
+    this.description = description;
+  }
+
+  printQuestionContent() {
+    console.log('Minimum: ________________');
+    console.log('Maximum: ________________');
+  }
+}
+
+function printQuiz(questions) {
+  questions.forEach(question => {
+    console.log(question.description);
+    question.printQuestionContent();
+  });
+}
+
+const questions = [
+  new BooleanQuestion('This is class open/close rule example'),
+  new MultipleChoiceQuestion(
+    'Whats solid design principle',
+    [
+      'Single responsibility',
+      'Open/close',
+      'Liskov substitution',
+      'Interface segregation',
+      'Dependency inversion'
+    ],
+  ),
+  new TextQuestion('What the current rule is'),
+  new RangeQuestion('Ranking the solid rules')
+];
+
+printQuiz(questions);
+```
+
+
+Reference: <a href="https://medium.com/@cramirez92/s-o-l-i-d-the-first-5-priciples-of-object-oriented-design-with-javascript-790f6ac9b9fa" target="_blank">here</a>
