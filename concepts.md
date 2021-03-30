@@ -57,7 +57,7 @@ Library > framework (library contains framework), your code will get called by t
 
 In JS, a class/function should ONLY has one job/task to do, nothing more, typical examples: React web component, only one functionality per component, and factory pattern in code design
 
-2). Open/Close Principle:
+2). <b>O</b>pen/Close Principle:
 
 Open for extension, but closed for modification ->
 
@@ -190,6 +190,61 @@ const questions = [
 
 printQuiz(questions);
 ```
+
+
+3). <b>L</b>iskov substitution (LSP):
+
+Mathematical interpolation:
+
+f(x), x is type of T, and f(y), y is type of S, S is subtype of T
+
+Code example:
+
+```js
+class FlyingBird { // base class
+  fly() {
+    console.log('I can fly ..');
+  }
+}
+
+class SwimmingBird extends FlyingBird { // base class
+  swim() {
+    console.log('I can swim ..');
+  };
+}
+
+class Duck extends FlyingBird { // extended class
+  quack() {
+    console.log('I can quack ..');
+  }
+}
+
+class Penguin extends SwimmingBird { // extended class
+}
+
+function makeFlyingBird(bird) {
+  bird.fly();
+}
+
+function makeSwimmingBird(bird) {
+  bird.swim();
+  bird.fly();
+}
+
+const duck = new Duck();
+const penguin = new Penguin();
+
+makeFlyingBird(duck);
+makeSwimmingBird(penguin);
+
+// SwimmingBird class can inherit from FlyingBird class, so all instances function (like penguin) can either fly or swim !!!
+
+// Liskov Substitution: if you have a function accepts a class, every single subclass of that class must also be able to enter that function and work !!!!!!!!!!!!!!!!!!!!!!
+```
+
+
+4). <b>I</b>nterface Segregation
+
 
 
 Reference: <a href="https://medium.com/@cramirez92/s-o-l-i-d-the-first-5-priciples-of-object-oriented-design-with-javascript-790f6ac9b9fa" target="_blank">here</a>
