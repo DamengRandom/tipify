@@ -2,7 +2,7 @@
 
 <strong>1. Redux Thunk (RT)</strong>
 
--- its a middleware like redux-sage which is used for handling action creator asynchronously !!!
+-- its a middleware like redux-saga which is used for handling action creator asynchronously !!!
 
 -- one word: waiting for API request is done, then trigger dispatch action to put latest state data into reducer !!!
 
@@ -192,7 +192,7 @@ printQuiz(questions);
 ```
 
 
-3). <b>L</b>iskov substitution (LSP):
+3). <b>L</b>iskov substitution (LSP) Principle:
 
 Mathematical interpolation:
 
@@ -243,8 +243,193 @@ makeSwimmingBird(penguin);
 ```
 
 
-4). <b>I</b>nterface Segregation
+4). <b>I</b>nterface Segregation Principle
 
+Try to make interface smaller ..
+
+Code example:
+
+```js
+// ### Interface Segregation
+
+// Step 1, normal interface definition: Normally we define interface with attribute and functions like below,
+
+// interface Entity {
+//   attackDamage
+//   health
+//   name
+//   move()
+//   attack()
+//   takeDamage(amount)
+// }
+
+// class Character implements Entity {
+//   move() {
+//     // do something ..
+//   }
+
+//   attack() {
+//     // do something ..
+//   }
+
+//   takeDamage() {
+//     // do something ..
+//   }
+// }
+
+// class Turret implements Entity {
+//   move() {
+//     // Error cannot move
+//   }
+// }
+
+
+
+
+
+// Step 2: In Javascript, even we don't have interface, but we have class, similar concept of doing interface segregation, below version is without implementing interface segregation concept:
+
+// Original Version: Entity class has many methods: move, attack, takeDamage, and some other classes might not use ALL OF THESE METHODS IN ENTITY CLASS !!!!
+
+// class Entity {
+//   constructor(name, attackDamage, health) {
+//     this.name = name;
+//     this.attackDamage = attackDamage;
+//     this.health = health;
+//   }
+
+//   move() {
+//     console.log(`${this.name} has moved ..`);
+//   }
+
+//   attack(targetEntity) {
+//     console.log(`${this.name} has attacked ${targetEntity.name} for ${this.attackDamage} damage ..`);
+//     targetEntity.takeDamage(this.attackDamage);
+//   }
+
+//   takeDamage(amount) {
+//     this.health -= amount;
+//     console.log(`${this.name} has ${this.health} remaining ..`);
+//   };
+// }
+
+// class Character extends Entity {
+
+// }
+
+// class Wall extends Entity {
+//   constructor(name, health) {
+//     super(name, 0 , health);
+//   }
+
+//   move() {
+//     return null;
+//   }
+
+//   attack() {
+//     return null;
+//   }
+// }
+
+// class Turret extends Entity {
+//   constructor(name, attackDamage) {
+//     super(name, attackDamage, -1);
+//   }
+
+//   move() {
+//    return null; 
+//   }
+
+//   takeDamage() {
+//     return null;
+//   };
+// }
+
+// const turret = new Turret('Turret', 5);
+// const character = new Character('Character', 3, 100);
+// const wall = new Wall('Wall', 200);
+
+// turret.attack(character);
+// character.move();
+// character.attack(wall);
+
+
+
+
+
+// Step 3: After implemented interface segregation concept: we separate the class into multiple methods, and each class call ing those methods by object assign, eg: Object.assign(CLASS.prototype, FUNCTION);
+
+class Entity {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+const mover = {
+  move() {
+    console.log(`${this.name} has moved ..`);
+  }
+}
+
+const attacker = {
+  attack(targetEntity) {
+    console.log(`${this.name} has attacked ${targetEntity.name} for ${this.attackDamage} damage ..`);
+    targetEntity.takeDamage(this.attackDamage);
+  }
+}
+
+const hasHealth = {
+  takeDamage(amount) {
+    this.health -= amount;
+    console.log(`${this.name} has ${this.health} remaining ..`);
+  }
+};
+
+class Character extends Entity {
+  constructor(name, attackDamage, health) {
+    super(name);
+    this.attackDamage = attackDamage;
+    this.health = health;
+  }
+}
+
+// adding object into class, don't forget class is also an object in JS
+
+Object.assign(Character.prototype, mover);
+Object.assign(Character.prototype, attacker);
+Object.assign(Character.prototype, hasHealth);
+
+class Wall extends Entity {
+  constructor(name, health) {
+    super(name);
+    this.health = health;
+  }
+}
+
+Object.assign(Wall.prototype, hasHealth);
+
+
+class Turret extends Entity {
+  constructor(name, attackDamage) {
+    super(name);
+    this.attackDamage = attackDamage;
+  }
+}
+
+Object.assign(Turret.prototype, attacker);
+
+
+const turret = new Turret('Turret', 5);
+const character = new Character('Character', 3, 100);
+const wall = new Wall('Wall', 200);
+
+turret.attack(character);
+character.move();
+character.attack(wall);
+```
+
+
+5). Dependency Inversion Principle
 
 
 Reference: <a href="https://medium.com/@cramirez92/s-o-l-i-d-the-first-5-priciples-of-object-oriented-design-with-javascript-790f6ac9b9fa" target="_blank">here</a>
