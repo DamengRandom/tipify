@@ -437,8 +437,6 @@ Its a design guideline which recommends classes should only have direct relation
 Code Example: 
 
 ```js
-// Note: store only talks to payment processor class (high level abstractions) not talk to payment APIs directly (low level methods/functions which makes API call)
-
 // ### dependency inversion
 
 // Step 1: before using dependency inversion concept:
@@ -491,19 +489,16 @@ Code Example:
 // basically we make dependency class to call the external class more easily
 
 class Store {
-  constructor(user) {
-    this.stripePaymentProcessor = new StripePaymentProcessor(user);
-    this.paypalPaymentProcessor = new PayPalPaymentProcessor(user);
+  constructor(user, PaymentProcessor) {
+    this.paymentProcessor = new PaymentProcessor(user);
   }
 
   purchaseBike(quantity) {
-    this.stripePaymentProcessor.pay(200 * quantity);
-    this.paypalPaymentProcessor.pay(15 * quantity);
+    this.paymentProcessor.pay(200 * quantity);
   }
 
   purchaseHelmet(quantity) {
-    this.stripePaymentProcessor.pay(200 * quantity);
-    this.paypalPaymentProcessor.pay(15 * quantity);
+    this.paymentProcessor.pay(200 * quantity);
   }
 }
 
@@ -546,13 +541,20 @@ class PayPal {
   }
 }
 
-const store = new Store('Damon');
+const store = new Store('Damon', StripePaymentProcessor);
 
 store.purchaseBike(10);
 store.purchaseHelmet(10);
+
+
+const store2 = new Store('Ella', PayPalPaymentProcessor);
+
+store2.purchaseBike(10);
+store2.purchaseHelmet(10);
 ```
 
 
 
 Reference: <a href="https://medium.com/@cramirez92/s-o-l-i-d-the-first-5-priciples-of-object-oriented-design-with-javascript-790f6ac9b9fa" target="_blank">here</a>
-Another reference is YouTube videos
+
+<!-- Another reference is YouTube videos -->

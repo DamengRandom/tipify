@@ -42,3 +42,67 @@ alohaClass.aloha(); // ma mi ma mi hong ..
 ```
 
 * Practical example codebase: <a href="https://github.com/DamengRandom/node-dependency-injection-concept" target="_blank">click here</a>
+
+
+<b>2. General error handling</b>
+ 
+When we write NodeJS API, we can write a class and middleware function to handle generic errors,
+ 
+Code example:
+ 
+```js
+// Step 1: error handling class
+class ApiError {
+ constructor(code, message) {
+   this.code = code;
+   this.message = message;
+ }
+ 
+ static badRequest(msg) {
+   return new ApiError(400, msg);
+ }
+ 
+ static generalServerError(msg) {
+   return new ApiError(500, msg);
+ }
+}
+ 
+module.exports = ApiError;
+ 
+ 
+ 
+// Step 2: middleware function
+const ApiError = require("./ApiError");
+ 
+// Error handler middleware function !!!!!
+function apiErrorHandler(err, req, res, next) {
+ // For developer (maybe cloudwatch ..)
+ console.error(err);
+ 
+ if (err instanceof ApiError) {
+   res.status(err.code).json({ message: err.message });
+   return;
+ }
+ 
+ res.status(500).json({ message: 'Server is down at moment ..' });
+};
+ 
+module.exports = apiErrorHandler;
+ 
+ 
+ 
+// Step 3: calling the error handler functionality:
+router.get('/api/employees/:id', (req, res, next) => {
+ Employee.findById(req.params.id, (err, data) => {
+   if (!err) {
+     res.send(data);
+   } else {
+     next(ApiError.badRequest(`Error for fetching /api/employees/:id, details are: ${err}`));
+     return; // stop the program when error detected ..
+   }
+ });
+});
+```
+ 
+Complete version of codebase: <a href="" target="_blank">here</a>
+Reference: <a href="youtube.com/watch?v=DyqVqaf1KnA" target="_blank">here</a>
