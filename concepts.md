@@ -431,5 +431,128 @@ character.attack(wall);
 
 5). Dependency Inversion Principle
 
+Its a design guideline which recommends classes should only have direct relationship with high level abstractions
+
+
+Code Example: 
+
+```js
+// Note: store only talks to payment processor class (high level abstractions) not talk to payment APIs directly (low level methods/functions which makes API call)
+
+// ### dependency inversion
+
+// Step 1: before using dependency inversion concept:
+
+// class Store {
+//   constructor(user) {
+//     this.stripe = new Stripe(user);
+//     this.paypal = new PayPal();
+//     this.user = user;
+//   }
+
+//   purchaseBike(quantity) {
+//     this.paypal.makePayment(this.user, 10 * quantity);
+//     this.stripe.makePayment(200 * quantity * 100);
+//   }
+
+//   purchaseHelmet(quantity) {
+//     this.paypal.makePayment(this.user, 10 * quantity);
+//     this.stripe.makePayment(15 * quantity * 100);
+//   }
+// }
+
+// class Stripe {
+//   constructor(user) {
+//     this.user = user;
+//   }
+
+//   makePayment(amountInCents) {
+//     console.log(`${this.user} has made a payment of ${amountInCents / 100} by using Stripe ..`);
+//   }
+// }
+
+// class PayPal {
+//   makePayment(user, amountInDollars) {
+//     console.log(`${user} has made a payment of ${amountInDollars} by using PayPal ..`);
+//   }
+// }
+
+// const store = new Store('Damon');
+// store.purchaseBike(10);
+// store.purchaseHelmet(10);
+
+
+
+
+// Step 2: After implemented dependency inversion concept: we created a StripePaymentProcessor & PayPalPaymentProcessor middleware class to handle the the payment methods from Stripe & PayPal class
+
+// Stripe & PayPal class can be treated as the external APIs
+
+// basically we make dependency class to call the external class more easily
+
+class Store {
+  constructor(user) {
+    this.stripePaymentProcessor = new StripePaymentProcessor(user);
+    this.paypalPaymentProcessor = new PayPalPaymentProcessor(user);
+  }
+
+  purchaseBike(quantity) {
+    this.stripePaymentProcessor.pay(200 * quantity);
+    this.paypalPaymentProcessor.pay(15 * quantity);
+  }
+
+  purchaseHelmet(quantity) {
+    this.stripePaymentProcessor.pay(200 * quantity);
+    this.paypalPaymentProcessor.pay(15 * quantity);
+  }
+}
+
+// payment middleware for Stripe class
+class StripePaymentProcessor {
+  constructor(user) {
+    this.stripe = new Stripe(user);
+  }
+
+  pay(amountInCents) {
+    this.stripe.makePayment(amountInCents);
+  }
+}
+
+// payment middleware for PayPal class
+class PayPalPaymentProcessor {
+  constructor(user) {
+    this.user = user;
+    this.paypal = new PayPal();
+  }
+
+  pay(amountInDollars) {
+    this.paypal.makePayment(this.user, amountInDollars);
+  }
+}
+
+class Stripe {
+  constructor(user) {
+    this.user = user;
+  }
+
+  makePayment(amountInCents) {
+    console.log(`${this.user} has made a payment of ${amountInCents / 100} by using Stripe ..`);
+  }
+}
+
+class PayPal {
+  makePayment(user, amountInDollars) {
+    console.log(`${user} has made a payment of ${amountInDollars} by using PayPal ..`);
+  }
+}
+
+const store = new Store('Damon');
+
+store.purchaseBike(10);
+store.purchaseHelmet(10);
+```
+
+
 
 Reference: <a href="https://medium.com/@cramirez92/s-o-l-i-d-the-first-5-priciples-of-object-oriented-design-with-javascript-790f6ac9b9fa" target="_blank">here</a>
+Another reference is YouTube videos

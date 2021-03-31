@@ -21,14 +21,14 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "6b0a53a0091866b8bf872d19853973e1"
+    "revision": "0f1d44a956dbd3428072d5823e95f8e3"
   },
   {
     "url": "assets/css/1.styles.521b6668.css",
     "revision": "d41d8cd98f00b204e9800998ecf8427e"
   },
   {
-    "url": "assets/css/styles.555e7119.css",
+    "url": "assets/css/styles.a65f9575.css",
     "revision": "564bb139f1f8cd379110c4e18ebe970a"
   },
   {
@@ -168,8 +168,8 @@ self.__precacheManifest = [
     "revision": "64c3e0010c5e5e08f4f76e1d86c7fe8d"
   },
   {
-    "url": "assets/js/4.12c3179f.js",
-    "revision": "2e3b11f082eebd149978ac908f803443"
+    "url": "assets/js/4.e726d028.js",
+    "revision": "5b599c9c844da288144307843e112b32"
   },
   {
     "url": "assets/js/40.d131aa73.js",
@@ -196,164 +196,164 @@ self.__precacheManifest = [
     "revision": "cc1ef354b118155012336e56cf15a1b9"
   },
   {
-    "url": "assets/js/app.555e7119.js",
-    "revision": "0e0f074335a0f4a7cc04fcf72aaea9a6"
+    "url": "assets/js/app.a65f9575.js",
+    "revision": "5dda815f763594e0d9bcbc2e5c2e9124"
   },
   {
     "url": "avoid-using-else.html",
-    "revision": "baf2fd3b799c0988b8d9705c01ee78d3"
+    "revision": "6594a0c84683366c4c6dc961f64ef7bc"
   },
   {
     "url": "concepts.html",
-    "revision": "9f821306a87cc9f46460c9983cce8c0e"
+    "revision": "93403a410c7b3628ab3b856d420b2039"
   },
   {
     "url": "css-bem.html",
-    "revision": "7cc3084455408030c34def8dda8562c0"
+    "revision": "68c127532b4f1c6a9ff7579b69603003"
   },
   {
     "url": "css-tips.html",
-    "revision": "84b3b33dd39209ecf4f3bf1e82f6dc10"
+    "revision": "aedb1c1d151ae8ccd14e39b257e9de14"
   },
   {
     "url": "docker-basics.html",
-    "revision": "25729bc1fd4f6322b857af98a8c1f66e"
+    "revision": "9aad6779eeebc1852ca17e1affba5c70"
   },
   {
     "url": "dotnet-basics.html",
-    "revision": "968002b938f519a9140d50a19c8270f2"
+    "revision": "90f8b9025e0208f9b206ae4b5f45ab2e"
   },
   {
     "url": "dotnet-cqrs.html",
-    "revision": "cee8e16519c788553c3f39133e6fa72a"
+    "revision": "eda690cc74bb3090598da62b5c7f0ae1"
   },
   {
     "url": "errors-I-saw.html",
-    "revision": "73017069e1584826eaaa39e0e4f2167d"
+    "revision": "698d9c744f55db425810910a6e36ef29"
   },
   {
     "url": "git-tips-one.html",
-    "revision": "7c6a1e535b1fd0b533bd04bdd50e428e"
+    "revision": "d41ed4bbecaa40a085f975085e6ed827"
   },
   {
     "url": "index.html",
-    "revision": "074971a7198b6a4284742c8a7ebe7b5b"
+    "revision": "9075b9dbb8b10f3c3b078ffe698e2af7"
   },
   {
     "url": "js-callback-promise-async-await.html",
-    "revision": "c069ac996291f42c0f49998982a2c59b"
+    "revision": "ef8d9bbb3cc80a179033c7c0ed9ab8d3"
   },
   {
     "url": "js-closure.html",
-    "revision": "4289b981ee0fe9d1722573891f23cbe2"
+    "revision": "3e6577084bd0073adbfb1131a2f2e579"
   },
   {
     "url": "js-event-loop.html",
-    "revision": "68a0446ecf64c90bcbf2296e1a790062"
+    "revision": "56a14f3dd9d826b0bb729424f2317ac5"
   },
   {
     "url": "js-general-tips.html",
-    "revision": "3b30454c2ec7096437e4d19f384d0059"
+    "revision": "4fadf6a7fae5ae3d00e7f5332e3019b2"
   },
   {
     "url": "js-high-order-functions.html",
-    "revision": "c55441618a76f9c7ca4d3e7d79609bec"
+    "revision": "90a22d2c62a648d84979d02c648ab419"
   },
   {
     "url": "js-hoisting.html",
-    "revision": "96643d191329fa0574a4787b2d283868"
+    "revision": "4a3df1b8a2d6a1aec6bb7152c0ec24ba"
   },
   {
     "url": "js-immutability.html",
-    "revision": "23477a1287bbeacfb827f658a0ee44d6"
+    "revision": "f23eb476f4b58f0e7db8f4321cd3ce5d"
   },
   {
     "url": "js-module-systems.html",
-    "revision": "8ae17f537f00c713c20396b51eb1771b"
+    "revision": "d376a0b610c82c82c97ea76c979ec940"
   },
   {
     "url": "js-reduce-method.html",
-    "revision": "82dfd24ed2a8eed2c390e7da6050f98c"
+    "revision": "0ec9b0000ef62d6b0add9546c89c6b36"
   },
   {
     "url": "node-tips.html",
-    "revision": "e39bcba15138179784986f6d9d6959c4"
+    "revision": "d8da837f73287e43f68bd409d5bf0868"
   },
   {
     "url": "npms.html",
-    "revision": "f875ebec67a75283cea5fe4e68741f72"
+    "revision": "d759819db8dea1da24abea175b1686bd"
   },
   {
     "url": "one-word-tips.html",
-    "revision": "f3524e7553fc16d1367f8b551725693c"
+    "revision": "dfa25d0fa720471bfc4f86719230f305"
   },
   {
     "url": "postgres-tips.html",
-    "revision": "492aaa131d8ee09d189f3b1e87b98cbc"
+    "revision": "4025d90ea0dfe6bee0c0804672a3b888"
   },
   {
     "url": "react-hoc.html",
-    "revision": "68fc9672b97afc1b2aa115fc7104efd8"
+    "revision": "10bbab8e96092aa4657042d908c9a37d"
   },
   {
     "url": "react-hooks-tips.html",
-    "revision": "10cdc49840a6d01e2a91cb7f0a8d8cae"
+    "revision": "61e728ccc4ac65e759b91a85d0595006"
   },
   {
     "url": "react-lifecycle.html",
-    "revision": "a2235c3d0e4c3f1e9742bd2204336efd"
+    "revision": "28a6344733ad0d24f525edc71829ca53"
   },
   {
     "url": "react-tips-one.html",
-    "revision": "17087910a54b5a78d32a759726efb1eb"
+    "revision": "1a818b03c569a53b4c245b8458a51208"
   },
   {
     "url": "redux-tips.html",
-    "revision": "bff0dcf97a31d20f434ed5473eadf72b"
+    "revision": "e0a7a8595b73e4301c4921e5ef202cf9"
   },
   {
     "url": "restful-api.html",
-    "revision": "4ff33a3040d853d0029ad45867c87f35"
+    "revision": "439d6767c5008cf233fcff6f04c31069"
   },
   {
     "url": "server-side-rendering.html",
-    "revision": "6ff5b8154ef51509be709ced9aa80324"
+    "revision": "d287b9e338f10afb4b3d59fb7520ff1c"
   },
   {
     "url": "sql-tips.html",
-    "revision": "890947e779b973e301d397e59dedfae7"
+    "revision": "8779775b04e7ea28dbe309a2c4e95aee"
   },
   {
     "url": "tipify.html",
-    "revision": "ee8c9bc92118dd3e39b988525ff6ec05"
+    "revision": "e896ab29aa781062d1fb13f4d22abbd7"
   },
   {
     "url": "tips-to-read.html",
-    "revision": "9241df307901cadd3757873128666b88"
+    "revision": "e204ec2d132726804db89413f25f9d57"
   },
   {
     "url": "tricky-js-recalls.html",
-    "revision": "b4469053d9a12e4fbe6da0875ac8ecc8"
+    "revision": "fee502368ef180dd008261d8c147a936"
   },
   {
     "url": "ts-basics.html",
-    "revision": "a8ce3c7f5daeaf7e6053789ae19f9aac"
+    "revision": "2618aba7aaba173ff06e068917c62069"
   },
   {
     "url": "vuejs-tips.html",
-    "revision": "ba518b52b241d7e4715d8f889acdcb3e"
+    "revision": "8f39acb4761c88e759b5a3f6642e4b80"
   },
   {
     "url": "vuex-terms.html",
-    "revision": "8a54743af1188a28dfeafc07b91cd54d"
+    "revision": "2e5fb6d002f681d6ca267e6044ef0dc1"
   },
   {
     "url": "webpack-tips.html",
-    "revision": "914ee9a68ee7511032aae48a1819a45e"
+    "revision": "bc799b6b09bebc18734e5a9da152181a"
   },
   {
     "url": "weekly-tips.html",
-    "revision": "e529d614cacc3913d9586727e883b840"
+    "revision": "369011961344deef97e9f28bbe8edf82"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
