@@ -1,6 +1,6 @@
 ### JavaScript Closure
 
-Before everything, we need to know JavaScript has `2` types of variables, `global` & `local` variable!!
+Before everything, we need to know JavaScript has `2` types of variables (based on Variable Scope to categorize), `global` & `local` variable !!
 
 #### Concept:
 

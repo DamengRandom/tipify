@@ -18,11 +18,12 @@ Caller(PassingAsAVariable);
 
 This is due to the fact that JavaScript functions are `first-class objects` which can be passed as variable format.
 
+Conclusion: A callback is a function passed as an argument to another function. This technique allows a function to call another function
 
 
-#### Important tips for Callback:
+#### Important tips for Callback - I will call back later !!
 
-<i><strong>Callback ensures a function will not going to be called before the task is completed, but it will be called right after the task completed.</strong></i>
+<i><strong>A callback function can run after another function has finished.</strong></i>
 
 1. A JavaScript Callback Function is a function that is passed as a parameter to another JavaScript function, and the callback function is run inside of the function it was passed into
 
@@ -66,7 +67,13 @@ download(url, process);
 
 
 
-#### Important Tips for Promise:
+#### Important Tips for Promise - A Promise is a JavaScript object that links producing code and consuming code
+
+`Producing code` is code that can take some time
+
+`Consuming code` is code that must wait for the result
+
+<hr/>
 
 Technically, the reason why we need `Promise` is we need to make things happen `asynchronously` without `waiting`, better performance and got error handlings as well.
 
@@ -126,7 +133,11 @@ buyingAndReceiving();
 
 
 
-#### Important tips for Async Await
+#### Important tips for Async Await - async and await make promises easier to write
+
+`async` makes a function return a Promise
+
+`await` makes a function wait for a Promise
 
 Basic Concept: also a way to handle things `asynchronously`. Better version of Promise.
 
@@ -168,3 +179,7 @@ const rollerCaller = async () => {
 
 rollerCaller();
 ```
+
+Quick concept recall for `Asynchronous`: I will finish later ~~
+
+Functions running in parallel with other functions are called asynchronous. A good example is JavaScript `setTimeout()`.
