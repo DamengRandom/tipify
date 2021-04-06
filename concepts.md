@@ -558,3 +558,18 @@ store2.purchaseHelmet(10);
 Reference: <a href="https://medium.com/@cramirez92/s-o-l-i-d-the-first-5-priciples-of-object-oriented-design-with-javascript-790f6ac9b9fa" target="_blank">here</a>
 
 <!-- Another reference is YouTube videos -->
+
+
+<strong>6. Redux Saga (RS)</strong>
+
+-- It is a middleware library for handling redux side effects, when we trigger some actions and then trigger state change, and later you need to reflect these changes for some purposes.
+
+eg: fetch new data and then after new data fetched, we need to get the data displayed for the users, which means fetch process must be done and redux store needs to be updated before re-rendering latest data, so saga is handling this steps (`fetch data -> update redux store -> show latest data`) synchronously, but the coding looks like asynchronous style ~~
+
+Core tech: Redux Saga is using generators functions which is like a bookmark, eg: `yield ...`
+
+Good resource <a href="https://flaviocopes.com/redux-saga/#:~:text=Redux%20Saga%20is%20a%20library,derives%20from%20this%20state%20change" target="_blank">here</a>
+
+Code example:
+
+Pleas check Redux recalls note <a href="https://dm-tipify.netlify.app/redux-tips.html" target="_blank">here</a>
