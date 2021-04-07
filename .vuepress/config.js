@@ -43,6 +43,7 @@ module.exports = {
       'restful-api.html',
       'concepts.html',
       'avoid-using-else.html',
+      'solid-principles.html',
     ],
     searchMaxSuggestions: 20
   },
