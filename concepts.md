@@ -14,7 +14,7 @@ export function fetchProducts() {
 
   return (dispatch) => {
     request.then(({ data }) => { // wait for API is done (request got some data) !!!
-      dispatch({ type: 'ACTION_TYPE', payload: data }); // the trigger the dispatch action !!!
+      dispatch({ type: 'ACTION_TYPE', payload: data }); // then trigger the dispatch action !!!
     })
   };
 }

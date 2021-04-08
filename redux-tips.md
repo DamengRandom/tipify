@@ -145,3 +145,70 @@ export default function User() {
 
 // For the complete code details, please check codebase: "redux-redux-saga-recall-2021"
 ```
+
+
+#### Redux-Thunk workflow example
+
+```js
+// store setup
+
+export const store = createStore(
+  combineReducers({
+    rates: ratesReducer,
+  }),
+  applyMiddleware(thunk),
+);
+
+// reducers
+
+const initialState = {
+  amount: '10',
+  currencyCode: 'USD',
+  currencyData: { USD: 1.0 },
+};
+
+export function ratesReducer(state = initialState, action) {
+  switch(action.type) {
+    case RATES_AMOUNT_CHANGED:
+      return {...state, amount: action.payload};
+    case RATES_CURRENCY_CHANGED:
+      return {...state, currencyCode: action.payload};
+    case RATES_RECEIVED:
+      return {...state, currencyData: action.payload};
+    default:
+      return state;
+  }
+}
+
+// selector functions (access redux state easily)
+export const getAmount = state => state.rates.amount;
+export const getCurrencyCode = state => state.rates.currencyCode;
+export const getCurrencyData = state => state.rates.currencyData;
+
+// actions
+
+export function changeCurrencyCode(currencyCode) {
+  return function changeCurrencyCodeThunk(dispatch) {
+    dispatch({
+      type: RATES_CURRENCY_CHANGED,
+      payload: currencyCode
+    }); // thunk action creator
+
+    getExchangeRates(currencyCode, supportedCurrencies) // api call
+      .then(rates => {
+        dispatch({ // then action creator get payload
+          type: RATES_RECEIVED,
+          payload: rates
+        });
+      });
+  }
+};
+
+// thunks
+
+export function getInitialRates(dispatch, getState) {
+  const state = getState();
+  const currencyCode = getCurrencyCode(state);
+  dispatch(changeCurrencyCode(currencyCode)); // fetch currency data before component get loaded ..
+};
+```
