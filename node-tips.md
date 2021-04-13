@@ -106,3 +106,12 @@ router.get('/api/employees/:id', (req, res, next) => {
  
 Complete version of codebase: <a href="" target="_blank">here</a>
 Reference: <a href="youtube.com/watch?v=DyqVqaf1KnA" target="_blank">here</a>
+
+
+<b>3. ExpressJS `next()`</b>
+
+In ExpressJS, next function is in express router which allows to pass the current route and `find next middleware function` to run, can be treated as skip it and go for next (function)
+
+Without `next()`, it will cause the application api request process hang there which is not responding ...
+ 
+Reference: <a href="https://expressjs.com/en/guide/writing-middleware.html">here</a>
