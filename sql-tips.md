@@ -88,3 +88,12 @@
   ```sql
   create table NewTableNAME as select * from orders; 
   ```
+
+<b>4. PostgreSQL queries for array of objects in JSONB format</b>
+
+The major method is: `jsonb_to_recordset`
+
+```
+-- select email from user_email_configuration, jsonb_to_recordset(user_email_configuration.body->'users') as users(email text)
+-- select * from user_email_configuration where body->>'groupname' = 'gitenant.app-demo'
+```

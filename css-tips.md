@@ -405,4 +405,12 @@ Demo:
 </html>
 ```
 
-<b>6.</b> 
+<b>6. CSS float property</b>
+
+`float`: used for positioning an element,
+
+Attentions:
+  - 1. absolutely positioned elements ignore the float property
+  - 2. after using the float, the rest of the elements will flow around the floating element, to avoid `flow around it`, we can use clear (`clear: both;`) property to fix the display issue.
+
+Example: <a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_float_clear_overflow" target="_blank">here</a>
