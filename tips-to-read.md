@@ -11,3 +11,5 @@
 <b>4.</b> NodeJS best practices Github <a href="https://github.com/goldbergyoni/nodebestpractices" target="_blank">here</a>
 
 <b>5.</b> Roadmap for techs: <a href="https://github.com/kamranahmedse/developer-roadmap" target="_blank">here</a>
+
+<b>6.</b> JavScript is a dynamically typed language: <a href="https://www.geeksforgeeks.org/variables-datatypes-javascript/" target="_blank">here</a>
