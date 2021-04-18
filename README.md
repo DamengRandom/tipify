@@ -51,3 +51,4 @@ yarn docs:build // will build up the project and make the latest editions availa
 ### [RESTFul API tips](./restful-api.html)
 ### [SOLID Principles](./solid-principles.html)
 ### [Avoid using ELSE statement](./avoid-using-else.html)
+### [Problems Resolved Recall](./problems-resolved.html)

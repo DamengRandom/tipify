@@ -44,6 +44,7 @@ module.exports = {
       'concepts.html',
       'avoid-using-else.html',
       'solid-principles.html',
+      'problems-resolved.html',
     ],
     searchMaxSuggestions: 20
   },
