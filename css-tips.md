@@ -414,3 +414,10 @@ Attentions:
   - 2. after using the float, the rest of the elements will flow around the floating element, to avoid `flow around it`, we can use clear (`clear: both;`) property to fix the display issue.
 
 Example: <a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_float_clear_overflow" target="_blank">here</a>
+
+
+<b>7. CSS common properties</b>
+
+1. user-select: make element is unselectable,
+
+Example: <a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_user-select" target="_blank">make element unable to be selected</a>
