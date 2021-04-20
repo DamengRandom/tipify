@@ -418,6 +418,22 @@ Example: <a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_flo
 
 <b>7. CSS common properties</b>
 
-1. user-select: make element is unselectable,
+1). user-select: make element is unselectable,
 
 Example: <a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_user-select" target="_blank">make element unable to be selected</a>
+
+2). clip-path: make an avatar profile image,
+
+Example: <a href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_clip-path&preval=circle(40%)" target="_blank">circle an image</a>
+
+3). transition property (for make element animation), it stands for:
+
+- transition property, eg: width
+- transition duration, eg: 1s
+- transition timing function, eg: linear
+- transition delay, eg: wait for 2 seconds to trigger transition effect
+
+Example: 
+<a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_dim_width_inputfocus" target="_blank">extend input field width when focus</a>
+
+4). 
