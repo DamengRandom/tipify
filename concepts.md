@@ -53,7 +53,7 @@ Pleas check Redux recalls note <a href="https://dm-tipify.netlify.app/redux-tips
 Library > framework (library contains framework), your code will get called by the framework functions and your code will call the library functions
 
 
-<strong>5. patterns we need to know as Senior developer</strong>
+<strong>5. patterns we need to know as Senior developer </strong>
 <a href="https://www.youtube.com/watch?v=FLmBqI3IKMA" target="_blank">Click</a>
 
 
@@ -64,4 +64,4 @@ Library > framework (library contains framework), your code will get called by t
 * Observer pattern: 2 roles (publisher: give stuff [eg: event(s)] && subscriber: listen stuff [eg: event(s)]), it allow losing coupling between publisher and subscriber !!
 
 
-🎏 Mindset: Use these patterns when we found codebase(s) need them !!!!!!!!!!!!!!
+🎏 Mindset: Use these patterns when we found codebase(s) <b>NEED</b> them !!!!!!!!!!!!!!

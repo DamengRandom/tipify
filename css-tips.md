@@ -418,15 +418,15 @@ Example: <a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_flo
 
 <b>7. CSS common properties</b>
 
-1). user-select: make element is unselectable,
+1). `user-select`: make element is unselectable,
 
 Example: <a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_user-select" target="_blank">make element unable to be selected</a>
 
-2). clip-path: make an avatar profile image,
+2). `clip-path`: make an avatar profile image,
 
 Example: <a href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_clip-path&preval=circle(40%)" target="_blank">circle an image</a>
 
-3). transition property (for make element animation), it stands for:
+3). `transition` property (for make element animation), it stands for:
 
 - transition property, eg: width
 - transition duration, eg: 1s
@@ -436,4 +436,12 @@ Example: <a href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_c
 Example: 
 <a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_dim_width_inputfocus" target="_blank">extend input field width when focus</a>
 
-4). 
+4). `letter-spacing`: increase or decrease the space between characters in text
+
+5). `display` properties:
+
+block: take entire row to display, like 100% width, div default display block
+inline: take as minimum space as possible, (don’t have width and height settings), span default display inline
+inline-block: same as inline element, and you can set width and height for that specific inline-block element !!!
+
+6). 
