@@ -48,7 +48,7 @@ Pleas check Redux recalls note <a href="https://dm-tipify.netlify.app/redux-tips
 -- available after React v16.8
 
 
-<strong>4. Framework vs library</strong>
+<strong>4. Framework vs Library</strong>
  
 Library > framework (library contains framework), your code will get called by the framework functions and your code will call the library functions
 

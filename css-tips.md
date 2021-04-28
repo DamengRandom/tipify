@@ -440,9 +440,9 @@ Example:
 
 5). `display` properties:
 
-block: take entire row to display, like 100% width, div default display block
+`block`: take entire row to display, like 100% width, div default display block
 inline: take as minimum space as possible, (don’t have width and height settings), span default display inline
-inline-block: same as inline element, and you can set width and height for that specific inline-block element !!!
+`inline-block`: same as inline element, and you can set width and height for that specific inline-block element !!!
 
 6). CSS units: `em`, `rem`
 
@@ -450,3 +450,5 @@ Both em and rem are relative to the font size you have defined
 
 Em: relative to its parent font size !!!
 Rem: R for root, relative to the root element font size !!!
+
+7). 

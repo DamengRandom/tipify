@@ -18,8 +18,8 @@ const afterDoubleUp = [1, 2, 3].map(doubleup);
 Another example: function return another function:
 
 ``` js
-const sumup = x => y => x + y;
-sumup(1)(2); // results is: 3
+const sumUp = x => y => x + y;
+sumUp(1)(2); // results is: 3
 ```
 
 The typical examples of using high order functions are array methods: `map`, `filter` and `reduce`.
