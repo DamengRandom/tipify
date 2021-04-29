@@ -115,3 +115,11 @@ In ExpressJS, next function is in express router which allows to pass the curren
 Without `next()`, it will cause the application api request process hang there which is not responding ...
  
 Reference: <a href="https://expressjs.com/en/guide/writing-middleware.html">here</a>
+
+
+<b>4. Why better structure is important when building node API</b>
+
+  - Write clean and readable code
+  - Write reusable pieces of code across our application
+  - Avoid repetition
+  - Add new features without disrupting existing code
