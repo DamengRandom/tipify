@@ -117,9 +117,26 @@ Without `next()`, it will cause the application api request process hang there w
 Reference: <a href="https://expressjs.com/en/guide/writing-middleware.html">here</a>
 
 
-<b>4. Why better structure is important when building node API</b>
+<b>4. When building node API, remember:</b>
 
   - Write clean and readable code
   - Write reusable pieces of code across our application
   - Avoid repetition
   - Add new features without disrupting existing code
+
+
+<b>5. Common good practices when building node restful API</b>
+
+(1). Create a folder structure for your project
+(2). Separate business logic and API routes
+(3). Use a service layer (controller class -> service class -> database access layer (DAL))
+(4). Use dependency injection
+(5). Use a config folder to organize configuration files
+(6). Use another layer for third-party services calls
+(7). Use a linter tool
+(8). Put comments in your codebase (especially business logic related)
+
+Reference: <a href="https://blog.logrocket.com/the-perfect-architecture-flow-for-your-next-node-js-project/#rule3useaservicelayer" target="_blank">here</a>
+
+
+<b>6. </b>
