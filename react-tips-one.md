@@ -214,3 +214,11 @@ ReactDOM.render(jsxEl, document.getElementById('root')); // life is easier ..
 ```
 
 JSX expression: `{}`, eg: `{variableName}`
+
+
+
+#### What is Virtual DOM
+
+It is an object which represents the DOM tree. (Shortest version)
+
+Try to get more details from this github repository: <a href="https://github.com/DamengRandom/virtual-dom-study" target="_blank">here</a>
