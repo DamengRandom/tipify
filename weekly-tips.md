@@ -465,6 +465,7 @@ var module = {
 // I was feeling like SPA is a big tab, each component is the tab content, each link is the tab title !!! 
 ```
 
+
 <b>16.</b> How to delete object from array by using forEach:
 
 ```js
@@ -483,4 +484,10 @@ data.forEach(val => {
 data; // [{x: 1, y: 2}, {a: 1, b: 2}]
 ```
 
-<b>17.</b> 
+
+<b>17. `axios.create()`</b>
+
+The `axios.create()` function creates a new Axios instance. When you `require('axios')`, you get back an the default Axios instance. The reason why you would create an instance is to set custom defaults for your application.
+
+
+<b>18. </b>
