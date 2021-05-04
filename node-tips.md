@@ -1,6 +1,6 @@
 ### NodeJS Recall Tips
 
-<b>1. Dependency Injection</b>
+<b>1.</b> Dependency Injection
 
 In NodeJS, Dependency Injection (DI) is a common design pattern for your codebase, normally we consider to use DI when we want to make our life easier as developer, especially deal with unit tests, so we only mock it locally, eg: we don't need to make a real / remote API call from other servers, we can do it internally with DI concept.
 
@@ -44,7 +44,7 @@ alohaClass.aloha(); // ma mi ma mi hong ..
 * Practical example codebase: <a href="https://github.com/DamengRandom/node-dependency-injection-concept" target="_blank">click here</a>
 
 
-<b>2. General error handling</b>
+<b>2.</b> General error handling
  
 When we write NodeJS API, we can write a class and middleware function to handle generic errors,
  
@@ -68,9 +68,8 @@ class ApiError {
 }
  
 module.exports = ApiError;
- 
- 
- 
+
+
 // Step 2: middleware function
 const ApiError = require("./ApiError");
  
@@ -88,9 +87,8 @@ function apiErrorHandler(err, req, res, next) {
 };
  
 module.exports = apiErrorHandler;
- 
- 
- 
+
+
 // Step 3: calling the error handler functionality:
 router.get('/api/employees/:id', (req, res, next) => {
  Employee.findById(req.params.id, (err, data) => {
@@ -108,7 +106,7 @@ Complete version of codebase: <a href="" target="_blank">here</a>
 Reference: <a href="youtube.com/watch?v=DyqVqaf1KnA" target="_blank">here</a>
 
 
-<b>3. ExpressJS `next()`</b>
+<b>3.</b> ExpressJS `next()`
 
 In ExpressJS, next function is in express router which allows to pass the current route and `find next middleware function` to run, can be treated as skip it and go for next (function)
 
@@ -117,7 +115,7 @@ Without `next()`, it will cause the application api request process hang there w
 Reference: <a href="https://expressjs.com/en/guide/writing-middleware.html">here</a>
 
 
-<b>4. When building node API, remember:</b>
+<b>4.</b> When building node API, remember:
 
   - Write clean and readable code
   - Write reusable pieces of code across our application
@@ -125,7 +123,7 @@ Reference: <a href="https://expressjs.com/en/guide/writing-middleware.html">here
   - Add new features without disrupting existing code
 
 
-<b>5. Common good practices when building node restful API</b>
+<b>5.</b> Common good practices when building node restful API
 
 (1). Create a folder structure for your project
 (2). Separate business logic and API routes
@@ -139,4 +137,20 @@ Reference: <a href="https://expressjs.com/en/guide/writing-middleware.html">here
 Reference: <a href="https://blog.logrocket.com/the-perfect-architecture-flow-for-your-next-node-js-project/#rule3useaservicelayer" target="_blank">here</a>
 
 
-<b>6. </b>
+<b>6.</b> Remember always save time to UTC time string for database (Backend development)
+
+Examples:
+
+```js
+// save time to UTC time string
+$('.datetime').each(function (idx) {
+  $(this).val(moment($(this).val(), "DD/MM/YYYY hh:mm A").utc().toISOString());
+});
+
+// when front-end read the UTC time, please convert time from UTC time string to local time string, example:
+const momentTZ = require('moment-timezone');
+const localTime = momentTZ(UTCTime).tz(currentTimeZone).format("DD/MM/YYYY hh:mm A");
+```
+
+
+<b>7.</b>
