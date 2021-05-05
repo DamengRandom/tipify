@@ -258,7 +258,7 @@ Header:
 }
 ```
 
-Signature:  to verify the message wasn't changed along the way
+Signature: to verify the message wasn't changed along the way
 
 ```js
 // If we use SHA256 algorithm, this is how signature looks like:
@@ -485,9 +485,13 @@ data; // [{x: 1, y: 2}, {a: 1, b: 2}]
 ```
 
 
-<b>17. `axios.create()`</b>
+<b>17.</b> `axios.create()`
 
 The `axios.create()` function creates a new Axios instance. When you `require('axios')`, you get back an the default Axios instance. The reason why you would create an instance is to set custom defaults for your application.
 
 
-<b>18. </b>
+<b>18.</b> MicroServices
+
+What is MicroServices: Divide one monolithic codebase into multiple services codebase:
+
+One to many -> which means one service can have one UI + one API + one DB (database per services - DPS) !!
