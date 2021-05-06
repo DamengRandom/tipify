@@ -495,3 +495,22 @@ The `axios.create()` function creates a new Axios instance. When you `require('a
 What is MicroServices: Divide one monolithic codebase into multiple services codebase:
 
 One to many -> which means one service can have one UI + one API + one DB (database per services - DPS) !!
+
+
+<b>19.</b> Loop until condition reaches
+
+```js
+const fn = () => {
+  let rand = 0;
+  
+  while (true) {
+    rand = Math.floor(Math.random() * 90 + 10);
+    console.log(rand);
+    if (rand === 12) {            
+      break;
+    }
+  }
+}
+
+fn();
+```

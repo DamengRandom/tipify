@@ -38,8 +38,12 @@ REST determines how the API looks like, developers can set bunch of rules to cre
 Example: Express `bodyParser` Middleware
 
 ```js
+// old version
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
+
+// newer version
+app.use(express.json());
 ```
 
 *. Use nouns instead of verbs in endpoint paths and naming collections with plural nouns, eg: `/products`
@@ -88,6 +92,8 @@ const bodyParser = require('body-parser');
 const app = express();
 
 app.use(bodyParser.json());
+// or use this version
+// app.use(express.json());
 
 app.get('/posts/:postId/comments', (req, res) => {
   const { postId } = req.params;
