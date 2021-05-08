@@ -451,4 +451,10 @@ Both em and rem are relative to the font size you have defined
 Em: relative to its parent font size !!!
 Rem: R for root, relative to the root element font size !!!
 
-7). 
+7). `whites-space` in css:
+
+Specify how the white space inside element get handled
+
+eg: `nowrap`: text will never wrap to the next line, always continue with the same line until `br` tag occurs.
+
+8). 
