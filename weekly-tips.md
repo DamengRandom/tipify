@@ -514,3 +514,85 @@ const fn = () => {
 
 fn();
 ```
+
+
+<b>20.</b> Personal Dignity Note
+
+<!-- I was in a 30 mins live coding test, and initially I wasn't able to think to use map to handle the array data, I was totally panic during live coding test and below is the code during test, which is pretty bad, I just want to remind myself I can do better next time ... -->
+
+```js
+console.clear();
+
+const stores = [
+  {
+    items: ["apple", "banana", "flour", "salt"]
+  },
+  {
+    items: ["flour", "salt", "sugar"]
+  },
+  {
+    items: ["apple", "apple", "flour", "lemon", "salt", "sugar"]
+  }
+];
+
+console.log("hello");
+
+// my code: during live coding test
+
+function getFirstFindResult(keyword) {
+  let keywordFoundArray = [];
+
+  for (var i = 0; i < stores.length; i++) {
+    for (var j = 0; j < stores[i].items.length; j++) {
+      for (var k = 0; k < keyword.length; k++) {
+        if (stores[i].items[j] === keyword[k]) {
+          keywordFoundArray.push(keyword[k]);
+        }
+
+        if (keywordFoundArray.length === keyword.length) {
+          return stores[i].items;
+        }
+      }
+    }
+  }
+}
+
+console.log(getFirstFindResult(["flour", "salt"]));
+```
+
+<!-- After a day finished, I was thought I can do better if I have enough time, here is the better version I believe: -->
+
+```js
+console.clear();
+
+const stores = [
+  {
+    items: ["apple", "banana", "flour", "salt"]
+  },
+  {
+    items: ["flour", "salt", "sugar"]
+  },
+  {
+    items: ["apple", "apple", "flour", "lemon", "salt", "sugar"]
+  }
+];
+
+console.log("hello");
+
+// my code: after one day I started for dignity fight
+
+function getFirstElement(paramsArray) {
+  return stores.map(store => {
+    if (store.items.join().includes(paramsArray.join())){
+      return store.items;
+    }
+
+    return false;
+  })[0];
+}
+
+console.log(getFirstElement(["flour", "salt"]));
+```
+
+
+<b>21.</b>
