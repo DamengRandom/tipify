@@ -45,6 +45,7 @@ module.exports = {
       'avoid-using-else.html',
       'solid-principles.html',
       'problems-resolved.html',
+      'just-code.html',
     ],
     searchMaxSuggestions: 20
   },
