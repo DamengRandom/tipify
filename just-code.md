@@ -23,7 +23,7 @@ setCurrent(afterSorted);
 Completed version below:
 
 ```js
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Articles from './Articles';
 
 function compareDate( a, b ) {
@@ -92,4 +92,27 @@ export default function ArticleWrapper() {
 Reference: <a href="https://stackoverflow.com/questions/56266575/why-is-usestate-not-triggering-re-render" target="_blank">here</a>
 
 
-<b>2. </b>
+<b>2. </b> How to save data like object format instead of array format in NodeJS
+
+```js
+app.post('/posts', async (req, res) => {
+  const id = randomBytes(4).toString('hex'); // will generate a random hash id value
+  const { title } = req.body;
+
+  posts[id] = {
+    id,
+    title,
+  };
+
+  // event bus (emit event !!!!)
+  await axios.post('http://localhost:9225/events', {
+    type: 'PostCreated',
+    data: {
+      id,
+      title,
+    }
+  });
+
+  res.status(201).send(posts[id]);
+});
+```
