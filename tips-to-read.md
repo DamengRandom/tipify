@@ -24,4 +24,7 @@
 <b>8.</b> JavaScript tips from github: <a href="https://github.com/rohan-paul/Awesome-JavaScript-Interviews" target="_blank">here</a>
 
 
-<b>9.</b> <a href="" target="_blank"></a>
+<b>9.</b> JavaScript micro-test: <a href="https://github.com/yeungon/In-JavaScript-we-trust" target="_blank">here</a>
+
+
+<b>10.</b> <a href="" target="_blank"></a>

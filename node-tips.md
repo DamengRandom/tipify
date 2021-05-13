@@ -153,4 +153,81 @@ const localTime = momentTZ(UTCTime).tz(currentTimeZone).format("DD/MM/YYYY hh:mm
 ```
 
 
-<b>7.</b>
+<b>7.</b> Using node `https` to make API
+
+```js
+const https = require('https');
+
+const errorMessage = "Username Not Found";
+
+function httpGet({
+  body,
+  ...options
+}) {
+  return new Promise((resolve, reject) => {
+    const req = https.request({
+      ...options,
+    }, res => {
+      const stream = [];
+      let body = '';
+
+      res.on('data', data => stream.push(data));
+      res.on('end', () => {
+        body += stream;
+
+        body = JSON.parse(body);
+        resolve(body);
+      });
+    });
+
+    req.on('[error]:', reject);
+
+    if (body) {
+      req.write(body);
+    }
+
+    req.end();
+  }).catch(err => {
+    console.error("Error: ", err);
+  });
+}
+
+async function getNumTransactions(username) {
+  const usernameResponse = await httpGet({
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    hostname: 'jsonmock.hackerrank.com',
+    path: `/api/article_users?username=${username}`,
+  });
+
+  if (usernameResponse && usernameResponse.data && usernameResponse.data[0] && usernameResponse.data[0].id) {
+    console.log(usernameResponse);
+    const userId = usernameResponse.data[0].id;
+    try {
+      const userIdResponse = await httpGet({
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        hostname: 'jsonmock.hackerrank.com',
+        path: `/api/transactions?&userId=${userId}`
+      });
+  
+      if (userIdResponse && userIdResponse.total) {
+        console.log(userIdResponse.total);
+        return userIdResponse.total;
+      }
+  
+      return errorMessage;
+    } catch(error) {
+      return errorMessage;
+    }
+  }
+  return errorMessage;
+}
+
+// console.log(getNumTransactions("jay"));
+console.log(getNumTransactions("epaga"));
+```
