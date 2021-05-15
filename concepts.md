@@ -1,6 +1,6 @@
 ### Recall some concepts knowledge
 
-<strong>1. Redux Thunk (RT)</strong>
+<strong>1.</strong> Redux Thunk (RT)
 
 -- its a middleware like redux-saga which is used for handling action creator asynchronously !!!
 
@@ -21,7 +21,7 @@ export function fetchProducts() {
 ```
 
 
-<strong>2. Redux Saga (RS)</strong>
+<strong>2.</strong> Redux Saga (RS)
 
 -- It is a middleware library for handling redux side effects, when we trigger some actions and then trigger state change, and later you need to reflect these changes for some purposes.
 
@@ -37,7 +37,7 @@ Pleas check Redux recalls note <a href="https://dm-tipify.netlify.app/redux-tips
 
 
 
-<strong>3. React Hooks</strong>
+<strong>3.</strong> React Hooks
 
 -- its a function hooks react state and lifecycle functions for functional components
 
@@ -48,14 +48,12 @@ Pleas check Redux recalls note <a href="https://dm-tipify.netlify.app/redux-tips
 -- available after React v16.8
 
 
-<strong>4. Framework vs Library</strong>
+<strong>4.</strong> Framework vs Library
  
 Library > framework (library contains framework), your code will get called by the framework functions and your code will call the library functions
 
 
-<strong>5. patterns we need to know as Senior developer </strong>
-<a href="https://www.youtube.com/watch?v=FLmBqI3IKMA" target="_blank">Click</a>
-
+<strong>5.</strong> Patterns we need to know as Senior developer
 
 * Singleton pattern: like a given class can only has one instance at a time, doing functionalities eg: list of client configurations, database driver, current state in the app (redux store maybe) and etc ..
 
@@ -65,3 +63,8 @@ Library > framework (library contains framework), your code will get called by t
 
 
 🎏 Mindset: Use these patterns when we found codebase(s) <b>NEED</b> them !!!!!!!!!!!!!!
+
+Reference: <a href="https://www.youtube.com/watch?v=FLmBqI3IKMA" target="_blank">Click</a>
+
+
+<strong>6.</strong>

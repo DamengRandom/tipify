@@ -257,11 +257,15 @@ node_modules/
 "dev": "webpack serve --config webpack.dev.config.js --hot",
 ```
 
+
+13).
+
+
+
 References:
 
 - Recall knowledge from webpack 5 Udemy course <a href="https://www.udemy.com/course/webpack-from-beginner-to-advanced/learn/lecture/12761343#overview" target="_blank">here</a>
 - <a href="https://webpack.js.org/concepts/why-webpack/" target="_blank">why webpack?</a>
 
-<br/>
-<br/>
+
 <i>Please send to me by email to correct me <a href="mailto:damonwu0605@gmail.com">here</a> if it's wrong</i>

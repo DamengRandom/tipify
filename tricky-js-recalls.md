@@ -68,4 +68,4 @@ arrowFunction(); // Ella
 normalFunction(); // Ella
 ```
 
-<b>2.</b> TBD
+<b>2.</b>

@@ -82,5 +82,8 @@ git reset: reset to a specific spot of previous commit, it deletes a range of co
 - `git show #hash-commit`
 
 
+<b>9.</b>
+
+
 
 *** -- Reference: <a href="https://git-scm.com/docs" target="_blank">https://git-scm.com/docs</a> ***

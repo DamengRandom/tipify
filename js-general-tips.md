@@ -442,4 +442,4 @@ delete Object.prototype;
 ```
 
 
-<b>14.</b> 
+<b>14.</b>

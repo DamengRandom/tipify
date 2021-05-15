@@ -231,3 +231,6 @@ async function getNumTransactions(username) {
 // console.log(getNumTransactions("jay"));
 console.log(getNumTransactions("epaga"));
 ```
+
+
+<b>8.</b>

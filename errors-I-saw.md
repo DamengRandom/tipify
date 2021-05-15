@@ -1,6 +1,6 @@
 ### Some errors I saw before
 
-1. Common `Cannot read property 'property' of undefined` error:
+1). Common `Cannot read property 'property' of undefined` error:
 
 ```js
 // Case 1:
@@ -70,7 +70,7 @@ val.a.b[0].value;
 ```
 
 
-2. Uncaught ReferenceError: `variable` is not defined
+2). Uncaught ReferenceError: `variable` is not defined
 
 ```js
   function error() {
@@ -82,7 +82,7 @@ val.a.b[0].value;
 ```
 
 
-3. Uncaught TypeError: `functionName` is not a function
+3). Uncaught TypeError: `functionName` is not a function
 
 ```js
 aloha();
@@ -96,4 +96,4 @@ var aloha = function aloha() {
 ```
 
 
-4. 
+4). 

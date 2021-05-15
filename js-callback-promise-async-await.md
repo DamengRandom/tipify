@@ -25,9 +25,10 @@ Conclusion: A callback is a function passed as an argument to another function. 
 
 <i><strong>A callback function can run after another function has finished.</strong></i>
 
-1. A JavaScript Callback Function is a function that is passed as a parameter to another JavaScript function, and the callback function is run inside of the function it was passed into
+1). A JavaScript Callback Function is a function that is passed as a parameter to another JavaScript function, and the callback function is run inside of the function it was passed into
 
-2. JavaScript Callback Functions can be used synchronously or asynchronously
+
+2). JavaScript Callback Functions can be used synchronously or asynchronously
 
 Basic Example:
 

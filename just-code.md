@@ -1,6 +1,6 @@
 ### Just Code (Shhh)
 
-<b>1. </b> If changes one of object values inside same array, we need to use spread operator (`...`) or `JSON.parse(JSON.stringify())` way to trigger the state changes and get component re-rendered !!!! Code example:
+<b>1.</b> If changes one of object values inside same array, we need to use spread operator (`...`) or `JSON.parse(JSON.stringify())` way to trigger the state changes and get component re-rendered !!!! Code example:
 
 ```js
 // sort array of objects !!
@@ -92,7 +92,7 @@ export default function ArticleWrapper() {
 Reference: <a href="https://stackoverflow.com/questions/56266575/why-is-usestate-not-triggering-re-render" target="_blank">here</a>
 
 
-<b>2. </b> How to save data like object format instead of array format in NodeJS
+<b>2.</b> How to save data like object format instead of array format in NodeJS
 
 ```js
 app.post('/posts', async (req, res) => {
@@ -116,3 +116,6 @@ app.post('/posts', async (req, res) => {
   res.status(201).send(posts[id]);
 });
 ```
+
+
+<b>3.</b>

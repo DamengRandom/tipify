@@ -71,7 +71,6 @@ Common: all of these 3 are stored inside browser ..
 
 
 <b>5.</b> Please watch this video for recall token && session based authentications
-<a href="https://www.youtube.com/watch?v=2PPSXonhIck" target="_blank">Link</a>
 
   - Session based authentication: stateful, using cookie
     
@@ -98,6 +97,8 @@ Common: all of these 3 are stored inside browser ..
     7. server `validate` user request & grant access 
     8. when user `logout`, token will be `cleared` by client storage
 
+Reference: <a href="https://www.youtube.com/watch?v=2PPSXonhIck" target="_blank">Link</a>
+
 
 <b>6.</b> Command `npx`:
 
@@ -121,7 +122,7 @@ Example: Messaging/Notification app: once you sends out some dat via API, then m
 Simple word: you did something, then some other things will be triggered after your action, and also let you know what happened.
 
 
-<b>9.</b> Redis:
+<b>9.</b> Redis
 
 It refers to a cache tool which helps developers to save some data as cache so when user refetch the data, user can get it from cache instead of making another API call, eg:
 
@@ -136,7 +137,7 @@ app.get('/path/route', cacheMiddleware, () => { cb ... });
 Reference <a href="https://www.youtube.com/watch?v=oaJq1mQ3dFI" target="_blank">Link</a>
 
 
-<b>10.</b> How Vue event bus working? An simple example:
+<b>10.</b> How Vue event bus working? An simple example
 
 ```js
 // Why we need event bus? We want to share the data/props .. between siblings components
@@ -207,7 +208,7 @@ bus.$on('titleChanged', data => {
 ```
 
 
-<b>11.</b> deploy docker container with CI/CD tool (Travis):
+<b>11.</b> deploy docker container with CI/CD tool (Travis)
 
 create a `.travis.yml` file and do the following setups:
 
@@ -226,7 +227,7 @@ script:
 Then connect travis with your github account: read doc and find the related github repository and connect it with Travis (every time commits a new PR, as long as merge into master, the Travis will get triggered to deploy the changes to certain environment)
 
 
-<b>12.</b> Common regex:
+<b>12.</b> Common regex
 
 ```js
 // email validator:
@@ -280,7 +281,7 @@ Payload: contains tge data to be sent
 Good way to integrate is Auth0.
 
 
-<b>14.</b> tilde (~) vs Caret (^) in npm:
+<b>14.</b> tilde (~) vs Caret (^) in npm
 
 ~version means: approximately equivalent to version. (update <b>patch</b> version)
 Eg: ~1.2.3: means will use release from 1.2.3 to <1.3.0
@@ -466,7 +467,7 @@ var module = {
 ```
 
 
-<b>16.</b> How to delete object from array by using forEach:
+<b>16.</b> How to delete object from array by using `forEach`:
 
 ```js
 // data to use

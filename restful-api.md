@@ -10,7 +10,7 @@ Currently understanding (might be wrong), RESTFul API is an architectural style 
 
 REST determines how the API looks like, developers can set bunch of rules to create their own customized APIs
 
-1. Common Http request consists of
+1). Common Http request consists of
 
 ```
 - The endpoint: URL for the request
@@ -19,7 +19,8 @@ REST determines how the API looks like, developers can set bunch of rules to cre
 - The data (or body): object to save to db ...
 ```
 
-2. Data format supported:
+
+2). Data format supported:
 
 ```
 - application/json
@@ -108,4 +109,4 @@ app.listen(3000, () => console.log('server started'));
 
 References:
 
-1. <a href="https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/" target="_blank">Restful API design</a>
+(1). <a href="https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/" target="_blank">Restful API design</a>
