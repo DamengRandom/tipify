@@ -46,6 +46,7 @@ module.exports = {
       'solid-principles.html',
       'problems-resolved.html',
       'just-code.html',
+      'js-class-prototype.html',
     ],
     searchMaxSuggestions: 20
   },

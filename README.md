@@ -53,3 +53,4 @@ yarn docs:build // will build up the project and make the latest editions availa
 ### [Avoid using ELSE statement](./avoid-using-else.html)
 ### [Just Code Shhh](./just-code.html)
 ### [Problems Resolved Recall](./problems-resolved.html)
+### [JavaScript Class & ProtoType](./js-class-prototype.html)
