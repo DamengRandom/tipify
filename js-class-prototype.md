@@ -51,3 +51,47 @@ PrototypeGreeting.prototype.greeting = function() {
 ```
 
 Reference: <a href="https://www.toptal.com/javascript/es6-class-chaos-keeps-js-developer-up#:~:text=Prototypes%20vs.-,Classes,is%20itself%20an%20object%20instance.&text=Functions%20are%20first%2Dclass%20in,be%20properties%20of%20other%20objects." target="_blank">here</a>
+
+<b>2.</b> Understanding more on `prototype` and `class` concept in JavaScript, this is one typical example:
+
+```js
+function Person() {
+  this.name = 'Damon';
+  return this;
+}
+
+Person.prototype.getName = function() {
+  return this.name;
+}
+
+class PersonClass extends Person {
+  constructor() {
+    super();
+    this.name = 'Damon (From Class)';
+  }
+}
+
+const personClassInstance = new PersonClass();
+
+console.log(personClassInstance.getName()); // Damon (From Class)
+
+Person.prototype.getName = function() {
+  return 'Overridden in Person';
+}
+
+console.log(personClassInstance.getName()); // Overridden in Person
+
+PersonClass.prototype.getName = function() {
+  return 'Overridden in PersonClass';
+}
+
+console.log(personClassInstance.getName()); // 'Overridden in PersonClass'
+
+personClassInstance.getName = function() {
+  return 'Overridden in person class instance';
+}
+
+console.log(personClassInstance.getName()); // Overridden in person class instance
+```
+
+<b>3.</b>

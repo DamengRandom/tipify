@@ -62,6 +62,7 @@ If we have conflicts during cherry pick, so we `first` resolve the conflicts and
 *** danger level: checkout -> revert -> reset ***
 
 git revert: delete the `specific` commit from commit chains, just don't want this specific commit
+
 git reset: reset to a specific spot of previous commit, it deletes a range of commits
 
 #commit-1 -> #commit-2 -> #commit-3 -> #commit-4
