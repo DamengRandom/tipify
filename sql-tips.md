@@ -99,4 +99,11 @@ The major method is: `jsonb_to_recordset`
 ```
 
 
-<b>5.</b>
+<b>5.</b> PostgreSQL query checking the data occurrence count
+
+SELECT column5, COUNT(*)
+FROM table1
+GROUP BY column5
+
+
+<b>6.</b>

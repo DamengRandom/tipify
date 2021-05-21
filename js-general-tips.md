@@ -442,4 +442,37 @@ delete Object.prototype;
 ```
 
 
-<b>14.</b>
+<b>14.</b> In React, we need to `bind(this)` if we are <strong>NOT</strong> using arrow function
+
+```js
+// Arrow function does not contain these context:
+// this
+// arguments
+// super
+// new.target
+
+// Conclusion, In React, we don't need functionName.bind(this) for arrow function
+
+// Code Example:
+
+const handleClick = () => {
+  this.setState({
+    isShown: !this.state.isShown
+  });
+};
+
+// In normal function, we need to use functionName.bind(this);
+// inside constructor, please add this bind function for using `this` context !!
+this.handleClick = this.handleClick.bind(this);
+
+handleClick () {
+  this.setState({
+    isShown: !this.state.isShown
+  });
+};
+```
+
+Reference: <a href="https://stackoverflow.com/questions/52979915/why-we-dont-need-to-bind-the-arrow-function-in-react" target="_blank">here</a>
+
+
+<b>15.</b>

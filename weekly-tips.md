@@ -117,7 +117,7 @@ alt + up / down // moving code up or down
 
 Explanation: after date, you asked your girlfriend to send you a message once she reached to home. Then, after your girlfriend reached home, then she sends you a message. Then, you feel happy.
 
-Example: Messaging/Notification app: once you sends out some dat via API, then maybe API can tell someone else you have successfully sent the data out, the notification message will be sent after your action is doen.
+Example: Messaging/Notification app: once you sends out some dat via API, then maybe API can tell someone else you have successfully sent the data out, the notification message will be sent after your action is done.
 
 Simple word: you did something, then some other things will be triggered after your action, and also let you know what happened.
 
