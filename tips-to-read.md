@@ -27,4 +27,7 @@
 <b>9.</b> JavaScript micro-test: <a href="https://github.com/yeungon/In-JavaScript-we-trust" target="_blank">here</a>
 
 
-<b>10.</b> <a href="" target="_blank"></a>
+<b>10.</b> Backend N + 1 Problem: <a href="https://stackoverflow.com/questions/97197/what-is-the-n1-selects-problem-in-orm-object-relational-mapping" target="_blank">here</a>
+
+
+<b>11.</b><a href="" target="_blank"></a>
