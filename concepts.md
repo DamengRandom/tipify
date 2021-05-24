@@ -67,4 +67,91 @@ Library > framework (library contains framework), your code will get called by t
 Reference: <a href="https://www.youtube.com/watch?v=FLmBqI3IKMA" target="_blank">Click</a>
 
 
-<strong>6.</strong>
+<strong>6.</strong> Big `O` notation
+
+Purpose: Analyzing the algorithm you created !!
+
+The time complexity is based on the operations inside loop, for instance:
+
+```js
+for (let i = 0; i < list.length; i++) {
+  newList[i] = [];
+  for (let j = 0; j < list.length; j++) {
+    newList[i][j] = list[i];
+    console.log(newList[i]); // n ^ 2
+  }
+}
+
+// vs
+
+for (let i = 0; i < list.length; i++) {
+  console.log(list[i]); // n
+}
+```
+
+
+Examples below:
+
+1). `O(1)`: because we already know the output is the fixed value
+
+```js
+const list = ['a', 'b', 'c'];
+for (let i = 0; i < list.length; i++) {
+  console.log(list[i]);
+}
+```
+
+2). `O(n)`: we need to generate the new output based on the input
+
+```js
+const list = ['a', 'b', 'c'];
+const newList = [];
+for (let i = 0; i < list.length; i++) {
+  newList[i] = list[i];
+  console.log(newList[i]);
+}
+```
+
+3). `O(n^2)`: double time complexity, because 2 list loops need to be calculated/operated
+
+```js
+const list = ['a', 'b', 'c'];
+const newList = [];
+for (let i = 0; i < list.length; i++) {
+  newList[i] = [];
+  for (let j = 0; j < list.length; j++) {
+    newList[i][j] = list[i];
+    console.log(newList[i]);
+  }
+}
+```
+
+4). `O(n^2 + n) = O(n^2)`: `+ n` will be treated as 0, because `n^2`
+
+```js
+const list = ['a', 'b', 'c'];
+const newList = [];
+for (let i = 0; i < list.length; i++) {
+  newList[i] = [];
+  for (let j = 0; j < list.length; j++) {
+    newList[i][j] = list[i];
+    console.log(newList[i]);
+  }
+}
+
+for(let k = 0; k < list.length; k++) {
+  console.log(list[i]);
+}
+```
+
+5). `O(n + m)`: 2 different loops
+
+```js
+const list = ['a', 'b', 'c'];
+const anotherList = [1, 2, 3, 4, 5, 6];
+for (let i = 0; i < list.length; i++) {
+  for (let j = 0; j < anotherList.length; j++) {
+    console.log(`Lists data: ${anotherList[j]}, ${list[i]}`);
+  }
+}
+```
