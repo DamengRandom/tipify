@@ -99,6 +99,11 @@ const list = ['a', 'b', 'c'];
 for (let i = 0; i < list.length; i++) {
   console.log(list[i]);
 }
+
+// output:
+// a
+// b
+// c
 ```
 
 2). `O(n)`: we need to generate the new output based on the input
@@ -110,6 +115,11 @@ for (let i = 0; i < list.length; i++) {
   newList[i] = list[i];
   console.log(newList[i]);
 }
+
+// output:
+// a
+// b
+// c
 ```
 
 3). `O(n^2)`: double time complexity, because 2 list loops need to be calculated/operated
@@ -121,9 +131,14 @@ for (let i = 0; i < list.length; i++) {
   newList[i] = [];
   for (let j = 0; j < list.length; j++) {
     newList[i][j] = list[i];
-    console.log(newList[i]);
+    console.log(newList[i][j]);
   }
 }
+
+// output:
+// 3 a // 3 means 3 times
+// 3 b
+// 3 c
 ```
 
 4). `O(n^2 + n) = O(n^2)`: `+ n` will be treated as 0, because `n^2`
@@ -135,13 +150,21 @@ for (let i = 0; i < list.length; i++) {
   newList[i] = [];
   for (let j = 0; j < list.length; j++) {
     newList[i][j] = list[i];
-    console.log(newList[i]);
+    console.log(newList[i][j]);
   }
 }
 
 for(let k = 0; k < list.length; k++) {
-  console.log(list[i]);
+  console.log(list[k]);
 }
+
+// output:
+// 3 a // 3 means 3 times
+// 3 b
+// 3 c
+// a
+// b
+// c
 ```
 
 5). `O(n + m)`: 2 different loops
@@ -154,4 +177,32 @@ for (let i = 0; i < list.length; i++) {
     console.log(`Lists data: ${anotherList[j]}, ${list[i]}`);
   }
 }
+// output:
+// Lists data: 1, a
+// Lists data: 2, a
+// Lists data: 3, a
+// Lists data: 4, a
+// Lists data: 5, a
+// Lists data: 6, a
+// Lists data: 1, b
+// Lists data: 2, b
+// Lists data: 3, b
+// Lists data: 4, b
+// Lists data: 5, b
+// Lists data: 6, b
+// Lists data: 1, c
+// Lists data: 2, c
+// Lists data: 3, c
+// Lists data: 4, c
+// Lists data: 5, c
+// Lists data: 6, c
 ```
+
+References
+
+1. Document: <a href="https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1176/handouts/midterm/5-BigO.pdf" target="_blank">here</a>
+
+2. Video Study: <a href="https://www.youtube.com/watch?v=itn09C2ZB9Y" target="_blank">here</a>
+
+
+<strong>7.</strong>
