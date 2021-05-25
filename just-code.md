@@ -269,3 +269,34 @@ main()
   console.error(err);
 });
 ```
+
+
+<b>4.</b> Palindrome interview question demo:
+
+```js
+function palindrome(word) {
+  if (typeof word === 'string') {
+		var regex = /[^A-Za-z]/g;
+  
+ 	 	word = word.toLowerCase().replace(regex, '');
+  
+  	var wordLength = word.length;
+  
+  	for (let i = 0; i < wordLength/2; i++) {
+			if (word[i] !== word[wordLength-1-i]) {
+				return false;
+			}
+ 
+			return true;
+		}
+  } else {
+  	console.log('Input must be a string ..');
+  }
+}
+
+console.log(palindrome('kyayk')); // true
+console.log(palindrome('damon')); // false
+```
+
+
+<b>5.</b>
