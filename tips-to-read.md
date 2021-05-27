@@ -30,4 +30,7 @@
 <b>10.</b> Backend N + 1 Problem: <a href="https://stackoverflow.com/questions/97197/what-is-the-n1-selects-problem-in-orm-object-relational-mapping" target="_blank">here</a>
 
 
-<b>11.</b><a href="" target="_blank"></a>
+<b>11.</b> React App Optimization<a href="https://www.codementor.io/blog/react-optimization-5wiwjnf9hj" target="_blank">here</a>
+
+
+<b>12.</b> <a href="" target="_blank"></a>
