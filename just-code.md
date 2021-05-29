@@ -299,4 +299,24 @@ console.log(palindrome('damon')); // false
 ```
 
 
-<b>5.</b>
+<b>5.</b> Find the same elements which occurred in 2 arrays 
+
+```js
+// 2 List of strings and return same elements which occurred in both array lists
+
+// const arr1 = ['1', '2', '4'];
+// const arr2 = ['11', '43', '55', '2', '832', '66', '4', '222', '1212'];
+const arr1 = ['I', 'love', 'Ella', '!'];
+const arr2 = ['Come', 'on', 'Ella', ',', 'you', 'can', 'make', 'it', '!'];
+
+const commonElements = arr1.filter(el => arr2.includes(el));
+
+console.log(commonElements);
+
+// if using underscore js or lodash js, we can use a function called `intersection`
+// eg: 
+_.intersection(arr1, arr2);
+```
+
+
+<b>6.</b>
