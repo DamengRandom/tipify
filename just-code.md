@@ -319,4 +319,14 @@ _.intersection(arr1, arr2);
 ```
 
 
-<b>6.</b>
+<b>6.</b> Merge 2 arrays and remove repeated elements
+
+```js
+const arr2 = ['I', 'love', 'Ella', '!'];
+const arr1 = ['Come', 'on', 'Ella', ',', 'you', 'can', 'make', 'it', '!'];
+
+const merged = [...arr1, ...arr2];
+const mergedWithoutRepeats = [...new Set(merged)]; // remove repeat elements inside array
+
+console.log(mergedWithoutRepeats);
+```
