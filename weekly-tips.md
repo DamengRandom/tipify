@@ -596,4 +596,19 @@ console.log(getFirstElement(["flour", "salt"]));
 ```
 
 
-<b>21.</b>
+<b>21.</b> Why using `webpack` instead of put `script` tag inside html file?
+
+Reason: Webpack make all the script files finally compiled as `1` bundle file, something like this:
+
+```js
+<script src="jquery.js" type="text/javascript"></script>
+<script src="app.js" type="text/javascript"></script>
+// without implementation (just put into html file)
+```
+
+becomes to 
+
+```js
+<script src="bundle.js" type="text/javascript"></script>
+// with webpack implementation
+```

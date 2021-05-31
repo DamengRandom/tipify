@@ -1,7 +1,5 @@
 ### JavaScript General Tips 
 
-* (Only record the knowledge I always forget)
-
 <b>1.</b> When you pass a function by name without parentheses, you are passing the function object itself. When you pass it with parentheses, you are passing the result of executing that function.
 
 

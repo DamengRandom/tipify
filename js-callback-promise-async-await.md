@@ -181,6 +181,9 @@ const rollerCaller = async () => {
 rollerCaller();
 ```
 
-Quick concept recall for `Asynchronous`: I will finish later ~~
+
+`Asynchronous`:
+
+Quick concept recall for `Asynchronous`: I will finish up later ~~
 
 Functions running in parallel with other functions are called asynchronous. A good example is JavaScript `setTimeout()`.

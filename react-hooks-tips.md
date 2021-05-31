@@ -5,8 +5,8 @@ Please find my personal react hooks practices <a href="https://github.com/Dameng
 
 
 #### useMemo vs useCallback
-- <p>useMemo: returns the value of that callback function</p>
-- <p>useCallback: returns the callback function</p>
+- <p>`useMemo`: returns the value of that callback function</p>
+- <p>`useCallback`: returns the callback function</p>
 
 
 #### useContext
