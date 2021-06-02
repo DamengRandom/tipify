@@ -612,3 +612,24 @@ becomes to
 <script src="bundle.js" type="text/javascript"></script>
 // with webpack implementation
 ```
+
+Advantage of using webpack instead of import inside html file is we have ability to set the environment variable to control whether shall we load this file as part of `bundle.js` or not !!!
+
+something like this:
+
+```js
+let pluginPartial = "";
+
+if (appcuesEnabled) {
+  pluginPartial += fs.readFileSync(path.resolve(__dirname, `./src/partials/appcues.html`), "utf8");
+}
+// include html inside `HtmlWebpackPlugin` plugin
+new HtmlWebpackPlugin({
+  title: "Bundle HTML files together",
+  template: "index.html",
+  plugin: pluginPartial,
+}),
+
+// inside `./src/partials/appcues.html` file, we have:
+<script src="//fast.appcues.com/specific_id.js"></script>
+```
