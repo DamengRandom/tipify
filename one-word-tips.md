@@ -55,6 +55,16 @@ console.log(x(y(5)))
 <b>5.</b> `ORM` [Object Relational Mapper]
 - concept: its a technique which helps developer talk to database more easier
 
+* ORM complementary note:
+
+- translate between data in a relational database and the javascript objects in your application
+
+Typical example: `Objection.js`
+
+- No matter of using either ORM or query builder, under the hood, it always uses SQL to talk to database
+
+Reference <a href="https://dzone.com/articles/the-complete-tutorial-on-the-top-5-ways-to-query-y-1" target="_blank">here</a>
+
 
 <b>6.</b> `Service Worker`: A service worker is a `script` that stands between your website and the network, giving you, among other things, the ability to intercept network requests and respond to them in different ways.
  
