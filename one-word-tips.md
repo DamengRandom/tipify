@@ -207,4 +207,7 @@ console.log(`%c${x} with Tax: %c$${y}`, 'font-weight: bold; color: red;', 'color
 <a href="https://medium.com/@dylanavery720/npmmmm-1-dev-dependencies-dependencies-8931c2583b0c#:~:text=The%20difference%20between%20these%20two,an%20npm%20install%20%2D%2Dsave." target="_blank">reference</a>
 
 
-<b>23.</b> 
+<b>23.</b> Using `synk` to fix your npm packages vulnerabilities [Security Considerations]
+
+
+<b>24.</b>
