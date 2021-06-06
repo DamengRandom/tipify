@@ -34,3 +34,18 @@ function print(val) {
   document.body.appendChild(el);
 }
 ```
+
+#### Tip 2: Observable: An array get build over time, it can be looped over time by subscribing to it ..
+
+(1). Basic Example:
+```js
+const observable = rxjs.Observable.create(observer => {
+  observer.next('Hello ..');
+  // next() is the method to allow developer to send data to this observable stream.
+  observer.next(JSON.stringify({
+    name: 'damon',
+  }, null, 2));
+  // value can be normal js data like string, number, boolean, object or array
+  observer.next([1, 2, 3]);
+});
+```
