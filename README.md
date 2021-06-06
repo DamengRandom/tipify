@@ -54,3 +54,5 @@ yarn docs:build // will build up the project and make the latest editions availa
 ### [Just Code Shhh](./just-code.html)
 ### [Problems Resolved Recall](./problems-resolved.html)
 ### [JavaScript Class & ProtoType](./js-class-prototype.html)
+
+### [RXJS Recalls & Trials](./rxjs-trials.html)

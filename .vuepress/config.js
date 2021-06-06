@@ -47,6 +47,7 @@ module.exports = {
       'problems-resolved.html',
       'just-code.html',
       'js-class-prototype.html',
+      './rxjs-trials.html',
     ],
     searchMaxSuggestions: 20
   },
