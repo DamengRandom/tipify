@@ -61,3 +61,19 @@ const clickEventObservable = rxjs.fromEvent(document, 'click');
 clickEventObservable.subscribe(click => console.log(click));
 // now we can get click event object
 ```
+
+(3). convert Promise to observable Example: for async process
+
+```js
+const promiseExample = new Promise((resolve, reject) => {
+  try {
+    resolve('Converted to observable');
+  } catch (error) {
+    reject(error);
+  }
+});
+
+const promiseObservable = rxjs.from(promiseExample); // data come from a promise
+
+promiseObservable.subscribe(p => print(p));
+```
