@@ -38,6 +38,7 @@ function print(val) {
 #### Tip 2: Observable: An array get build over time, it can be looped over time by subscribing to it ..
 
 (1). Basic Example:
+
 ```js
 const observable = rxjs.Observable.create(observer => {
   observer.next('Hello ..');
@@ -48,4 +49,15 @@ const observable = rxjs.Observable.create(observer => {
   // value can be normal js data like string, number, boolean, object or array
   observer.next([1, 2, 3]);
 });
+
+observable.subscribe(val => print(val));
+```
+
+(2). Event based Example: triggered by click
+
+```js
+const clickEventObservable = rxjs.fromEvent(document, 'click');
+
+clickEventObservable.subscribe(click => console.log(click));
+// now we can get click event object
 ```
