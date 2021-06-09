@@ -196,6 +196,48 @@ console.log(xx3() === yy3()); // false
 xx3().then(data => console.log(data === yy3())); // true
 ```
 
+Another Example with or without `await`:
+
+```js
+// Without await keyword, resolve() is not going to run:
+function returnPromises() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      console.log("not going to trigger resolve() ..");
+      resolve('Aloha ..');
+    }, 3000);
+  });
+}
+
+function run() {
+  var getPromiseTriggered = returnPromises();
+  console.log(getPromiseTriggered);
+}
+
+run();
+// result: not going to trigger resolve() ..
+
+// With await keyword, resolve() result will get returned ~~
+function returnPromises() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      console.log("will trigger resolve() because of 'await' ..");
+      resolve('Aloha ..');
+    }, 3000);
+  });
+}
+
+async function run() {
+  var getPromiseTriggered = await returnPromises();
+  console.log(getPromiseTriggered);
+}
+
+run();
+// result:
+// not going to trigger resolve() ..
+// Aloha ..
+```
+
 
 `Asynchronous`:
 
