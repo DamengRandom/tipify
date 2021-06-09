@@ -181,6 +181,21 @@ const rollerCaller = async () => {
 rollerCaller();
 ```
 
+Basic example: <i>always remember async keyword will return the function as a <b>PROMISE</b> instead of a normal function result !!</i>
+
+```js
+const xx3 = async () => {
+  return '1';
+}; // return as a promise object
+
+const yy3 = () => {
+  return '1';
+}; // return as string '1'
+
+console.log(xx3() === yy3()); // false
+xx3().then(data => console.log(data === yy3())); // true
+```
+
 
 `Asynchronous`:
 
