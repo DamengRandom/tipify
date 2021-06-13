@@ -238,6 +238,16 @@ run();
 // Aloha ..
 ```
 
+<i>Just add .catch() method at the end of the promise</i>
+
+```js
+// we can choose not using try catch, just directly using catch, like below:
+
+async function catchAfterMethod() {
+  await apiCall().catch(error => errorHandler(error));
+}
+```
+
 
 `Asynchronous`:
 
